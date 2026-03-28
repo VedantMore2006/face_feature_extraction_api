@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-03-24T14:54:34",
+  "input": "data/patient_level_master_180k_model_ready.csv",
+  "output": "data/patient_level_master_180k_model_ready_pruned.csv",
+  "rows": 180000,
+  "classes": [
+    "anxiety",
+    "depression",
+    "bipolar",
+    "phobia",
+    "stress",
+    "suicidal_tendency"
+  ],
+  "feature_counts": {
+    "before": 142,
+    "dropped": 45,
+    "after": 97
+  },
+  "thresholds": {
+    "hard_auc_threshold": 0.97,
+    "soft_auc_threshold": 0.93,
+    "perm_z_threshold": 2.5
+  },
+  "model_macro_f1": {
+    "baseline": 1.0,
+    "after_pruning": 1.0,
+    "delta": 0.0
+  },
+  "dropped_features": [
+    "au12_activation_frequency__std",
+    "au12_mean_amplitude__max",
+    "au12_mean_amplitude__mean",
+    "au12_mean_amplitude__range",
+    "au12_mean_amplitude__std",
+    "au12_variance__mean",
+    "au15_mean_amplitude__min",
+    "au15_mean_amplitude__std",
+    "au1_au2_peak_intensity__max",
+    "au1_au2_peak_intensity__mean",
+    "au1_au2_peak_intensity__min",
+    "au1_au2_peak_intensity__std",
+    "au4_duration_ratio__min",
+    "au4_mean_activation__mean",
+    "au4_mean_activation__min",
+    "au4_mean_activation__std",
+    "baseline_eye_openness__mean",
+    "blink_duration__max",
+    "blink_duration__min",
+    "blink_duration__std",
+    "blink_rate__mean",
+    "downward_gaze_frequency__mean",
+    "downward_gaze_frequency__std",
+    "eye_contact_ratio__mean",
+    "facial_emotional_range__max",
+    "facial_emotional_range__mean",
+    "facial_emotional_range__min",
+    "gesture_frequency__mean",
+    "gesture_frequency__range",
+    "gesture_frequency__std",
+    "head_motion_energy__mean",
+    "head_velocity_peak__max",
+    "head_velocity_peak__range",
+    "head_velocity_peak__std",
+    "lip_compression_frequency__max",
+    "lip_compression_frequency__mean",
+    "lip_compression_frequency__min",
+    "mean_head_velocity__mean",
+    "motion_energy_floor_score__min",
+    "overall_au_variance__mean",
+    "pause_duration_mean__std",
+    "posture_rigidity_index__min",
+    "posture_rigidity_index__std",
+    "reaction_time_instability_index__mean",
+    "response_latency_mean__mean"
+  ],
+  "artifacts": {
+    "report_json": "reports/eda/feature_importance_pruning_report.json",
+    "importance_csv": "reports/eda/feature_importance_pruning_report.importance.csv"
+  }
+}

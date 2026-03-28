@@ -1,0 +1,7 @@
+,anxiety,bipolar,depression,phobia,stress,suicidal_tendency
+anxiety,5998,0,2,0,0,0
+bipolar,0,6000,0,0,0,0
+depression,3,0,5997,0,0,0
+phobia,0,0,0,6000,0,0
+stress,0,0,0,0,6000,0
+suicidal_tendency,0,0,0,0,0,6000

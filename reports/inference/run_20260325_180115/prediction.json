@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-03-25T18:01:15",
+  "video_file": "assets/stress.mp4",
+  "model_dir": "/home/vedant/Facial_analysis/reports/model_training/run_20260324_171117",
+  "training_report": "/home/vedant/Facial_analysis/reports/model_training/run_20260324_171117/training_report.json",
+  "training_input_schema_source": "/home/vedant/Facial_analysis/data/patient_level_master_180k_model_ready_pruned_ultra.csv",
+  "session": {
+    "frames_with_face": 250,
+    "frames_used_for_features": 125,
+    "duration_seconds": 358.2912666666667,
+    "min_duration_seconds": 150.0,
+    "duration_check_passed": true
+  },
+  "runtime": {
+    "mode": "balanced",
+    "frame_stride": 2,
+    "mode_default_stride": 2
+  },
+  "schema": {
+    "runtime_base_feature_count": 34,
+    "engineered_feature_count": 204,
+    "model_feature_count": 63
+  },
+  "prediction": {
+    "predicted_label": "phobia",
+    "predicted_index": 3,
+    "confidence": 0.9977715611457825,
+    "risk_score": 0.9977715611457825,
+    "probabilities": {
+      "anxiety": 0.00021628272952511907,
+      "bipolar": 0.00016613997286185622,
+      "depression": 0.000685631122905761,
+      "phobia": 0.9977715611457825,
+      "stress": 0.0003287950239609927,
+      "suicidal_tendency": 0.0008315987652167678
+    },
+    "top3": [
+      {
+        "label": "phobia",
+        "probability": 0.9977715611457825
+      },
+      {
+        "label": "suicidal_tendency",
+        "probability": 0.0008315987652167678
+      },
+      {
+        "label": "depression",
+        "probability": 0.000685631122905761
+      }
+    ]
+  },
+  "artifacts": {
+    "run_dir": "/home/vedant/Facial_analysis/reports/inference/run_20260325_180115",
+    "raw_frame_features_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_180115/raw_frame_features.csv",
+    "session_engineered_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_180115/session_engineered_204.csv",
+    "model_input_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_180115/model_input_vector.csv",
+    "prediction_json": "/home/vedant/Facial_analysis/reports/inference/run_20260325_180115/prediction.json"
+  }
+}

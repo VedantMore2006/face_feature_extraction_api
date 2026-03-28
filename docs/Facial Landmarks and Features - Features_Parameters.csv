@@ -1,0 +1,313 @@
+Attribute/List,au12_mean_amplitude,au12_variance,au12_activation_frequency,au15_mean_amplitude,au4_mean_activation,au4_duration_ratio,au1_au2_peak_intensity,au20_activation_rate,lip_compression_frequency,overall_au_variance,facial_emotional_range,facial_transition_frequency,near_zero_au_activation_ratio,mean_head_velocity,head_velocity_peak,head_motion_energy,motion_energy_floor_score,landmark_displacement_mean,gesture_frequency,posture_rigidity_index,micro_motion_energy,blink_rate,blink_duration,blink_cluster_density,eye_contact_ratio,downward_gaze_frequency,gaze_shift_frequency,baseline_eye_openness,response_latency_mean,speech_onset_delay,nod_onset_latency,pause_duration_mean,extended_silence_ratio,reaction_time_instability_index
+Discription,"Computational Meaning:
+ Mean intensity of AU12 (Zygomaticus Major) activation across session frames.
+Clinical Meaning:
+ Primary biomarker of positive affect expression; reduced in depressive flattening, elevated in hypomanic states.
+Behavioral Meaning:
+ Represents how strongly a person smiles on average.
+Human Explanation:
+ This tells us how “strong” or noticeable someone’s smile is during conversation.
+Used In:
+ MDD, Melancholic Depression, Atypical Depression, Hypomania, Bipolar Depression, Burnout. (refered form the 
+Document prepared by Ashutosh For all features)","Computational Meaning:
+ Statistical variance of AU12 intensity over time.
+Clinical Meaning:
+ Low variance indicates emotional blunting; high variance suggests affective instability.
+Behavioral Meaning:
+ How much someone’s smiling changes during interaction.
+Human Explanation:
+ Does the smile stay flat and minimal, or does it go up and down emotionally?
+Used In:
+ MDD, Bipolar Spectrum, Cyclothymia.
+","Computational Meaning:
+ Number of discrete AU12 activation events per minute.
+Clinical Meaning:
+ Marker of social engagement and warmth.
+Behavioral Meaning:
+ How often a person smiles.
+Human Explanation:
+ Frequent smiling usually reflects engagement; rare smiling may suggest withdrawal.
+Used In:
+ Peripartum Depression, Hypomania, Burnout.","Computational Meaning:
+ Mean intensity of lip-corner depressor activation.
+Clinical Meaning:
+ Proxy for sadness expression.
+Behavioral Meaning:
+ Downward turning of mouth.
+Human Explanation:
+ Persistent “sad mouth” posture even when not discussing negative topics.
+Used In:
+ MDD, Bipolar Depression.","Computational Meaning:
+ Mean activation intensity of brow furrow (Corrugator Supercilii).
+Clinical Meaning:
+ Chronic cognitive tension and worry marker.
+Behavioral Meaning:
+ Forehead tightening or frowning.
+Human Explanation:
+ The “worried look” someone keeps even at rest.
+Used In:
+ GAD, Chronic Stress, Social Anxiety, Health Anxiety.","Computational Meaning:
+ Proportion of session time AU4 is active above threshold.
+Clinical Meaning:
+ Distinguishes chronic tension from brief fear spikes.
+Behavioral Meaning:
+ How long the person stays tense.
+Human Explanation:
+ Do they relax between moments, or stay constantly tense?
+Used In:
+ GAD, Social Anxiety, Stress Disorders.","Computational Meaning:
+ Maximum co-activation of eyebrow raise muscles.
+Clinical Meaning:
+ Acute fear or alertness activation.
+Behavioral Meaning:
+ Sudden widening of eyes and brows.
+Human Explanation:
+ The “shock” or “fear” face.
+Used In:
+ Panic Disorder, Specific Phobia, Acute Stress.","Computational Meaning:
+ Frequency of horizontal lip stretch events.
+Clinical Meaning:
+ Fear grimace indicator.
+Behavioral Meaning:
+ Tight sideways lip stretching.
+Human Explanation:
+ The tight-lipped fear expression when exposed to a trigger.
+Used In:
+ Specific Phobia.","Computational Meaning:
+ Frequency of lip tightening (AU23/AU24).
+Clinical Meaning:
+ Suppressed emotional distress.
+Behavioral Meaning:
+ Holding lips tightly together.
+Human Explanation:
+ Someone holding back emotions.
+Used In:
+ PMDD, Social Anxiety, Performance Anxiety.","Computational Meaning:
+ Global standard deviation of all tracked facial AUs.
+Clinical Meaning:
+ Overall emotional dynamism.
+Behavioral Meaning:
+ How expressive the face is overall.
+Human Explanation:
+ Flat face vs animated face.
+Used In:
+ MDD, Burnout, Hypomania, Bipolar Spectrum.","Computational Meaning:
+ Difference between maximum and minimum AU amplitudes.
+Clinical Meaning:
+ Breadth of emotional range.
+Behavioral Meaning:
+ Range between strongest and weakest expressions.
+Human Explanation:
+ Do they show full emotional range or stay within a narrow band?
+Used In:
+ Dysthymia, Hypomania.","Computational Meaning:
+ Number of expression changes per minute.
+Clinical Meaning:
+ Emotional flexibility vs rigidity.
+Behavioral Meaning:
+ How often the face shifts expressions.
+Human Explanation:
+ Do expressions change naturally or stay frozen?
+Used In:
+ Melancholic Depression, Psychotic Depression.","Computational Meaning:
+ Proportion of frames with minimal facial activation.
+Clinical Meaning:
+ Extreme affective flattening.
+Behavioral Meaning:
+ Emotionally blank presentation.
+Human Explanation:
+ The face looks almost completely expressionless.
+Used In:
+ Psychotic Depression, Severe Melancholic Depression.","Computational Meaning:
+ Average angular speed of head movement.
+Clinical Meaning:
+ Psychomotor retardation vs agitation marker.
+Behavioral Meaning:
+ How fast someone moves their head while speaking.
+Human Explanation:
+ Sluggish vs energetic movement style.
+Used In:
+ Depression, Hypomania, Panic Disorder.","Computational Meaning:
+ Maximum head speed observed in session.
+Clinical Meaning:
+ Acute agitation spike.
+Behavioral Meaning:
+ Sudden sharp head movements.
+Human Explanation:
+ Fast, abrupt movement when anxious or startled.
+Used In:
+ Panic Disorder, Acute Stress.","Computational Meaning:
+ Total magnitude of motion across session.
+Clinical Meaning:
+ Overall physical activation level.
+Behavioral Meaning:
+ General motor energy.
+Human Explanation:
+ Are they moving a lot or barely moving?
+Used In:
+ Depression, Burnout, Bipolar Spectrum.","Computational Meaning:
+ Time spent at minimal motion baseline.
+Clinical Meaning:
+ Motor stupor indicator.
+Behavioral Meaning:
+ Long still periods.
+Human Explanation:
+ Long stretches of near-complete stillness.
+Used In:
+ Melancholic Depression,.","Computational Meaning:
+ Mean displacement of facial landmarks frame-to-frame.
+Clinical Meaning:
+ Subtle motor engagement indicator.
+Behavioral Meaning:
+ Micro facial movements.
+Human Explanation:
+ Small movements that indicate liveliness.
+Used In:
+ GAD, Hypomania.","Computational Meaning:
+ Rate of spontaneous gestures per minute.
+Clinical Meaning:
+ Engagement vs withdrawal.
+Behavioral Meaning:
+ Hand/head gestures during conversation.
+Human Explanation:
+ How much someone uses body language.
+Used In:
+ Depression, Hypomania, Burnout.","Computational Meaning:
+ Inverse variance of head/postural orientation.
+Clinical Meaning:
+ Psychomotor rigidity marker.
+Behavioral Meaning:
+ Fixed or stiff posture.
+Human Explanation:
+ Looks stiff and unmoving.
+Used In:
+ Melancholic Depression, Psychotic Depression","Computational Meaning:
+ Magnitude of small-scale movements (<1–2 cm).
+Clinical Meaning:
+ Restlessness indicator.
+Behavioral Meaning:
+ Fidgeting or subtle movement.
+Human Explanation:
+ Can’t sit still.
+Used In:
+ GAD, Agoraphobia.","Computational Meaning:
+ Number of blink events per minute.
+Clinical Meaning:
+ Autonomic arousal marker.
+Behavioral Meaning:
+ Frequent blinking.
+Human Explanation:
+ Blinking more when anxious.
+Used In:
+ GAD, Performance Anxiety, Depression.","Computational Meaning:
+ Average duration of individual blink events across the session.
+Clinical Meaning:
+ Supports differentiation between brief arousal blinks and prolonged closure linked to fatigue or slowing.
+Behavioral Meaning:
+ How long each blink typically lasts.
+Human Explanation:
+ Not just how often someone blinks, but whether blinks are short and sharp or longer and heavy.
+Used In:
+ Anxiety, Burnout, Depression, Stress-related screening.","Computational Meaning:
+ Frequency of rapid blink bursts.
+Clinical Meaning:
+ Cognitive overload marker.
+Behavioral Meaning:
+ Blinking several times quickly.
+Human Explanation:
+ Rapid blinking when stressed.
+Used In:
+ GAD, Panic Disorder.","Computational Meaning:
+ Proportion of time gaze aligns with camera.
+Clinical Meaning:
+ Social engagement marker.
+Behavioral Meaning:
+ Maintaining or avoiding eye contact.
+Human Explanation:
+ Looking at the person vs avoiding their eyes.
+Used In:
+ Social Anxiety, Burnout, Psychotic Depression.","Computational Meaning:
+ Frequency of downward gaze orientation.
+Clinical Meaning:
+ Withdrawal or shame-related posture.
+Behavioral Meaning:
+ Looking down frequently.
+Human Explanation:
+ Avoiding looking up during conversation.
+Used In:
+ Depression, Social Anxiety.
+","Computational Meaning:
+ Number of gaze direction changes per minute.
+Clinical Meaning:
+ Hypervigilance marker.
+Behavioral Meaning:
+ Scanning the environment.
+Human Explanation:
+ Eyes moving around constantly.
+Used In:
+ Panic Disorder, Acute Stress.","Computational Meaning:
+ Mean eyelid aperture distance.
+Clinical Meaning:
+ Alertness vs fatigue.
+Behavioral Meaning:
+ Wide eyes vs droopy eyelids.
+Human Explanation:
+ Alert look vs tired look.
+Used In:
+ Hypomania, Burnout.","Computational Meaning:
+ Average time between prompt and response initiation.
+Clinical Meaning:
+ Cognitive processing speed.
+Behavioral Meaning:
+ Hesitation before answering.
+Human Explanation:
+ Taking longer to respond.
+Used In:
+ Depression, Burnout, Hypomania.","Computational Meaning:
+ Time from prompt to first speech-related mouth movement.
+Clinical Meaning:
+ Speech initiation slowing.
+Behavioral Meaning:
+ Delay before speaking.
+Human Explanation:
+ Pause before starting to talk.
+Used In:
+ Depression, Performance Anxiety.","Computational Meaning:
+ Time to first acknowledgment head movement.
+Clinical Meaning:
+ Social feedback delay.
+Behavioral Meaning:
+ Slow acknowledgment.
+Human Explanation:
+ Taking time to nod in agreement.
+Used In:
+ MDD, Burnout.
+","Computational Meaning:
+ Average length of conversational pauses.
+Clinical Meaning:
+ Psychomotor slowing or depletion.
+Behavioral Meaning:
+ Long silences.
+Human Explanation:
+ Conversations feel slower.
+Used In:
+ Depression, Burnout.","Computational Meaning:
+ Percentage of session with pauses exceeding threshold (e.g., >3s).
+Clinical Meaning:
+ Severe retardation indicator.
+Behavioral Meaning:
+ Very long pauses.
+Human Explanation:
+ Long uncomfortable silences.
+Used In:
+ Melancholic, Psychotic Depression.","Computational Meaning:
+ Variance of response latency across session.
+Clinical Meaning:
+ Mood polarity instability.
+Behavioral Meaning:
+ Sometimes fast, sometimes slow.
+Human Explanation:
+ Inconsistent reaction timing.
+Used In:
+ Bipolar Spectrum, Cyclothymia."
+Std values/Range,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

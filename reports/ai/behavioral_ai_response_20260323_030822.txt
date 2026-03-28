@@ -1,0 +1,77 @@
+Behavioral Screening Report
+==============================================================================
+Model: qwen/qwen3.5-122b-a10b
+Finish reason: stop
+Usage: prompt=2904, completion=3449, total=6353
+------------------------------------------------------------------------------
+Primary Screening Condition
+------------------------------------------------------------------------------
+Condition : Bipolar Disorder
+Risk      : Moderate
+Confidence: 57%
+Rationale : Derived from model bipolar_risk in behavioral summary payload.
+------------------------------------------------------------------------------
+Fallback Conditions
+------------------------------------------------------------------------------
+- Anxiety: Moderate (39%)
+- Depression: Moderate (36%)
+- Stress: Low (33%)
+- Phobia: Low (23%)
+- Suicidal Tendency: Low (13%)
+------------------------------------------------------------------------------
+Raw Assistant Summary
+------------------------------------------------------------------------------
+### 1) Key Indicators
+*   **High Gaze Scanning:** `gaze_shift_frequency` (0.99) indicates constant environmental scanning, often linked to hypervigilance.
+*   **Postural Rigidity:** `posture_rigidity` (0.82) suggests physical stiffness, associated with melancholic depression or high stress.
+*   **Expressivity Variance:** High `au_variance` (0.84) and `emotional_range` (0.73) contrast with rigidity, suggesting emotional volatility rather than flat affect.
+*   **Ocular Activity:** Elevated `blink_rate` (0.78) and `downward_gaze_frequency` (0.64) signal potential anxiety or avoidance behaviors.
+*   **Temporal Instability:** `reaction_time_instability` (0.5) and `overall_stability` (0.27) point to inconsistent behavioral responses.
+*   **Data Anomalies:** Significant `large_gaps` (1235 rows) and `sudden_au_drops` (1921) indicate potential data loss or abrupt emotional suppression.
+
+### 2) Risk Interpretation
+The behavioral profile suggests a **moderate probability** of underlying distress, primarily driven by instability and hypervigilance markers. While the model indicates a higher risk for Bipolar Disorder (0.57) compared to Depression (0.36) or Anxiety (0.40), the conflicting signals between high expressivity and high postural rigidity create ambiguity. The significant data gaps (~33% of rows) reduce the reliability of temporal trend analysis, meaning observed patterns may not represent consistent baseline behavior. Risk is elevated due to emotional instability markers, but certainty is reduced by data quality issues.
+
+### 3) Potential Confounders
+*   **Data Continuity:** `large_gaps` (1235) disrupts the continuity of temporal patterns, potentially skewing variance and frequency calculations.
+*   **Technical Artifacts:** High `sudden_au_drops` (1921) may reflect camera occlusion or lighting changes rather than genuine emotional suppression.
+*   **Single Session:** `session_count` is 1, preventing longitudinal comparison to establish baseline norms for this individual.
+*   **Contextual Blindness:** Lack of conversation topic data makes it difficult to distinguish between situational stress (e.g., discussing a phobia trigger) and trait-based anxiety.
+
+### 4) Suggested Next Data to Collect
+*   **Longitudinal Sessions:** Collect data across multiple days to distinguish state-based fluctuations from trait-based patterns.
+*   **Self-Report Measures:** Administer standardized scales (e.g., GAD-7, PHQ-9) to validate behavioral signals against subjective experience.
+*   **Contextual Metadata:** Record conversation topics to correlate facial expressions with specific triggers (e.g., fear vs. sadness).
+*   **Physiological Correlates:** If available, integrate heart rate variability (HRV) to corroborate anxiety/stress markers independent of facial data.
+
+### 5) Condition Screening Map
+
+**Stress**
+*   **risk_level:** Moderate
+*   **confidence:** 60
+*   **rationale:** Elevated `blink_rate` and `posture_rigidity` suggest physiological tension, though data gaps limit certainty.
+
+**Depression**
+*   **risk_level:** Low
+*   **confidence:** 45
+*   **rationale:** `downward_gaze` and `response_latency` are present, but high `au_variance` contradicts typical flat affect; uncertainty is high.
+
+**Phobia**
+*   **risk_level:** Moderate
+*   **confidence:** 50
+*   **rationale:** Extreme `gaze_shift_frequency` (0.99) indicates scanning behavior, but lack of trigger context creates high uncertainty.
+
+**Anxiety**
+*   **risk_level:** Moderate
+*   **confidence:** 65
+*   **rationale:** Consistent markers in `blink_rate`, `gaze_shift`, and model score (0.40) support elevated anxiety probability.
+
+**Bipolar Disorder**
+*   **risk_level:** Moderate
+*   **confidence:** 55
+*   **rationale:** Highest model score (0.57) and `reaction_time_instability` suggest mood volatility, but single session limits diagnostic confidence.
+
+**Suicidal Tendency**
+*   **risk_level:** Low
+*   **confidence:** 30
+*   **rationale:** No severe psychomotor retardation or specific speech markers detected; evidence is weak and uncertainty is high.

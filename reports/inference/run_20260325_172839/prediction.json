@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-03-25T17:28:42",
+  "video_file": "assets/Depression_Interview.mp4",
+  "model_dir": "/home/vedant/Facial_analysis/reports/model_training/run_20260324_171117",
+  "training_report": "/home/vedant/Facial_analysis/reports/model_training/run_20260324_171117/training_report.json",
+  "training_input_schema_source": "/home/vedant/Facial_analysis/data/patient_level_master_180k_model_ready_pruned_ultra.csv",
+  "session": {
+    "frames_with_face": 20956,
+    "duration_seconds": 871.0,
+    "min_duration_seconds": 150.0,
+    "duration_check_passed": true
+  },
+  "schema": {
+    "runtime_base_feature_count": 34,
+    "engineered_feature_count": 204,
+    "model_feature_count": 63
+  },
+  "prediction": {
+    "predicted_label": "suicidal_tendency",
+    "predicted_index": 5,
+    "confidence": 0.9397580027580261,
+    "risk_score": 0.9397580027580261,
+    "probabilities": {
+      "anxiety": 2.8203978217788972e-05,
+      "bipolar": 0.00015336232900153846,
+      "depression": 0.05976613610982895,
+      "phobia": 0.00010586356074782088,
+      "stress": 0.00018845332670025527,
+      "suicidal_tendency": 0.9397580027580261
+    },
+    "top3": [
+      {
+        "label": "suicidal_tendency",
+        "probability": 0.9397580027580261
+      },
+      {
+        "label": "depression",
+        "probability": 0.05976613610982895
+      },
+      {
+        "label": "stress",
+        "probability": 0.00018845332670025527
+      }
+    ]
+  },
+  "artifacts": {
+    "run_dir": "/home/vedant/Facial_analysis/reports/inference/run_20260325_172839",
+    "raw_frame_features_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_172839/raw_frame_features.csv",
+    "session_engineered_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_172839/session_engineered_204.csv",
+    "model_input_csv": "/home/vedant/Facial_analysis/reports/inference/run_20260325_172839/model_input_vector.csv",
+    "prediction_json": "/home/vedant/Facial_analysis/reports/inference/run_20260325_172839/prediction.json"
+  }
+}

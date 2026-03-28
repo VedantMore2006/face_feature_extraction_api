@@ -1,0 +1,76 @@
+Behavioral Screening Report
+==============================================================================
+Model: qwen/qwen3.5-122b-a10b
+Finish reason: stop
+Usage: prompt=2904, completion=3761, total=6665
+------------------------------------------------------------------------------
+Primary Screening Condition
+------------------------------------------------------------------------------
+Condition : Bipolar Disorder
+Risk      : Moderate
+Confidence: 57%
+Rationale : Derived from model bipolar_risk in behavioral summary payload.
+------------------------------------------------------------------------------
+Fallback Conditions
+------------------------------------------------------------------------------
+- Anxiety: Moderate (39%)
+- Depression: Moderate (36%)
+- Stress: Low (33%)
+- Phobia: Low (23%)
+- Suicidal Tendency: Low (13%)
+------------------------------------------------------------------------------
+Raw Assistant Summary
+------------------------------------------------------------------------------
+### 1) Key Indicators
+*   **Expressivity:** High facial action unit variance (0.84) and emotional range (0.73) suggest animated presentation, contrasting with high posture rigidity (0.82).
+*   **Ocular Behavior:** Elevated downward gaze frequency (0.64) and near-maximal gaze shift frequency (0.99) indicate mixed avoidance and environmental scanning.
+*   **Psychomotor:** Significant sudden movement spikes (521) and moderate reaction time instability (0.5) suggest motor volatility.
+*   **Internal Scores:** Bipolar risk (0.57) is the highest among calculated metrics, followed by Anxiety (0.40) and Depression (0.36).
+*   **Data Integrity:** Significant data loss detected with 1,235 large gaps across 3,709 rows (~33% of session).
+
+### 2) Risk Interpretation
+The behavioral profile presents a complex mix of high expressivity and motor instability, which may align with mood volatility rather than static low mood. While internal models indicate moderate risk for anxiety and depression, the high variance in facial expressions conflicts with typical melancholic presentations. The elevated gaze shifting and blinking rates suggest heightened physiological arousal. Due to significant data gaps and conflicting behavioral signals (e.g., high gestures vs. high rigidity), the overall risk assessment carries substantial uncertainty and requires validation.
+
+### 3) Potential Confounders
+*   **Data Quality:** Approximately 33% of the session data contains large gaps, potentially skewing temporal variability indices and blink metrics.
+*   **Session Context:** Single-session analysis prevents assessment of longitudinal stability or mood cycling.
+*   **Environmental Factors:** Lighting or camera positioning may influence `face_detection_consistency` (0.92) and action unit detection accuracy.
+*   **Behavioral State:** Fatigue, medication, or acute situational stressors could temporarily elevate blink rates and movement spikes unrelated to chronic conditions.
+
+### 4) Suggested Next Data to Collect
+*   **Longitudinal Data:** Multiple sessions over time to distinguish transient stress from persistent patterns.
+*   **Self-Report Scales:** PHQ-9, GAD-7, and MDQ to correlate behavioral markers with subjective experience.
+*   **Audio/Prosody:** Speech rate and tone analysis to complement facial expressivity metrics.
+*   **Contextual Metadata:** Time of day, recent life events, and medication status to contextualize arousal levels.
+
+### 5) Condition Screening Map
+
+**Stress**
+*   **risk_level:** Moderate
+*   **confidence:** 70
+*   **rationale:** Elevated blink rate and frequent gaze shifts indicate physiological arousal consistent with stress; uncertainty is high due to data gaps.
+
+**Depression**
+*   **risk_level:** Moderate
+*   **confidence:** 60
+*   **rationale:** Downward gaze is present, but high facial variance conflicts with typical low-expressivity depression; uncertainty is high.
+
+**Phobia**
+*   **risk_level:** Moderate
+*   **confidence:** 65
+*   **rationale:** High gaze shift frequency combined with downward gaze suggests avoidance and environmental scanning behaviors.
+
+**Anxiety**
+*   **risk_level:** Moderate
+*   **confidence:** 70
+*   **rationale:** Blink metrics and gaze instability align with moderate anxiety risk profiles observed in the internal model.
+
+**Bipolar Disorder**
+*   **risk_level:** Moderate
+*   **confidence:** 75
+*   **rationale:** Highest internal risk score (0.57) supported by high expression variance and reaction time instability.
+
+**Suicidal Tendency**
+*   **risk_level:** Low
+*   **confidence:** 65
+*   **rationale:** Absence of extreme withdrawal or dominant rigidity keeps risk indicators below threshold; uncertainty is high due to data gaps.

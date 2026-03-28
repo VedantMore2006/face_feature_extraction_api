@@ -1,0 +1,373 @@
+{
+  "generated_at": "2026-03-24T14:22:36",
+  "rows": 180000,
+  "columns": 206,
+  "class_balance": {
+    "anxiety": 30000,
+    "depression": 30000,
+    "bipolar": 30000,
+    "phobia": 30000,
+    "stress": 30000,
+    "suicidal_tendency": 30000
+  },
+  "tail_outlier_ratio": {
+    "orig_mean": 0.09898744553376906,
+    "clean_mean": 0.09892769607843137,
+    "top15_orig": [
+      {
+        "column": "au20_activation_rate__slope",
+        "value": 0.48228333333333334
+      },
+      {
+        "column": "baseline_eye_openness__slope",
+        "value": 0.45131666666666664
+      },
+      {
+        "column": "reaction_time_instability_index__slope",
+        "value": 0.4376
+      },
+      {
+        "column": "blink_rate__slope",
+        "value": 0.4375888888888889
+      },
+      {
+        "column": "gaze_shift_frequency__slope",
+        "value": 0.42101666666666665
+      },
+      {
+        "column": "au12_mean_amplitude__slope",
+        "value": 0.4179388888888889
+      },
+      {
+        "column": "facial_transition_frequency__slope",
+        "value": 0.41339444444444445
+      },
+      {
+        "column": "eye_contact_ratio__slope",
+        "value": 0.39865555555555554
+      },
+      {
+        "column": "near_zero_au_activation_ratio__slope",
+        "value": 0.3927222222222222
+      },
+      {
+        "column": "facial_emotional_range__slope",
+        "value": 0.3869222222222222
+      },
+      {
+        "column": "downward_gaze_frequency__slope",
+        "value": 0.38527222222222224
+      },
+      {
+        "column": "motion_energy_floor_score__slope",
+        "value": 0.3790611111111111
+      },
+      {
+        "column": "landmark_displacement_mean__slope",
+        "value": 0.3781777777777778
+      },
+      {
+        "column": "au1_au2_peak_intensity__slope",
+        "value": 0.3729277777777778
+      },
+      {
+        "column": "downward_gaze_frequency__max",
+        "value": 0.37027777777777776
+      }
+    ],
+    "top15_clean": [
+      {
+        "column": "au20_activation_rate__slope",
+        "value": 0.48228333333333334
+      },
+      {
+        "column": "baseline_eye_openness__slope",
+        "value": 0.45368888888888886
+      },
+      {
+        "column": "reaction_time_instability_index__slope",
+        "value": 0.43662222222222224
+      },
+      {
+        "column": "blink_rate__slope",
+        "value": 0.4358111111111111
+      },
+      {
+        "column": "gaze_shift_frequency__slope",
+        "value": 0.42101666666666665
+      },
+      {
+        "column": "au12_mean_amplitude__slope",
+        "value": 0.4194333333333333
+      },
+      {
+        "column": "facial_transition_frequency__slope",
+        "value": 0.4114
+      },
+      {
+        "column": "eye_contact_ratio__slope",
+        "value": 0.39865555555555554
+      },
+      {
+        "column": "near_zero_au_activation_ratio__slope",
+        "value": 0.39036666666666664
+      },
+      {
+        "column": "facial_emotional_range__slope",
+        "value": 0.3872555555555556
+      },
+      {
+        "column": "downward_gaze_frequency__slope",
+        "value": 0.38348333333333334
+      },
+      {
+        "column": "motion_energy_floor_score__slope",
+        "value": 0.38055555555555554
+      },
+      {
+        "column": "landmark_displacement_mean__slope",
+        "value": 0.37799444444444447
+      },
+      {
+        "column": "au1_au2_peak_intensity__slope",
+        "value": 0.37325555555555556
+      },
+      {
+        "column": "downward_gaze_frequency__max",
+        "value": 0.37027777777777776
+      }
+    ],
+    "top15_reduction": [
+      {
+        "column": "posture_rigidity_index__slope",
+        "value": 0.003172222222222243
+      },
+      {
+        "column": "blink_duration__slope",
+        "value": 0.0028055555555555334
+      },
+      {
+        "column": "near_zero_au_activation_ratio__slope",
+        "value": 0.002355555555555555
+      },
+      {
+        "column": "facial_transition_frequency__slope",
+        "value": 0.0019944444444444653
+      },
+      {
+        "column": "overall_au_variance__slope",
+        "value": 0.001861111111111119
+      },
+      {
+        "column": "downward_gaze_frequency__slope",
+        "value": 0.0017888888888888954
+      },
+      {
+        "column": "blink_rate__slope",
+        "value": 0.0017777777777778225
+      },
+      {
+        "column": "pause_duration_mean__slope",
+        "value": 0.0010722222222222522
+      },
+      {
+        "column": "mean_head_velocity__slope",
+        "value": 0.0010499999999999954
+      },
+      {
+        "column": "reaction_time_instability_index__slope",
+        "value": 0.000977777777777744
+      },
+      {
+        "column": "head_motion_energy__slope",
+        "value": 0.0009611111111111348
+      },
+      {
+        "column": "overall_au_variance__mean",
+        "value": 0.0009611111111111112
+      },
+      {
+        "column": "overall_au_variance__std",
+        "value": 0.0009166666666666666
+      },
+      {
+        "column": "au4_mean_activation__mean",
+        "value": 0.0008777777777777779
+      },
+      {
+        "column": "au4_duration_ratio__std",
+        "value": 0.0007611111111111111
+      }
+    ]
+  },
+  "correlation": {
+    "abs_r_ge_0_95_pairs_orig": 133,
+    "abs_r_ge_0_95_pairs_clean": 162
+  },
+  "class_separability_proxy": {
+    "top20_features_orig": [
+      {
+        "column": "au12_variance__std",
+        "max_standardized_mean_gap": 2.6698768775439152
+      },
+      {
+        "column": "au12_variance__max",
+        "max_standardized_mean_gap": 2.6641239148184273
+      },
+      {
+        "column": "au12_variance__range",
+        "max_standardized_mean_gap": 2.6639657681722175
+      },
+      {
+        "column": "au15_mean_amplitude__std",
+        "max_standardized_mean_gap": 2.6515970121319374
+      },
+      {
+        "column": "response_latency_mean__std",
+        "max_standardized_mean_gap": 2.6492857546290227
+      },
+      {
+        "column": "au15_mean_amplitude__range",
+        "max_standardized_mean_gap": 2.6468431384682756
+      },
+      {
+        "column": "response_latency_mean__range",
+        "max_standardized_mean_gap": 2.6332612539091915
+      },
+      {
+        "column": "lip_compression_frequency__std",
+        "max_standardized_mean_gap": 2.616476133137695
+      },
+      {
+        "column": "au15_mean_amplitude__max",
+        "max_standardized_mean_gap": 2.6047378393105896
+      },
+      {
+        "column": "response_latency_mean__max",
+        "max_standardized_mean_gap": 2.603439099738164
+      },
+      {
+        "column": "au12_variance__mean",
+        "max_standardized_mean_gap": 2.6032440369737384
+      },
+      {
+        "column": "lip_compression_frequency__range",
+        "max_standardized_mean_gap": 2.5933360294849335
+      },
+      {
+        "column": "head_motion_energy__max",
+        "max_standardized_mean_gap": 2.532706353045726
+      },
+      {
+        "column": "head_motion_energy__std",
+        "max_standardized_mean_gap": 2.532636203237695
+      },
+      {
+        "column": "head_motion_energy__range",
+        "max_standardized_mean_gap": 2.5315375202817103
+      },
+      {
+        "column": "au1_au2_peak_intensity__std",
+        "max_standardized_mean_gap": 2.504372419358126
+      },
+      {
+        "column": "au1_au2_peak_intensity__range",
+        "max_standardized_mean_gap": 2.437012999112983
+      },
+      {
+        "column": "au1_au2_peak_intensity__max",
+        "max_standardized_mean_gap": 2.406462975580339
+      },
+      {
+        "column": "mean_head_velocity__std",
+        "max_standardized_mean_gap": 2.3870899126013025
+      },
+      {
+        "column": "mean_head_velocity__max",
+        "max_standardized_mean_gap": 2.377223520526526
+      }
+    ],
+    "top20_features_clean": [
+      {
+        "column": "au12_variance__std",
+        "max_standardized_mean_gap": 2.6704415413064524
+      },
+      {
+        "column": "au12_variance__max",
+        "max_standardized_mean_gap": 2.6644683450622106
+      },
+      {
+        "column": "au12_variance__range",
+        "max_standardized_mean_gap": 2.6643624852925525
+      },
+      {
+        "column": "au15_mean_amplitude__std",
+        "max_standardized_mean_gap": 2.6519197177128677
+      },
+      {
+        "column": "response_latency_mean__std",
+        "max_standardized_mean_gap": 2.6502752832572387
+      },
+      {
+        "column": "au15_mean_amplitude__range",
+        "max_standardized_mean_gap": 2.647181185153923
+      },
+      {
+        "column": "response_latency_mean__range",
+        "max_standardized_mean_gap": 2.633534236108739
+      },
+      {
+        "column": "lip_compression_frequency__std",
+        "max_standardized_mean_gap": 2.6167019132477125
+      },
+      {
+        "column": "au12_variance__mean",
+        "max_standardized_mean_gap": 2.6086968724173585
+      },
+      {
+        "column": "au15_mean_amplitude__max",
+        "max_standardized_mean_gap": 2.605069735840087
+      },
+      {
+        "column": "response_latency_mean__max",
+        "max_standardized_mean_gap": 2.603744516429187
+      },
+      {
+        "column": "lip_compression_frequency__range",
+        "max_standardized_mean_gap": 2.593386602348349
+      },
+      {
+        "column": "head_motion_energy__max",
+        "max_standardized_mean_gap": 2.542044935425494
+      },
+      {
+        "column": "head_motion_energy__range",
+        "max_standardized_mean_gap": 2.539449557350066
+      },
+      {
+        "column": "head_motion_energy__std",
+        "max_standardized_mean_gap": 2.5372381944882716
+      },
+      {
+        "column": "au1_au2_peak_intensity__std",
+        "max_standardized_mean_gap": 2.505115480883732
+      },
+      {
+        "column": "au1_au2_peak_intensity__range",
+        "max_standardized_mean_gap": 2.4373938212544934
+      },
+      {
+        "column": "au1_au2_peak_intensity__max",
+        "max_standardized_mean_gap": 2.4072480845133515
+      },
+      {
+        "column": "mean_head_velocity__std",
+        "max_standardized_mean_gap": 2.3873561134587025
+      },
+      {
+        "column": "mean_head_velocity__max",
+        "max_standardized_mean_gap": 2.377456737590385
+      }
+    ]
+  }
+}

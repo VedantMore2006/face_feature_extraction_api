@@ -1,0 +1,266 @@
+{
+  "schema_version": "1.0.0",
+  "frozen_on": "2026-03-20",
+  "feature_count": 34,
+  "notes": [
+    "This file is the canonical feature contract for the first full pipeline build.",
+    "Feature order is fixed and must be reused for CSV header order and model input order.",
+    "Normalization is applied after baseline lock: z-score then sigmoid scaling to [0,1].",
+    "Eye metrics (EAR, blink-related, and eye-openness) use the finalized left/right eye structures from final_structure with EAR keys p1_outer, p2_upper1, p3_upper2, p4_inner, p5_lower1, p6_lower2."
+  ],
+  "feature_order": [
+    "au12_mean_amplitude",
+    "au12_variance",
+    "au12_activation_frequency",
+    "au15_mean_amplitude",
+    "au4_mean_activation",
+    "au4_duration_ratio",
+    "au1_au2_peak_intensity",
+    "au20_activation_rate",
+    "lip_compression_frequency",
+    "overall_au_variance",
+    "facial_emotional_range",
+    "facial_transition_frequency",
+    "near_zero_au_activation_ratio",
+    "mean_head_velocity",
+    "head_velocity_peak",
+    "head_motion_energy",
+    "motion_energy_floor_score",
+    "landmark_displacement_mean",
+    "gesture_frequency",
+    "posture_rigidity_index",
+    "micro_motion_energy",
+    "blink_rate",
+    "blink_duration",
+    "blink_cluster_density",
+    "eye_contact_ratio",
+    "downward_gaze_frequency",
+    "gaze_shift_frequency",
+    "baseline_eye_openness",
+    "response_latency_mean",
+    "speech_onset_delay",
+    "nod_onset_latency",
+    "pause_duration_mean",
+    "extended_silence_ratio",
+    "reaction_time_instability_index"
+  ],
+  "groups": {
+    "au_expression": [
+      "au12_mean_amplitude",
+      "au12_variance",
+      "au12_activation_frequency",
+      "au15_mean_amplitude",
+      "au4_mean_activation",
+      "au4_duration_ratio",
+      "au1_au2_peak_intensity",
+      "au20_activation_rate",
+      "lip_compression_frequency",
+      "overall_au_variance",
+      "facial_emotional_range",
+      "facial_transition_frequency",
+      "near_zero_au_activation_ratio"
+    ],
+    "head_motion": [
+      "mean_head_velocity",
+      "head_velocity_peak",
+      "head_motion_energy",
+      "motion_energy_floor_score",
+      "landmark_displacement_mean",
+      "gesture_frequency",
+      "posture_rigidity_index",
+      "micro_motion_energy"
+    ],
+    "eye_gaze": [
+      "blink_rate",
+      "blink_duration",
+      "blink_cluster_density",
+      "eye_contact_ratio",
+      "downward_gaze_frequency",
+      "gaze_shift_frequency",
+      "baseline_eye_openness"
+    ],
+    "temporal_response": [
+      "response_latency_mean",
+      "speech_onset_delay",
+      "nod_onset_latency",
+      "pause_duration_mean",
+      "extended_silence_ratio",
+      "reaction_time_instability_index"
+    ]
+  },
+  "definitions": {
+    "au12_mean_amplitude": {
+      "group": "au_expression",
+      "regions": ["left_lip_corner", "right_lip_corner", "upperlip_border", "lowerlip_border"],
+      "signal_type": "distance"
+    },
+    "au12_variance": {
+      "group": "au_expression",
+      "regions": ["left_lip_corner", "right_lip_corner"],
+      "signal_type": "variance"
+    },
+    "au12_activation_frequency": {
+      "group": "au_expression",
+      "regions": ["left_lip_corner", "right_lip_corner"],
+      "signal_type": "event_rate"
+    },
+    "au15_mean_amplitude": {
+      "group": "au_expression",
+      "regions": ["left_lip_corner", "right_lip_corner", "lowerlip_border"],
+      "signal_type": "distance"
+    },
+    "au4_mean_activation": {
+      "group": "au_expression",
+      "regions": ["left_eyebrow", "right_eyebrow", "between_eyebrows"],
+      "signal_type": "distance"
+    },
+    "au4_duration_ratio": {
+      "group": "au_expression",
+      "regions": ["left_eyebrow", "right_eyebrow"],
+      "signal_type": "ratio"
+    },
+    "au1_au2_peak_intensity": {
+      "group": "au_expression",
+      "regions": ["left_eyebrow", "right_eyebrow", "forehead"],
+      "signal_type": "peak"
+    },
+    "au20_activation_rate": {
+      "group": "au_expression",
+      "regions": ["upperlip_border", "lowerlip_border"],
+      "signal_type": "event_rate"
+    },
+    "lip_compression_frequency": {
+      "group": "au_expression",
+      "regions": ["upperlic         5p_border", "lowerlip_border", "moustache"],
+      "signal_type": "event_rate"
+    },
+    "overall_au_variance": {
+      "group": "au_expression",
+      "regions": ["left_eye", "right_eye", "left_eyebrow", "right_eyebrow", "upperlip_border", "lowerlip_border"],
+      "signal_type": "variance"
+    },
+    "facial_emotional_range": {
+      "group": "au_expression",
+      "regions": ["left_eye", "right_eye", "left_eyebrow", "right_eyebrow", "upperlip_border", "lowerlip_border"],
+      "signal_type": "range"
+    },
+    "facial_transition_frequency": {
+      "group": "au_expression",
+      "regions": ["all"],
+      "signal_type": "event_rate"
+    },
+    "near_zero_au_activation_ratio": {
+      "group": "au_expression",
+      "regions": ["all"],
+      "signal_type": "ratio"
+    },
+    "mean_head_velocity": {
+      "group": "head_motion",
+      "regions": ["nose_tip", "nose_bridge", "chin"],
+      "signal_type": "velocity"
+    },
+    "head_velocity_peak": {
+      "group": "head_motion",
+      "regions": ["nose_tip", "chin"],
+      "signal_type": "peak"
+    },
+    "head_motion_energy": {
+      "group": "head_motion",
+      "regions": ["nose_tip", "jawline_left", "jawline_right"],
+      "signal_type": "energy"
+    },
+    "motion_energy_floor_score": {
+      "group": "head_motion",
+      "regions": ["all"],
+      "signal_type": "floor"
+    },
+    "landmark_displacement_mean": {
+      "group": "head_motion",
+      "regions": ["all"],
+      "signal_type": "mean_displacement"
+    },
+    "gesture_frequency": {
+      "group": "head_motion",
+      "regions": ["chin", "jawline_left", "jawline_right"],
+      "signal_type": "event_rate"
+    },
+    "posture_rigidity_index": {
+      "group": "head_motion",
+      "regions": ["nose_bridge", "between_eyebrows", "chin"],
+      "signal_type": "index"
+    },
+    "micro_motion_energy": {
+      "group": "head_motion",
+      "regions": ["left_cheek", "right_cheek", "moustache"],
+      "signal_type": "energy"
+    },
+    "blink_rate": {
+      "group": "eye_gaze",
+      "regions": ["left_eye", "right_eye"],
+      "signal_type": "event_rate",
+      "eye_signal": "ear"
+    },
+    "blink_duration": {
+      "group": "eye_gaze",
+      "regions": ["left_eye", "right_eye"],
+      "signal_type": "duration",
+      "eye_signal": "ear"
+    },
+    "blink_cluster_density": {
+      "group": "eye_gaze",
+      "regions": ["left_eye", "right_eye"],
+      "signal_type": "density",
+      "eye_signal": "ear"
+    },
+    "eye_contact_ratio": {
+      "group": "eye_gaze",
+      "regions": ["left_iris", "right_iris", "nose_bridge"],
+      "signal_type": "ratio"
+    },
+    "downward_gaze_frequency": {
+      "group": "eye_gaze",
+      "regions": ["left_iris", "right_iris"],
+      "signal_type": "event_rate"
+    },
+    "gaze_shift_frequency": {
+      "group": "eye_gaze",
+      "regions": ["left_iris", "right_iris"],
+      "signal_type": "event_rate"
+    },
+    "baseline_eye_openness": {
+      "group": "eye_gaze",
+      "regions": ["left_eye", "right_eye"],
+      "signal_type": "ear"
+    },
+    "response_latency_mean": {
+      "group": "temporal_response",
+      "regions": ["upperlip_border", "lowerlip_border", "chin"],
+      "signal_type": "latency"
+    },
+    "speech_onset_delay": {
+      "group": "temporal_response",
+      "regions": ["lowerlip_border", "upper_lip_intersection"],
+      "signal_type": "latency"
+    },
+    "nod_onset_latency": {
+      "group": "temporal_response",
+      "regions": ["nose_tip", "chin"],
+      "signal_type": "latency"
+    },
+    "pause_duration_mean": {
+      "group": "temporal_response",
+      "regions": ["all"],
+      "signal_type": "duration"
+    },
+    "extended_silence_ratio": {
+      "group": "temporal_response",
+      "regions": ["all"],
+      "signal_type": "ratio"
+    },
+    "reaction_time_instability_index": {
+      "group": "temporal_response",
+      "regions": ["all"],
+      "signal_type": "index"
+    }
+  }
+}

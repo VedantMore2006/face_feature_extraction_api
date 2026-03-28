@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-03-23T02:56:17",
+  "data_quality": {
+    "missing_frames": 0,
+    "total_rows": 3709,
+    "face_detection_consistency": 0.9208803367361996,
+    "fps_estimates": [
+      10.03686137500299,
+      10.106366983441601,
+      10.03765402996719,
+      8.667529085987063,
+      11.167508473538332
+    ],
+    "large_gaps": 1235
+  },
+  "temporal_patterns": {
+    "trend_slopes": {
+      "au12_mean_amplitude": 3.6860042008230915e-05,
+      "au12_variance": 2.9363031101694686e-05,
+      "au12_activation_frequency": -6.104360550611044e-05,
+      "au15_mean_amplitude": 2.6902307260179344e-05,
+      "au4_mean_activation": -1.4627613951337292e-05
+    },
+    "variability_indices": {
+      "au12_mean_amplitude": 0.201778238373552,
+      "au12_variance": 0.25782950564045304,
+      "au12_activation_frequency": 0.2747549638880407,
+      "au15_mean_amplitude": 0.2388088980482143,
+      "au4_mean_activation": 0.113747433803414
+    }
+  },
+  "behavioral_indicators": {
+    "eye_behavior": {
+      "blink_rate": 0.779571464567269,
+      "inter_blink_interval_mean": 10.0,
+      "inter_blink_interval_std": 5.0,
+      "blink_duration_mean": 0.5,
+      "blink_variability": 0.060259662143940095,
+      "gaze_stability": 0.002126983229981061,
+      "gaze_shift_frequency": 0.9978730167700189,
+      "downward_gaze_frequency": 0.6439741170126719,
+      "eye_contact_ratio": 0.5
+    },
+    "expressivity": {
+      "au_variance": 0.8448468538123484,
+      "au_amplitude_mean": 0.6736767838662711,
+      "au_activation_frequency": 0.04111620382852521,
+      "emotional_range": 0.7327663898786736,
+      "expression_stability": 0.15515314618765164,
+      "expression_fluctuation": 0.8448468538123484
+    },
+    "psychomotor": {
+      "head_velocity_mean": 0.21120407258021032,
+      "head_velocity_std": 0.18692393942526592,
+      "motion_energy": 0.20996793360744134,
+      "gesture_frequency": 0.9915914443515772,
+      "posture_rigidity": 0.8214144342194661,
+      "micro_motion_energy": 0.46798867252628745,
+      "restlessness_index": 0.3274563059757767
+    },
+    "response": {
+      "response_latency_mean": 0.6606902129954165,
+      "response_latency_std": 0.23353472183781035,
+      "speech_onset_delay_mean": 0.6606902129954165,
+      "pause_duration_mean": 0.6606902129954165,
+      "reaction_time_instability": 0.5
+    }
+  },
+  "risk_scores": {
+    "depression_risk": 0.36304188997640874,
+    "anxiety_risk": 0.3987026914265966,
+    "bipolar_risk": 0.5736694186071043,
+    "overall_stability": 0.2701020974584344
+  },
+  "behavioral_summary": {
+    "expressivity_level": "high",
+    "emotional_stability": "unstable",
+    "engagement_pattern": "neutral",
+    "movement_profile": "normal",
+    "response_speed": "normal",
+    "behavioral_consistency": "variable",
+    "dominant_patterns": [
+      "blink_rate:0",
+      "au_variance:high",
+      "head_velocity:0.21"
+    ]
+  },
+  "anomalies": {
+    "sudden_movement_spikes": 521,
+    "sudden_au_drops": 1921,
+    "behavioral_shifts": 0
+  },
+  "session_analysis": {
+    "session_count": 1,
+    "analysis": "Single session - cross-session analysis skipped"
+  }
+}

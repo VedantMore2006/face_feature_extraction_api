@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-03-24T12:44:56",
+  "inputs": [
+    "data/patient_level_master_180k_cleaned.csv"
+  ],
+  "basic": {
+    "row_count": 180000,
+    "column_count": 207,
+    "numeric_column_count": 205,
+    "duplicate_row_count": 0,
+    "memory_mb": 307.0737
+  },
+  "missing": {
+    "total_missing_cells": 0,
+    "missing_cell_ratio": 0.0,
+    "columns_with_missing": 0
+  },
+  "stability": {
+    "constant_count": 1,
+    "near_constant_count": 1
+  },
+  "range_check": {
+    "normalized_min_expected": 0.0,
+    "normalized_max_expected": 1.0,
+    "violating_columns": 102
+  },
+  "correlation": {
+    "high_pair_count": 345,
+    "threshold_abs_r": 0.9
+  },
+  "temporal": {
+    "timestamp_column_present": false,
+    "note": "Column 'timestamp' not found."
+  },
+  "artifacts": {
+    "summary_json": "reports/eda/eda_20260324_124347/summary.json",
+    "plots_generated": []
+  }
+}

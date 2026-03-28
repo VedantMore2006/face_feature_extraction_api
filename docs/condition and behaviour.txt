@@ -1,0 +1,1564 @@
+Core Video / Facial Behavioral Features that are included in the Agent 
+Facial Action Units (AUs): Frequency, duration, and intensity of AUs, specifically AU1, AU2, AU12, and AU15.(FACS/Automatic Face Analysis (AFA) )
+Expressivity Metrics: Emotion amplitude/variance, smile frequency and duration, and flatness of affect (low variance).
+Head Pose & Movement: Head nods, tilts, and movement speed (proxies for psychomotor retardation or agitation).
+Eye Features: Blink rate, gaze direction stability, and eye-contact proxies.
+Micro-behavioral Timing: Time to first smile, response latency, and micro-expression occurrences.
+3D Facial Landmarks / Geometry: Landmark movement statistics and 3D facial landmark trajectories.
+Computational feature Mathematical formulas: integrates your 34 extracted features.(Click here)
+Depressive Disorders
+1. Major Depressive Disorder (Unipolar MDD)
+Sustained low mood + reduced emotional reactivity + psychomotor slowing.
+Unlike stress (activation) or hypomania (elevation), MDD is characterized by suppression and slowing.
+Facial Action Units: Amplitude and variance of AU12 and AU15.
+Clinical Meaning: Depression reduces positive affect (smiling) and may increase sadness-related expressions.
+Behavioral Meaning:
+Reduced smiling (AU12 activation decreases)
+Lower smile intensity
+Increased subtle sadness cues (AU15 lip corner depressor)
+Reduced variability in facial reactions
+Video Observable:
+Low AU12 amplitude across session
+Reduced AU12 variance
+Possible mild AU15 activation
+Narrow emotional expression range
+Short Meaning: Smiling decreases and facial emotional range narrows.
+Feature Set A – AU Amplitude Metrics
+For each AU:
+1. Mean Intensity
+Where:
+ = intensity at frame 
+ = total frames
+Depression pattern:
+ Mean AU12
+Slight  or stable AU15
+ overall AU intensity spread
+2. AU Variance (Emotional Variability): 
+Depression signature:
+Low AU12 variance
+Low global AU variance
+Narrow dynamic range
+Captures flattening.
+3. AU Activation Frequency:  (Threshold-based activation)
+Depression:
+ AU12 activation frequency
+Low activation transitions
+4. AU Dynamic Range: 
+Depression:
+Reduced emotional amplitude range
+
+
+		
+
+	
+
+
+
+
+
+Expressivity: Reduced facial expressivity (lower AU amplitude/variance) and overall facial expressivity variance.
+Clinical Meaning: Emotional blunting and reduced reactivity are central depressive features.
+Behavioral Meaning:
+Limited facial movement
+Minimal emotional reaction to prompts
+Reduced dynamic shifts in expression
+Face appears emotionally flat
+Video Observable:
+Low overall AU variance
+Reduced emotional amplitude
+Limited facial movement transitions
+Stable, low-intensity facial baseline
+Short Meaning: Face shows minimal emotional variation.
+Psychomotor/Movement: Decreased head movement and head-motion velocity.
+Clinical Meaning: Psychomotor retardation is common in MDD (Major Depressive Disorder).
+Behavioral Meaning:
+Slow head nodding
+Reduced gestures
+Minimal posture shifts
+Sluggish movement style
+Contrast: Unlike anxiety (restless) or hypomania (animated).
+Video Observable:
+Low head velocity
+Reduced motion energy
+Minimal landmark displacement
+Decreased gesture frequency
+Short Meaning: Body movements are slow and reduced.
+Eye Features: Blink rate.
+Clinical Meaning: Depression can alter arousal levels, sometimes reducing spontaneous blinking.
+Behavioral Meaning:
+Lower blink frequency
+Slower blink cycles
+Reduced eye engagement
+(Not universal — but often reduced arousal.)
+Video Observable:
+Decreased blink rate
+Longer inter-blink intervals
+Reduced gaze shifts
+Short Meaning: Blink rate may decrease due to lowered arousal.
+Temporal (related to time): Longer response latency.
+Clinical Meaning: Cognitive slowing affects response initiation.
+Behavioral Meaning:
+Noticeable hesitation before answering
+Slower speech onset
+Delayed reaction to prompts
+Unlike acute stress (fast), this reflects slowed processing.
+Video Observable:
+Increased pause duration
+Delayed mouth opening
+Slower nod onset
+Short Meaning: Responses are slower due to cognitive slowing.
+Flattened Affect: Low AU variance.
+Clinical Meaning: Emotional range becomes restricted.
+Behavioral Meaning:
+Limited smile intensity
+Minimal emotional shifts
+Stable low-expression baseline
+Emotional neutrality even during positive prompts
+Video Observable:
+Very low AU standard deviation
+Reduced dynamic facial transitions
+Narrow amplitude distribution
+Short Meaning: Emotional expressions remain consistently low and flat.
+Big Pattern Snapshot
+Major Depressive Disorder (Unipolar MDD):
+Low expressivity
+Low movement
+Low blink rate (sometimes)
+Slow responses
+Narrow emotional variance
+Everything trends downward.
+
+2. Chronic Depression (Dysthymia)
+Core theme:
+Persistent low-grade depressive state over long periods.
+Unlike Major Depressive Disorder (episodic and often more severe), dysthymia is:
+Less intense
+But long-lasting
+Emotionally stable in its low tone
+This is the stability of a low state.
+Long-term Expressivity: Chronically reduced expressivity across time series and stable low AU variance.
+Clinical Meaning: Emotional blunting is persistent and does not fluctuate significantly over time.
+Behavioral Meaning:
+Limited smiling across sessions
+Low emotional amplitude consistently
+Minimal facial reaction to both positive and negative prompts
+Emotional tone appears subdued over repeated interactions
+Unlike Bipolar variability — this does not shift upward.
+Video Observable:
+Low AU12 activation across sessions
+Stable low AU variance over time
+Narrow emotional amplitude distribution
+No significant emotional spikes
+Short Meaning: Emotional expression remains consistently low over long periods.
+Psychomotor / Movement: Minimal head movement variability and chronically reduced facial expressivity.
+Clinical Meaning: Persistent mild psychomotor slowing without episodic variation.
+Behavioral Meaning:
+Reduced gesture frequency
+Slow or minimal head nodding
+Low motor energy across sessions
+Consistent physical stillness
+Note: Unlike MDD episodes — there are no strong shifts; it’s steady.
+Video Observable:
+Low head velocity across recordings
+Minimal motion energy
+Stable reduced movement variance
+Consistent motor pattern across time
+Short Meaning: Movement remains consistently low and subdued over time.
+Temporal (related to time): Slow response initiation across sessions.
+Clinical Meaning: Mild but persistent cognitive slowing.
+Behavioral Meaning:
+Delayed answers consistently
+Slight pause before speaking in multiple sessions
+Reduced spontaneity over time
+Note: Unlike acute depression episode — delay is stable and ongoing.
+Video Observable:
+Increased response latency across recordings
+Stable delay pattern
+No episodic acceleration
+Short Meaning: Responses are consistently slower across repeated interactions.
+Affect Stability: Stable flattened affect over repeated interactions.
+Clinical Meaning: Mood remains persistently low without dramatic fluctuation.
+Behavioral Meaning:
+Emotional tone remains muted
+No strong positive reactivity
+No elevated engagement periods
+Consistent subdued demeanor
+Unlike Cyclothymia — no oscillation.
+Video Observable:
+Low emotional variance across sessions
+Consistent flat affect
+Minimal amplitude fluctuation in facial signals
+Short Meaning: Emotional flatness remains stable across time.
+Big Pattern Snapshot: Chronic Depression (Dysthymia) = Stable low expressivity
+Stable low movement
+Stable slow responses
+No significant upward fluctuation
+The key word here is stability of low state.
+3. Depression in Bipolar Disorder
+Core theme:
+Depressive states occurring within the bipolar spectrum but embedded in overall mood variability.
+Unlike Unipolar MDD (consistently downward trend), bipolar depression exists within a fluctuating mood framework.
+This is instability + polarity shifts.
+Psychomotor Variability: Fluctuating psychomotor patterns across sessions (retardation vs. increased movement).
+Clinical Meaning: Bipolar disorder involves alternating mood states. Even during depressive periods, motor activity may not remain uniformly slowed across time.
+Behavioral Meaning:
+Some sessions show slowed movement (retardation)
+Other sessions show elevated or restless movement
+Clear contrast between low-energy and high-energy periods
+Movement patterns are inconsistent across recordings
+Unlike unipolar depression — motor slowing is not stable.
+Video Observable:
+Large variance in head velocity across sessions
+Alternating low and high motion energy recordings
+Gesture frequency inconsistency
+Postural shifts between subdued and animated states
+Short Meaning: Motor activity alternates between slowed and elevated across time.
+
+Expressivity: Variable facial expressivity and inconsistency across sessions.
+Clinical Meaning: Emotional expression shifts depending on mood polarity.
+Behavioral Meaning:
+Some sessions show flattened affect.
+Other sessions show amplified or animated expression.
+Smile frequency fluctuates.
+Emotional tone lacks stability.
+Unlike dysthymia — there is no stable low baseline.
+Video Observable:
+AU variance low in some sessions, high in others.
+Smile activation inconsistent across recordings.
+Emotional amplitude fluctuates noticeably.
+Short Meaning: Emotional expression varies significantly across time.
+Temporal (related to time): Inconsistent response latency.
+Clinical Meaning: Cognitive speed fluctuates with mood state.
+Behavioral Meaning:
+Slow responses during depressive states.
+Fast responses during elevated states.
+Noticeable inconsistency in reaction time across sessions.
+Unlike unipolar MDD — delay is not stable.
+Video Observable:
+Response latency high in some recordings.
+Reduced latency in others.
+Wide variance in reaction time across sessions.
+Short Meaning: Response timing fluctuates depending on mood state.
+Big Pattern Snapshot
+Depression in Bipolar Disorder = Depressive features +
+Intermittent elevated patterns
+High cross-session variability
+Key differentiator:
+Unipolar MDD → consistently low
+Bipolar depression → low within a fluctuating system
+4. Seasonal Depression (SAD)
+(Seasonal Affective Disorder – depressive subtype)
+Core theme:
+Recurrent depressive pattern linked to seasonal cycles (typically winter).
+Unlike unipolar MDD (continuous or episodic without seasonal trigger), this is time-of-year dependent variability.
+Seasonal Expressivity:
+Description: Reduced facial expressivity during the depressive season, with partial normalization in non-depressive months.
+Clinical Meaning: Mood and affect decline seasonally (typically with reduced emotional reactivity), followed by improvement in other months.
+Behavioral Meaning:
+Fewer smiles and reduced emotional amplitude during the depressive season.
+Face appears dull or less reactive in winter months.
+Noticeable improvement during non-depressive season.
+Emotional tone fluctuates annually, not randomly.
+Contrast: Unlike dysthymia, the low state is not constant year-round.
+Video Observable:
+Lower AU12 activation and reduced AU variance during depressive months.
+Higher emotional amplitude in non-depressive season.
+Clear seasonal contrast in facial expressivity metrics.
+Short Meaning: Emotional expression decreases during the depressive season and partially recovers in other months.
+Psychomotor / Movement:
+Description: Reduced head movement during the depressive season and season-linked reduction in psychomotor activity.
+Clinical Meaning: Seasonal depressive phase includes psychomotor slowing and reduced energy.
+Behavioral Meaning:
+Slower head nodding and reduced gesture frequency during depressive months.
+Lower overall motor energy.
+Increased physical sluggishness in season-specific periods.
+Improved movement energy outside the depressive season.
+Contrast: Unlike chronic depression, the slowing is season-bound.
+Video Observable:
+Lower head velocity and reduced motion energy during depressive season.
+Fewer gestures in winter recordings.
+Increased movement metrics during non-depressive months.
+Short Meaning: Movement slows during the depressive season and improves outside it.
+Big Pattern Snapshot: Seasonal Depression (SAD)
+Season-dependent reduction in:
+Expressivity
+Movement
+Energy
+Partial recovery in non-depressive months.
+This represents cyclical temporal modeling at a macro time scale (months, not sessions).
+5. Pregnancy-Related / Peripartum Depression
+Core theme:
+Depressive symptoms occurring during pregnancy or in the postpartum period.Behaviorally, it resembles Major Depressive Disorder —
+but the context is peripartum hormonal + psychosocial changes.
+This is context-linked depression.
+Expressivity: Reduced facial expressivity, diminished affect variability, and flattened affect.
+Clinical Meaning: Emotional blunting and reduced reactivity occur in the peripartum depressive state.
+Behavioral Meaning:
+Reduced smiling
+Limited emotional shifts
+Muted reactions to prompts
+Facial affect appears subdued
+Less spontaneous warmth
+Unlike hypomania — emotional amplitude decreases.
+Video Observable:
+Low AU12 (smile) activation frequency
+Reduced overall AU variance
+Narrow emotional amplitude range
+Stable low-intensity facial baseline
+Short Meaning: Emotional expressions are reduced and less dynamic.
+Psychomotor: Subtle psychomotor slowing and reduced smile frequency.
+Clinical Meaning: Mild psychomotor retardation, often subtler than severe MDD.
+Behavioral Meaning:
+Slower head nods
+Reduced gestures
+Decreased spontaneous smiling
+Slightly slowed movement patterns
+Note: Mood-driven, unlike purely physical exhaustion.
+Video Observable:
+Reduced head velocity
+Lower motion energy
+Decreased smile occurrence
+Minimal gesture frequency
+Short Meaning: Movement and smiling frequency are mildly reduced.
+Temporal (related to time): Increased response latency and delayed emotional responses.
+Clinical Meaning: Cognitive slowing and delayed emotional processing.
+Behavioral Meaning:
+Noticeable pause before responding
+Delayed smile or emotional reaction
+Slower conversational pacing
+Reduced spontaneity
+Note: Responses are slowed, unlike acute stress.
+Video Observable:
+Increased response latency
+Delayed facial activation after emotional prompts
+Slower mouth-opening onset
+Reduced rapid engagement cues
+Short Meaning: Emotional and verbal responses occur more slowly.
+Peripartum Depression:
+Reduced expressivity:
+Subtle psychomotor slowing
+Reduced smiling
+Delayed responses
+Behaviorally similar to unipolar depression, but context-bound to pregnancy/postpartum period.
+6. Psychotic Depression
+Core theme:
+Severe depressive episode with psychotic features (delusions, hallucinations) and marked behavioral impairment.
+Behaviorally, this is not mild flattening.
+ This is extreme suppression or extreme dysregulation.
+Affective Flattening: Profound facial flattening, severe affective flattening, and minimal AU activation.
+Clinical Meaning: Emotional expression is markedly diminished, often appearing emotionally blank or detached.
+Behavioral Meaning:
+Almost no smiling
+Minimal emotional reaction
+Face appears rigid or vacant
+Reduced spontaneous micro-expressions
+Emotional responses nearly absent
+Note: Unlike mild MDD — this is severe reduction.
+Video Observable:
+Very low AU activation across entire session
+Near-zero AU variance
+Minimal facial muscle transitions
+Extremely narrow emotional amplitude range
+Short Meaning: Facial expressions are profoundly reduced and nearly absent.
+Psychomotor:
+Extreme psychomotor retardation or agitation and abnormal psychomotor behavior.
+Clinical Meaning: Severe depression may present either with extreme slowing (retardation) or marked agitation.
+Behavioral Meaning (Retardation subtype):
+Very slow movements
+Minimum gestures
+Prolonged stillness
+Delayed head movements
+Behavioral Meaning (Agitated subtype):
+Repetitive pacing-like movement
+Rapid posture shifts
+Visible internal distress
+Restless but dysregulated motor behavior
+Note: Unlike typical depression — intensity is much higher.
+Video Observable:
+Extremely low head velocity (retardation)
+OR
+Elevated motion energy with irregular patterns (agitation)
+Abnormal movement distribution
+Long static periods or chaotic movement bursts
+Short Meaning: Movement is either severely slowed or abnormally agitated.
+Temporal (related to time): Very long response latency.
+Clinical Meaning: Severe cognitive slowing or psychotic processing delays response initiation.
+Behavioral Meaning:
+Long silence before answering
+Prolonged pauses
+Delayed speech onset
+Slow or fragmented response timing
+Unlike mild depression — delays are pronounced.
+Video Observable:
+Significantly increased response latency
+Long pause durations
+Delayed mouth opening
+Slow conversational pacing
+Short Meaning: Responses are markedly delayed.
+Gaze: Reduced gaze engagement.
+Clinical Meaning: Reduced interpersonal engagement or internal preoccupation.
+Behavioral Meaning:
+Avoids sustained eye contact
+Downward gaze
+Vacant or distant look
+Reduced tracking of conversational cues
+Unlike social anxiety — this is not evaluative fear; it may reflect withdrawal or internal focus.
+Video Observable:
+Reduced eye-contact duration
+Downward head pitch
+Limited gaze fixation toward interviewer
+Decreased gaze shift responsiveness
+Short Meaning: Eye engagement is significantly reduced.
+Big Pattern Snapshot: Psychotic Depression
+Profound emotional flattening
+Extreme motor disturbance (very slow or agitated)
+Very delayed responses
+Minimal gaze engagement
+Severity and extremity are key differentiators.
+7. PMS / PMDD-related Depression
+(Premenstrual Syndrome / Premenstrual Dysphoric Disorder)
+Core theme: Cyclic mood disturbance tied to the menstrual cycle, especially the luteal phase (pre-menses).
+Unlike unipolar depression (continuous), this is cycle-dependent fluctuation.
+Facial Tension: Increased facial tension and irritability micro-expressions.
+Clinical Meaning: Hormonal fluctuations in the luteal phase increase emotional reactivity and irritability.
+Behavioral Meaning:
+Brow furrow more frequent
+Subtle irritation expressions
+Tightened lips
+Short-lived frustration micro-expressions
+Increased facial stiffness pre-menses
+Unlike chronic stress — this is phase-linked.
+Video Observable:
+Increased AU4 activation frequency
+Lip compression cues
+Brief negative micro-expression bursts
+Elevated facial muscle tension during luteal recordings
+Short Meaning: Face shows increased irritability and tension before menstruation.
+Expressivity: Reduced during the luteal phase, with post-menses recovery.
+Clinical Meaning: Emotional dampening and mood reduction before menstruation, with normalization afterward.
+Behavioral Meaning:
+Fewer smiles during luteal phase.
+Reduced emotional amplitude.
+Limited positive affect.
+Emotional responsiveness improves post-menses.
+Unlike dysthymia — reduction is cyclical, not stable.
+Video Observable:
+Lower AU12 (smile) activation in luteal phase.
+Reduced AU variance pre-menses.
+Higher expressivity in follicular/post-menses phase.
+Clear cyclic contrast across recordings.
+Short Meaning: Emotional expressivity drops before menstruation and improves afterward.
+Affective Stability: Premenstrual affective instability and reduced positive affect.
+Clinical Meaning: Mood becomes more unstable and negative during the luteal phase.
+Behavioral Meaning:
+Rapid emotional shifts.
+Increased irritability.
+Reduced enthusiasm.
+Short emotional tolerance window.
+Fluctuating affect during premenstrual period.
+Unlike bipolar variability — changes are cycle-bound.
+Video Observable:
+Increased emotional amplitude variability during luteal phase.
+Reduced positive affect frequency.
+Greater emotional transition frequency pre-menses.
+Stabilization after cycle reset.
+Short Meaning: Mood becomes unstable and more negative before menstruation.
+Big Pattern Snapshot (PMS / PMDD-related Depression):
+Cycle-dependent tension.
+Irritability.
+Reduced positive affect.
+Post-menses recovery.
+This is biologically periodic fluctuation, not continuous depression.
+8. Non-Typical / Atypical Depression
+Core Theme: Mood reactivity is preserved
+Emotional response to positive stimuli remains intact (unlike melancholic depression).
+Shows preserved positive reactivity, but baseline low mood and energy (selective preservation).
+Reactivity: Preserved facial expressivity and emotional reactivity to positive stimuli
+Clinical Meaning: Individuals can still show emotional improvement in response to positive events.
+Behavioral Meaning:
+Smiles in response to positive questions.
+Emotional amplitude increases with positive prompts.
+Temporary mood lift is visible.
+Facial expressions are not completely flat.
+Positive stimuli still activate a response (unlike melancholic depression).
+Video Observable:
+AU12 activation during positive segments.
+Increased AU variance during positive prompts.
+Emotional amplitude rises contextually.
+Clear contrast between neutral and positive segments.
+Short Meaning: Emotional responsiveness remains intact for positive stimuli.
+Alertness: Reduced alertness cues
+Clinical Meaning: Individuals may show low energy or lethargy despite preserved emotional reactivity.
+Behavioral Meaning:
+Slightly drooped eyelids.
+Reduced gaze intensity.
+Slower head orientation.
+Lower baseline attentiveness.
+No hypervigilance (unlike anxiety).
+Video Observable:
+Reduced eye openness baseline.
+Lower head movement frequency.
+Decreased spontaneous engagement cues.
+Mild reduction in posture activation.
+Short Meaning: Baseline alertness appears reduced.
+
+Psychomotor: Mild psychomotor slowing and delayed initiation of responses.
+Clinical Meaning: Some degree of motor and cognitive slowing remains present.
+Behavioral Meaning:
+Slight delay before responding
+Slower head nods
+Reduced gesture frequency
+Mildly slowed conversational pacing
+Unlike severe MDD — slowing is moderate.
+Video Observable:
+Increased response latency (mild)
+Reduced head velocity
+Lower motion energy
+Delayed speech onset
+Short Meaning: Movement and response initiation are mildly slowed.
+Big Pattern Snapshot: Atypical Depression
+Preserved positive reactivity
+Mild slowing
+Reduced alertness
+Emotional improvement during positive stimuli
+Key differentiator:
+Melancholic MDD → No mood reactivity
+Atypical → Mood improves with positive input
+9. Melancholic Depression
+Core theme: Severe, biologically driven depression with profound motor slowing and emotional non-reactivity.
+Melancholic depression is characterized by:
+Marked psychomotor retardation
+Deep affective flattening
+Lack of mood reactivity
+This is high-severity suppression.
+Psychomotor Retardation: Pronounced psychomotor retardation, minimal head movement, and rigid posture.
+Clinical Meaning: Significant motor slowing and reduced spontaneous movement due to severe depressive state.
+Behavioral Meaning:
+Very slow head movements
+Minimal gesturing
+Long periods of stillness
+Rigid or fixed posture
+Reduced spontaneous physical engagement
+Video Observable:
+Extremely low head velocity
+Minimal motion energy
+Very low gesture frequency
+Sustained static posture
+Reduced postural variability
+Short Meaning: Movement is markedly slowed and physically rigid.
+Expressivity: Very low facial AU amplitude and variance, flattened affect, and minimal facial expressivity.
+Clinical Meaning: Emotional reactivity is severely blunted; positive stimuli do not meaningfully increase expression.
+Behavioral Meaning:
+Minimal smiling even during positive prompts
+Narrow emotional range
+Lack of spontaneous micro-expressions
+Face appears emotionally empty or detached
+No contextual emotional lift
+Video Observable:
+Near-zero AU variance
+Very low AU12 activation
+Minimal amplitude shifts across session
+No increase in expression during positive segments
+Short Meaning: Facial expression remains profoundly flat regardless of context.
+
+Temporal (related to time): Prolonged response latency and delayed responses.
+Clinical Meaning: Severe cognitive and motor slowing delays response initiation.
+Behavioral Meaning:
+Long pauses before answering
+Slow speech onset
+Delayed emotional reaction
+Reduced conversational spontaneity
+Note: Unlike acute stress (fast) or hypomania (accelerated), this is pronounced slowing.
+Video Observable:
+Very high response latency
+Extended pause duration
+Delayed mouth opening
+Slowed head nod initiation
+Short Meaning: Responses are significantly delayed due to severe slowing.
+Big Pattern Snapshot: Melancholic Depression
+Extreme psychomotor slowing
+Profound emotional flattening
+No positive reactivity
+Very long response latency
+Key characteristics: Severity and absence of mood reactivity.
+
+Anxiety Disorders
+1. Generalized Anxiety Disorder (GAD)
+Core Theme: Chronic, excessive worry with sustained physiological arousal (persistent background activation, unlike episodic panic disorder).
+Facial Tension: Brow furrow (AU4) and sustained facial tension.
+Clinical Meaning: Ongoing worry causes continuous low-level muscle tension.
+Behavioral Meaning:
+Brow frequently drawn together.
+Face appears strained at rest.
+Tight lips or jaw.
+Limited relaxation between prompts.
+Tension is persistent, not episodic.
+Video Observable:
+Sustained AU4 activation.
+High AU4 duration ratio.
+Reduced neutral baseline relaxation.
+Mild but continuous muscle contraction.
+Short Meaning: Face appears chronically tense due to persistent worry.
+Eye Features: Increased blink rate and frequent blinking.
+Clinical Meaning: Heightened arousal increases autonomic activation, affecting blink behavior.
+Behavioral Meaning:
+Frequent blinking.
+Short inter-blink intervals.
+Slight eye restlessness.
+Rapid eye movement during thinking.
+Video Observable:
+Elevated blink rate.
+Reduced inter-blink interval.
+Blink clustering.
+Increased gaze shifts.
+Short Meaning: Blink frequency increases due to sustained anxiety.
+Psychomotor / Movement: Restlessness cues, micro-movements, and restless posture.
+Clinical Meaning: Persistent anxiety produces subtle motor agitation.
+Behavioral Meaning:
+Small head shifts.
+Fidgeting.
+Minor posture adjustments.
+Slight upper-body instability.
+Constant low-level movement.
+Energy is tense, not elevated (unlike hypomania).
+Video Observable:
+Increased small-scale motion energy.
+Higher head velocity variance.
+Frequent micro-adjustments.
+Landmark displacement variability.
+Short Meaning: Body shows subtle but ongoing restlessness.
+Temporal (related to time): Shortened response latency.
+Clinical Meaning: Hyper-alert cognitive state speeds up response initiation.
+Behavioral Meaning:
+Quick responses
+Minimal hesitation
+Rapid speech onset
+Immediate conversational reaction
+Unlike depression — no cognitive slowing.
+Video Observable:
+Reduced response latency
+Faster mouth opening after prompt
+Rapid nod onset
+Short pause duration
+Short Meaning: Person responds quickly due to hyper-alertness.
+Big Pattern Snapshot
+Generalized Anxiety Disorder = Chronic tension
+Increased blinking
+Subtle restlessness
+Fast response initiation
+Sustained activation without emotional elevation.
+2. Panic Disorder
+Core Theme: Sudden, intense episodes of fear with rapid physiological and behavioral escalation (Episodic and high-intensity, unlike GAD's chronic tension).
+Fear Expression: Acute facial fear expressions (wide eyes, AU1+AU2) and intense fear expressions.
+Clinical Meaning: Panic episodes activate the fear circuitry abruptly and intensely.
+Behavioral Meaning:
+Sudden widening of eyes
+Eyebrows raised (AU1 + AU2)
+Heightened facial alertness
+Intense emotional expression spike
+Short-duration but high-intensity fear display (Sharp and episodic, unlike chronic anxiety).
+Video Observable:
+Sudden AU1/AU2 activation peak
+Increased eye openness
+High-amplitude facial expression bursts
+Short-lived but intense emotional spike
+Short Meaning: Face shows sudden, intense fear expression.
+Psychomotor / Movement: Rapid head movement, visible agitation, and rapid behavioral shifts.
+Clinical Meaning: Fight-or-flight response causes abrupt motor activation.
+Behavioral Meaning:
+Rapid head turns
+Quick posture changes
+High motor energy
+Restless, unsettled movement
+Sudden behavioral transitions (Movement amplitude is higher than in GAD).
+Video Observable:
+Increased head velocity
+Motion energy spikes
+Rapid landmark displacement
+Sudden movement acceleration
+Short Meaning: Body exhibits sudden, high-energy agitation.
+Autonomic Proxies: Hyperventilation Cues
+Clinical Meaning: Panic activates the autonomic nervous system, often causing rapid breathing.
+Behavioral Meaning:
+Rapid breathing
+Visible chest or shoulder rise
+Slight head movement synchronized with breath
+Mouth opening frequency increases
+Distinction: Unlike general stress, breathing rate may be markedly elevated.
+Video Observable:
+Increased mouth-open cycles
+Upper-body rhythmic motion
+Faster respiratory-related micro-movements
+Reduced breath interval
+Short Meaning: Visible rapid breathing indicating autonomic arousal.
+Temporal (related to time): Abrupt Response Timing Changes
+Clinical Meaning: Panic disrupts normal cognitive processing timing.
+Behavioral Meaning:
+Sudden rapid responses
+Or brief freeze before response
+Unstable reaction timing
+Irregular conversational rhythm
+Distinction: Unlike depression, timing becomes unstable, not just slow.
+Video Observable:
+Response latency spikes or drops suddenly
+High reaction-time variance
+Irregular speech onset timing
+Timing instability across short windows
+Short Meaning: Response timing becomes suddenly unstable.
+Big Pattern Snapshot: Panic Disorder
+Sudden intense fear
+High-amplitude motor agitation
+Hyperventilation cues
+Abrupt timing instability
+This is episodic high-intensity activation.
+3. Social Anxiety Disorder
+Core Theme: Fear of negative evaluation in social situations.
+Unlike panic or GAD, this is social-context–specific inhibition.
+Gaze / Eye Contact: Gaze avoidance, reduced eye contact, and gaze aversion.
+Clinical Meaning: Fear of judgment leads to avoidance of direct social gaze.
+Behavioral Meaning:
+Avoids sustained eye contact
+Looks down or sideways during interaction
+Breaks eye contact quickly
+Limited direct gaze during social prompts
+Appears uncomfortable when being observed
+Video Observable:
+Reduced eye-contact duration
+Increased gaze deviation angle
+Short gaze fixation lengths
+Frequent gaze shifts away from camera/interviewer
+Short Meaning: Person avoids direct eye contact during social interaction.
+Facial Tension: Brow furrow (AU4) and facial tension during interaction.
+Clinical Meaning: Social evaluation triggers anticipatory anxiety and muscle tension.
+Behavioral Meaning:
+Brow drawn together during social questioning
+Tight lips
+Upper-face stiffness
+Visible strain while speaking
+Tension increases in interactive segments
+Video Observable:
+AU4 activation during social prompts
+Increased muscle tension in upper face
+Reduced relaxation between social questions
+Mild sustained facial contraction
+Short Meaning: Face becomes tense during social interaction.
+Expressivity: Reduced facial expressivity during social prompts.
+Clinical Meaning: Emotional expression becomes inhibited in evaluative contexts.
+Behavioral Meaning:
+Limited smiling during interaction
+Muted emotional responses
+Reduced amplitude of expressions
+Constrained facial reactions when addressed directly
+Video Observable:
+Lower AU variance during social segments
+Reduced smile activation (AU12) in interaction windows
+Narrow emotional amplitude range under evaluation
+Short Meaning: Emotional expressions are suppressed in social settings.
+Psychomotor / Movement: Head lowering.
+Clinical Meaning: Submissive or avoidance posture during perceived social threat.
+Behavioral Meaning:
+Chin lowered
+Downward head pitch
+Reduced upright posture
+Slight physical withdrawal
+Note: Unlike agoraphobia — posture reflects evaluation discomfort, not spatial avoidance.
+Video Observable:
+Negative head pitch angle
+Sustained downward orientation
+Reduced frontal head alignment
+Limited upward gaze
+Short Meaning: Head posture reflects social withdrawal.
+Blushing: Blushing proxies.
+Clinical Meaning: Social embarrassment activates autonomic response.
+Behavioral Meaning:
+Facial redness
+Sudden warmth expression
+Slight facial self-touch gestures
+Subtle embarrassment cues
+Video Observable:
+Increased redness in cheek region (if lighting normalized)
+Sudden skin-tone shift
+Face-touch frequency increase
+Short Meaning: Visible autonomic embarrassment response during interaction.
+Big Pattern Snapshot: Social Anxiety Disorder
+Gaze avoidance
+Social-triggered facial tension
+Context-dependent reduced expressivity
+Downward head posture
+Possible blushing
+Key differentiators:
+Not globally flat (like depression)
+Not panic-level intense
+Not chronic baseline tension
+It is evaluation-triggered inhibition.
+4. Separation Anxiety Disorder (SAD)
+Not Social Anxiety. Different constructs.
+Core theme: fear or distress related to separation from attachment figures.
+Unlike agoraphobia (fear of public spaces) or specific phobia (single object), this is attachment-based anxiety.
+Distress: Visible distress when separation is discussed and distress cues when separation scenarios are introduced.
+Clinical Meaning: Discussion of being away from loved ones triggers anxiety.
+Behavioral Meaning:
+Face tightens when talking about separation
+Eyes slightly widen
+Lips tense
+Emotional discomfort increases
+Subtle sadness + fear mixture
+Important: This is scenario-triggered.
+Video Observable:
+AU4 (brow furrow) increase
+AU1 slight activation
+Reduced smile cues
+Increased blink clusters
+Short Meaning: Visible anxiety and emotional discomfort when separation is discussed.
+Tension: Facial tension.
+Clinical Meaning: Attachment-related fear activates muscle tension.
+Behavioral Meaning
+Brow furrow
+Lip compression
+Jaw stiffness
+Subtle rigidity
+Unlike panic — intensity is moderate but persistent during topic.
+Video Observable
+Sustained AU4
+Lip press (AU24 if tracked)
+Reduced facial variability
+Short Meaning: Face becomes tense during separation-related discussion.
+Behavioral: Clinging or withdrawal behaviors.
+Clinical Meaning: Fear of losing attachment figure leads to dependency or avoidance.
+Behavioral Meaning: Two possible patterns:
+Clinging pattern:
+Leaning forward
+Seeking reassurance
+Increased engagement
+Withdrawal pattern:
+Head down
+Reduced movement
+Reduced engagement
+Behavior may polarize.
+Video Observable:
+Reduced interpersonal distance (lean forward)
+OR
+Increased downward head pitch
+Reduced motion energy
+Short Meaning: Person either seeks reassurance or withdraws when separation is mentioned.
+Temporal (related to time): Increased response latency.
+Clinical Meaning: Emotional processing slows when attachment fear is activated.
+Behavioral Meaning:
+Hesitation before answering separation-related questions
+Pause before speaking
+Slight freeze response
+Not hyper-alert like GAD.
+Video Observable:
+Delayed mouth opening
+Delayed head nod
+Increased pause duration
+Short Meaning: Person hesitates longer when discussing separation.
+5. Health Anxiety (Illness Anxiety Disorder)
+Preoccupation with having or developing a serious illness.
+Unlike GAD (general worry), this is health-topic-specific anxiety.
+Anxiety/Tension: Visible anxiety during health-related topics and facial tension.
+Clinical Meaning: Discussion about symptoms, medical tests, illness triggers anxiety.
+Behavioral Meaning:
+Brow furrow when talking about health
+Lip tightening
+Slight facial rigidity
+Concerned or worried facial expression
+Not necessarily dramatic fear — more persistent worry.
+Video Observable:
+AU4 activation during health segments
+Reduced smile activation
+Sustained mild muscle tension
+Increased blink bursts
+Short Meaning: Face becomes tense and anxious when discussing health concerns.
+Behavioral: Scanning behaviors and guarded posture.
+Clinical Meaning: Individuals hyper-monitor their body and environment for health threats.
+Behavioral Meaning:
+Frequent body checking
+Looking down at hands/arms
+Touching chest/throat
+Guarded, protective posture
+Slight shoulder tension
+This is hypervigilance.
+Video Observable:
+Increased gaze shifts downward to body
+Repeated self-touch gestures
+Reduced posture openness
+Slight contraction of shoulders
+Short Meaning: Person appears hyper-alert and physically guarded when discussing health.
+Temporal (related to time): Increased response latency when reassured.
+Clinical Meaning:
+Reassurance does not immediately reduce anxiety.
+Processing reassurance takes longer.
+Behavioral Meaning:
+Pause before responding after reassurance
+Slight hesitation
+Delayed facial relaxation
+Continued tension after calming statement
+Unlike GAD (quick response) or panic (abrupt shifts), here delay occurs specifically after reassurance.
+Video Observable:
+Delayed smile after reassurance
+Delayed head nod
+Slow facial relaxation
+Short Meaning:
+Person hesitates longer and remains tense even after reassurance.
+6. Performance Anxiety
+Core Theme: Anxiety triggered by performance evaluation (exams, presentations, interviews).
+Unlike Social Anxiety, this is task-specific evaluation pressure.
+Tension: Jaw clenching and brow furrow (AU4).
+Clinical Meaning: Performance pressure activates anticipatory anxiety and muscular tension.
+Behavioral Meaning:
+Brow drawn together (AU4)
+Jaw tightening
+Lip compression
+Facial stiffness during task-related prompts
+Strained concentration look
+Unlike panic — intensity is moderate and task-bound.
+Video Observable:
+Sustained AU4 activation during performance-related segments
+Lower-face tension cues (jaw/lip compression)
+Reduced relaxation baseline
+Facial muscle stiffness during evaluation prompts
+Short Meaning: Face shows visible strain during performance-related discussion.
+Psychomotor / Posture: Restlessness and rigid posture.
+Clinical Meaning: Internal anxiety causes motor agitation, but social context restricts outward movement.
+Behavioral Meaning:
+Small fidgeting movements
+Slight body stiffness
+Raised shoulders
+Limited fluidity of gestures
+Controlled but tense posture
+Unlike hypomania — movement is tense, not energetic.
+Video Observable:
+Increased small-scale motion energy
+Reduced body openness
+Shoulder elevation
+Limited gesture amplitude
+Slight head movement variability
+Short Meaning: Body appears restless but physically constrained.
+Eye Features: Increased blink rate.
+Clinical Meaning: Heightened autonomic arousal increases blink frequency.
+Behavioral Meaning:
+Frequent blinking
+Short inter-blink intervals
+Slight eye tension
+Visual scanning during task thinking
+Unlike depression — blink rate increases rather than decreases.
+Video Observable:
+Elevated blink rate
+Reduced inter-blink interval
+Blink clustering during performance prompts
+Short Meaning: Blink frequency increases due to performance-related stress.
+Expressivity: Constrained facial expressivity
+Clinical Meaning: Emotional expression becomes controlled under evaluation pressure.
+Behavioral Meaning:
+Limited smiling
+Reduced emotional amplitude
+Serious facial tone
+Suppressed spontaneous reactions
+Video Observable:
+Reduced AU variance during performance segments
+Lower smile frequency
+Narrow emotional amplitude range
+Short Meaning: Facial expressions become controlled and restricted during performance context.
+Temporal (related to time): Increased response latency
+Clinical Meaning: Cognitive load and anxiety delay response initiation.
+Behavioral Meaning:
+Hesitation before answering performance questions
+Slight pause before speaking
+Slower conversational pacing during evaluation topics
+Video Observable:
+Increased response latency
+Delayed mouth opening
+Prolonged pause duration
+Slower nod onset
+Short Meaning: Person hesitates more when under performance pressure.
+Big Pattern Snapshot: Performance Anxiety
+Task-linked tension
+Restless but rigid posture
+Increased blinking
+Constrained expressivity
+Slightly delayed responses
+Key differentiator: The trigger is evaluation of competence, not interpersonal rejection (unlike Social Anxiety's fear of social judgment).
+7. Specific Phobia
+Fear Expression: Acute facial fear activation when trigger is mentioned.
+Clinical Meaning: Exposure (real or imagined) to a specific phobic stimulus produces an immediate fear response.
+Behavioral Meaning:
+Sudden widening of eyes
+Eyebrows raised (AU1 + AU2)
+Lip stretch (AU20)
+Brief but intense fear expression
+Expression spike immediately after trigger mention
+Video Observable:
+AU1/AU2 intensity spike (widened eyes)
+AU20 activation (horizontal lip stretch)
+Sudden increase in eye openness
+Short-duration high-amplitude facial burst
+Time-locked expression change after trigger word
+Short Meaning: Sudden high-intensity fear expression anchored to the phobic stimulus.
+Facial Tension: Increased muscle contraction during trigger discussion.
+Clinical Meaning: Anticipatory fear produces facial muscle tightening.
+Behavioral Meaning:
+Brow furrow (AU4)
+Tight lips
+Jaw stiffness
+Facial rigidity during stimulus discussion
+Video Observable:
+AU4 activation during trigger window
+Increased lower-face tension
+Reduced facial relaxation immediately after stimulus mention
+Elevated muscle activation delta vs baseline
+Short Meaning: Face becomes tense when the phobic stimulus is discussed.
+Withdrawal / Recoil Behavior
+Clinical Meaning: Fear activates avoidance and defensive motor patterns.
+Behavioral Meaning:
+Leaning backward
+Head pulling away
+Turning face slightly aside
+Visible recoil when imagining the stimulus
+Video Observable:
+Backward head translation
+Increased head yaw deviation
+Reduced frontal facial alignment
+Sudden postural shift at trigger timestamp
+Short Meaning: Body and face orient away from the feared stimulus.
+Visible Distress Indicators
+Clinical Meaning: Acute fear produces distress micro-signals.
+Behavioral Meaning:
+Brief facial grimace
+Rapid blinking during trigger
+Facial tightening followed by micro-freeze
+Momentary discomfort spike
+Video Observable:
+Blink burst cluster
+Transient AU activation spike
+Increased facial muscle variance during trigger segment
+Micro-expression bursts
+Short Meaning: Short-lived visible distress immediately following trigger exposure.
+
+8. Agoraphobia
+Agoraphobia: Fear of being in situations where escape feels difficult or help may not be available.
+Involves fear of:
+Public spaces
+Crowds
+Transport
+Open environments
+Characterized by anticipatory + spatial anxiety.
+Distress: Visible distress when imagining public situations and anxiety expressions.
+Clinical Meaning: Imagining public exposure triggers anticipatory anxiety.
+Behavioral Meaning:
+Face tightens when discussing crowds or transport.
+Subtle fear expression.
+Uneasy facial micro-reactions.
+Emotional discomfort increases during scenario discussion.
+This is anticipatory distress, not immediate panic.
+Video Observable:
+Increased AU4 activation during public-related segments.
+Mild AU1/AU2 activation.
+Reduced smile activation.
+Increased blink bursts.
+Slight increase in facial muscle tension during scenario prompts.
+Short Meaning: Visible discomfort when imagining public spaces.
+Tension: Facial tension.
+Clinical Meaning: Chronic anticipatory anxiety leads to sustained muscle stiffness.
+Behavioral Meaning:
+Brow furrow.
+Tight lips.
+Reduced facial relaxation.
+Subtle rigidity.
+Intensity moderate but sustained.
+Video Observable:
+Sustained AU4 activation.
+Lip compression cues.
+Reduced neutral baseline relaxation.
+Lower facial variability during anxiety topics.
+Short Meaning: Face remains tense during anxiety-provoking topics.
+Movement / Posture: Restless movements and guarded posture.
+Clinical Meaning: Internal anxiety produces a defensive physical stance.
+Behavioral Meaning:
+Slight fidgeting.
+Shoulders slightly raised.
+Body slightly closed or contracted.
+Protective posture.
+Not dramatic recoil like specific phobia.
+Video Observable:
+Increased small-scale motion energy.
+Reduced body openness.
+Shoulder elevation.
+Slight increase in micro-movements during scenario prompts.
+Short Meaning: Subtle restlessness with a protective body stance.
+Avoidance: Avoidance-related body orientation.
+Clinical Meaning: Fear leads to orientation away from perceived threat.
+Behavioral Meaning:
+Body slightly turned away
+Head angled off-camera
+Reduced frontal engagement
+Spatial avoidance rather than downward gaze
+Unlike social anxiety — this is not evaluation-driven.
+Video Observable:
+Increased head yaw angle deviation
+Reduced frontal alignment ratio
+Lateral orientation shift during public scenario discussion
+Short Meaning: Body subtly turns away from imagined public exposure.
+Temporal (related to time): Increased response latency.
+Clinical Meaning: Processing feared situations requires additional cognitive-emotional effort.
+Behavioral Meaning:
+Hesitation before answering public-scenario questions
+Slight freeze before responding
+Longer pause during exposure-related prompts
+Unlike GAD (fast responses)
+Video Observable:
+Increased response latency during public-related segments
+Delayed mouth opening
+Prolonged pause duration
+Slower nod onset
+Short Meaning: Longer hesitation when discussing feared public situations.
+Big Pattern Snapshot: Agoraphobia = Public-space–specific distress
+Sustained moderate tension
+Guarded posture
+Spatial avoidance
+Slower responses
+Key differentiator:
+Social Anxiety → evaluation fear
+Specific Phobia → single stimulus
+Panic → sudden spike
+Agoraphobia → anticipatory spatial fear
+
+
+
+
+
+
+
+
+
+
+
+
+Stress
+1. Chronic Stress
+Long-term physiological and psychological strain.
+Unlike acute stress (spike), chronic stress is sustained depletion.
+Tension: Persistent facial tension and persistent tension cues.
+Clinical Meaning
+Long-term stress keeps the body in a semi-activated state.
+Muscles remain slightly contracted even at rest.
+Behavioral Meaning
+Brow slightly furrowed most of the time
+Tight jaw
+Reduced relaxed facial baseline
+Face looks “strained” even when neutral
+Unlike anxiety spikes — this is low-to-moderate but constant.
+Video Observable
+Sustained AU4 (brow furrow) activation
+Lip compression cues
+Reduced facial relaxation periods
+Minimal return to neutral baseline
+Short Meaning
+Face appears continuously tense, even without a specific trigger.
+Expressivity: Reduced emotional variability and flattened affect.
+Clinical Meaning: Chronic stress leads to emotional blunting and reduced affective flexibility.
+Behavioral Meaning:
+Fewer smiles
+Less variation in facial reactions
+Emotional responses feel muted
+Reduced enthusiasm
+Not severe flatness like melancholic depression — but noticeable dulling.
+Video Observable:
+Low AU variance across session
+Reduced smile frequency
+Smaller amplitude of emotional expressions
+Limited facial movement range
+Short Meaning: Emotional expressions become dull and less varied over time.
+Exhaustion Proxies: Slumped posture and reduced head movement/energy.
+Clinical Meaning: Chronic stress drains physical and mental energy.
+Behavioral Meaning:
+Shoulders slightly dropped
+Forward-leaning posture
+Reduced head nodding
+Slower or minimal gestures
+General physical fatigue cues
+Unlike agitation — this is depleted energy.
+Video Observable:
+Forward head pitch
+Reduced head velocity
+Lower motion energy
+Reduced gesture frequency
+Sustained slumped upper-body alignment
+Short Meaning: Body posture and movement reflect fatigue and reduced energy.
+
+
+
+2. Occupational / Academic Stress
+Core theme:
+Performance pressure and workload-related strain.
+Unlike chronic stress (global depletion), this is context-linked to work/study demands.
+Tension: Brow furrow (AU4) and visible tension.
+Clinical Meaning: Performance pressure activates cognitive strain and worry.
+Behavioral Meaning:
+Brow pulled together (AU4)
+Tight lips
+Slight jaw stiffness
+Face looks focused but strained
+This tension appears especially when discussing deadlines, exams, workload.
+Video Observable:
+AU4 activation during performance-related discussion
+Reduced neutral relaxation
+Mild but noticeable upper-face tension
+Short Meaning: Face shows strain and concentration-related tension.
+Psychomotor/Movement: Restlessness and constrained posture.
+Clinical Meaning: Stress creates internal agitation but social context suppresses large movement.
+Behavioral Meaning:
+Small fidgeting
+Foot tapping (if visible)
+Slight posture rigidity
+Shoulders slightly raised
+Reduced fluidity of gestures
+Summary: Restless energy but controlled outward behavior.
+Video Observable:
+Increased small-scale movement
+Reduced arm openness
+Slight upper-body stiffness
+Limited natural gesture range
+Short Meaning: Body shows subtle restlessness while posture remains somewhat rigid.
+Expressivity: Reduced relaxation cues and reduced affective variability.
+Clinical Meaning: Stress narrows emotional range.
+Behavioral Meaning:
+Fewer spontaneous smiles
+Limited emotional shifts
+Face remains serious
+Reduced playfulness or warmth
+Unlike depression, not flat, but constrained.
+Video Observable:
+Lower smile frequency
+Reduced AU amplitude variability
+Narrow emotional expression range
+Short Meaning: Facial emotions become more serious and less flexible.
+Temporal (related to time): Increased response latency.
+Clinical Meaning: Cognitive overload slows response initiation.
+Behavioral Meaning:
+Slight hesitation before answering workload questions
+Processing delay
+Small pause before speaking
+Unlike GAD (fast responses), this reflects cognitive load.
+Video Observable:
+Delayed mouth opening
+Slight pause before nodding
+Increased reaction time during performance-related prompts
+Short Meaning: Person takes slightly longer to respond due to mental overload.
+
+
+
+
+3. Acute Stress
+Tension: Visible tension and brow furrow (AU1/2, AU4).
+Clinical Meaning: Acute stress activates immediate sympathetic arousal, leading to rapid facial muscle contraction and alertness signals.
+Behavioral Meaning:
+Brow pulled together (AU4)
+Eyebrows raised with alertness (AU1/AU2)
+Tightened jaw or lips
+Facial stiffness during stressful prompts
+Unlike chronic stress (persistent), this appears suddenly.
+Video Observable:
+Sudden AU4 activation spike
+AU1/AU2 co-activation during stress segment
+Reduced facial relaxation immediately after trigger
+Short-duration high-intensity muscle contraction
+Short Meaning: Face shows sudden, intense tension in response to immediate stress.
+Eye Features: Widened eyes
+Clinical Meaning: Acute stress increases vigilance and threat monitoring.
+Behavioral Meaning: Eyes open wider than baseline
+increased alert gaze
+heightened visual scanning
+rapid environmental checking.
+Video Observable: 
+Increased eye aspect ratio
+sudden increase in eye openness 
+reduced blink duration temporarily
+increased gaze shifts.
+Short Meaning: Eyes widen due to heightened alertness and threat detection.
+Psychomotor / Movement: Restlessness, agitation cues, and rapid movements
+Clinical Meaning: Acute stress activates fight-or-flight motor preparation.
+Behavioral Meaning: 
+Rapid head movements quick 
+posture adjustments, 
+increased gesture speed, 
+visible agitation (sharper and more energetic than subtle restlessness).
+Video Observable: 
+Increased head velocity, 
+motion energy spikes, 
+rapid landmark displacement, 
+increased movement acceleration.
+Short Meaning: Body shows rapid, high-energy movements linked to immediate stress.
+Temporal (related to time): Rapid response initiation
+Clinical Meaning: Acute stress heightens arousal and speeds reaction time.
+Behavioral Meaning: Quick answers,
+minimal hesitation, 
+fast speech initiation, 
+immediate verbal response after prompt (reflects hyper-alert activation, unlike delayed response from cognitive overload).
+Video Observable: 
+Faster mouth opening after question, 
+reduced response latency, 
+rapid head nod onset, 
+short pause duration.
+Short Meaning: Person responds quickly due to heightened physiological arousal.
+4. Episodic Acute Stress
+Core Idea: Repeated acute stress episodes with temporary recovery in between.
+Not chronic baseline tension; it's a pattern of spike → normalize → spike → normalize.
+Tension / Agitation: Recurring visible tension and agitation.
+Clinical Meaning: Repeated short-term stress activations triggered by recurring situational pressures.
+Behavioral Meaning:
+Facial tension appears during stress-related discussion.
+Brow furrow during activation periods.
+Noticeable agitation during certain segments.
+Tension is not constant (unlike chronic stress).
+Pattern: calm → activated → calm → activated.
+Video Observable:
+Repeated AU4 activation spikes.
+Periodic increases in facial muscle intensity.
+Visible agitation bursts.
+Clear contrast between neutral and activated segments.
+Short Meaning: Stress-related tension appears repeatedly but is not continuously present.
+Movement: Restlessness across sessions.
+Clinical Meaning: Motor agitation re-emerges in multiple stress episodes.
+Behavioral Meaning:
+Recurrent fidgeting during stress triggers.
+Increased head or body movement during specific topics.
+Calm movement baseline outside stress segments.
+Repeated agitation pattern across time.
+Video Observable:
+Motion energy spikes in multiple distinct segments.
+Increased head velocity during stress windows.
+Restlessness clusters separated by calmer intervals.
+Short Meaning: Restlessness appears repeatedly during stress episodes rather than continuously.
+Normalization: Partial normalization between sessions followed by rapid re-activation.
+Clinical Meaning: The nervous system returns closer to baseline after stress, but is easily re-triggered.
+Behavioral Meaning:
+Facial relaxation between stress discussions.
+Reduced agitation temporarily.
+Rapid reappearance of tension when new stressor introduced.
+Emotional reset followed by quick activation.
+Video Observable:
+Drop in AU4 intensity between episodes.
+Reduced motion energy during neutral segments.
+Rapid re-onset of tension indicators after trigger.
+Clear fluctuation pattern over time.
+Short Meaning: Person temporarily relaxes, but stress reactivates quickly with new triggers.
+5. Burnout
+Core Theme: Emotional exhaustion and disengagement due to prolonged occupational stress.
+Distinction from Chronic Stress: Burnout includes detachment and reduced engagement, unlike persistent strain.
+Expressivity:
+Clinical Meaning: Prolonged stress leads to emotional exhaustion and reduced emotional responsiveness.
+Behavioral Meaning:
+Minimal smiling
+Reduced facial reaction to prompts
+Limited emotional amplitude
+Face appears emotionally "numb"
+No visible agitation (unlike acute stress)
+Video Observable:
+Low facial action unit variability
+Reduced smile frequency (minimal AU12 activation)
+Small emotional amplitude range
+Limited facial movement across session
+Short Meaning: Facial expressions appear dull and emotionally muted.
+Psychomotor / Engagement:
+Clinical Meaning: Burnout includes depersonalization and reduced motivation.
+Behavioral Meaning:
+Slouched or withdrawn posture
+Minimal head movement/nodding
+Limited gesturing
+Reduced eye engagement
+Passive interaction style (Often work-context specific, unlike depression)
+Video Observable:
+Forward head pitch (slight slumping)
+Reduced head velocity and motion energy
+Reduced nod frequency
+Lower eye-contact duration
+Short Meaning: Body language reflects disengagement and low motivational energy.
+Temporal (related to time): Delayed responses.
+Clinical Meaning: Emotional exhaustion slows cognitive processing and response initiation.
+Behavioral Meaning:
+Noticeable pause before answering
+Slower speech initiation
+Reduced spontaneous responses
+Less conversational enthusiasm (Reflects depletion, unlike fast responses in acute stress)
+Video Observable:
+Delayed mouth opening after prompt
+Increased pause duration
+Reduced reaction speed
+Slower nod onset
+Short Meaning: Person responds more slowly due to exhaustion and disengagement.
+
+
+Bipolar Disorder
+1. Hypomanic Episode
+Elevated mood + increased energy + heightened engagement (without full manic severity).
+Unlike anxiety (tense activation), hypomania is energized and expansive, not fearful.
+Expressivity: Increased facial expressivity and heightened engagement.
+Clinical Meaning: Elevated mood leads to amplified emotional expression and social engagement.
+Behavioral Meaning:
+Frequent smiling
+Larger emotional reactions
+Animated facial expressions
+Increased eye brightness
+More expressive during conversation
+Contrast: Unlike depression (flattened), expression amplitude increases.
+Video Observable:
+Increased AU12 (smile) activation frequency
+Higher facial action unit variability
+Larger emotional amplitude range
+Increased eye openness during engagement
+Short Meaning: Face appears more animated and emotionally amplified.
+Psychomotor / Movement: Animated gestures, increased head movement, and restlessness.
+Clinical Meaning: Elevated energy increases motor activity and spontaneity.
+Behavioral Meaning:
+Frequent hand gestures
+Rapid head nodding
+Increased posture shifts
+Energetic movement
+Mild restlessness
+Contrast: Unlike anxiety, movement is not tense — it’s lively.
+Video Observable:
+Increased head velocity
+Higher motion energy
+More frequent gestures
+Larger landmark displacement
+Rapid head nod frequency
+Short Meaning: Body movements become energetic and animated.
+Temporal (related to time): Reduced response latency.
+Clinical Meaning: Accelerated thought processes reduce response initiation time.
+Behavioral Meaning:
+Quick answers
+Minimal hesitation
+Fast speech onset
+Rapid conversational turn-taking
+Contrast: Unlike cognitive overload (slow), this reflects mental acceleration.
+Video Observable:
+Faster mouth opening after prompt
+Short pause duration
+Rapid nod onset
+Quick reaction to conversational cues
+Short Meaning: Person responds very quickly due to elevated mental speed.
+
+
+2. Bipolar II Risk
+Mood-state fluctuation over time — depressive slowing alternating with hypomanic activation.
+This cannot be detected from one static clip.
+It is inherently temporal and cross-session dependent.
+Psychomotor Variability: Fluctuating psychomotor activity across sessions.
+Clinical Meaning: Alternating depressive and hypomanic states cause shifts in motor activity.
+Behavioral Meaning:
+Depressive phases: Slowed head movement, reduced gestures, low motor energy, slumped posture.
+Hypomanic phases: Increased gestures, rapid head movement, high energy, restlessness.
+Clear contrast between sessions; state-dependent polarity shift.
+Video Observable: Large difference in motion energy, head velocity, gesture frequency, and posture between sessions.
+Short Meaning: Motor activity alternates between slowed and elevated states over time.
+Expressivity: Variability in expressivity and activity level across time.
+Clinical Meaning: Emotional expression shifts between flattened (depressive) and amplified (hypomanic) states.
+Behavioral Meaning:
+Depressive periods: Flattened affect, reduced smiling, low emotional amplitude.
+Hypomanic periods: Increased smiling, high emotional variability, animated facial reactions.
+Noticeable change in emotional tone between sessions.
+Video Observable: Low vs. high facial action unit variance, fluctuation in smile frequency, emotional intensity contrast across recordings.
+Short Meaning: Emotional expression fluctuates significantly across different time periods.
+3. Cyclothymic Disorder
+Chronic mood instability with mild but persistent fluctuations, without full depressive or hypomanic episodes.
+Unlike Bipolar II (clear episodic polarity), cyclothymia = continuous oscillation at lower amplitude.
+Psychomotor Variability: Fluctuating psychomotor activity (animated ↔ subdued).
+Clinical Meaning: Ongoing mild shifts in mood state cause corresponding changes in motor energy, but not extreme enough to meet full episode criteria.
+Behavioral Meaning:
+Some sessions show increased movement.
+Other sessions show reduced movement.
+Changes are noticeable but not extreme.
+No prolonged full depressive retardation.
+No sustained hypomanic overactivation.
+This is mild but persistent fluctuation.
+Video Observable:
+Moderate variation in head velocity across sessions.
+Changes in gesture frequency.
+Alternation between slightly elevated and slightly reduced motion energy.
+No extreme spikes like hypomania.
+Short Meaning: Motor activity shifts up and down mildly over time.
+Expressivity: Fluctuating facial expressivity and emotional lability without prolonged extremes.
+Clinical Meaning: Emotional tone shifts frequently but remains subthreshold.
+Behavioral Meaning:
+Some sessions show animated expression.
+Others show mild flattening.
+Emotional reactions vary unpredictably.
+Mood shifts appear frequent but less intense.
+Unlike Bipolar II, extremes are less pronounced.
+Video Observable:
+AU variance fluctuates across sessions.
+Smile frequency inconsistent.
+Emotional amplitude varies moderately.
+No sustained high-intensity expression periods.
+Short Meaning: Emotional expression varies over time without strong extremes.
+Engagement: Alternating engagement levels across sessions.
+Clinical Meaning: Social and conversational engagement fluctuates with mood variability.
+Behavioral Meaning:
+Some sessions show high interaction.
+Others show reduced responsiveness.
+Inconsistent conversational energy.
+Fluctuating attentional presence.
+Unlike burnout (consistently low), this alternates.
+Video Observable:
+Variation in eye-contact duration.
+Head nod frequency fluctuates.
+Changes in response enthusiasm.
+Engagement metrics inconsistent across recordings.
+Short Meaning: Engagement level shifts between mildly high and mildly low over time.
+
+
+
+4. Depression in Bipolar Disorder(Bipolar Depression)
+Core theme:
+Depressive states occurring within the bipolar spectrum but embedded in overall mood variability.
+Unlike Unipolar MDD (consistently downward trend), bipolar depression exists within a fluctuating mood framework.
+This is instability + polarity shifts.
+Psychomotor Variability: Fluctuating psychomotor patterns across sessions (retardation vs. increased movement).
+Clinical Meaning: Bipolar disorder involves alternating mood states. Even during depressive periods, motor activity may not remain uniformly slowed across time.
+Behavioral Meaning:
+Some sessions show slowed movement (retardation)
+Other sessions show elevated or restless movement
+Clear contrast between low-energy and high-energy periods
+Movement patterns are inconsistent across recordings
+Unlike unipolar depression — motor slowing is not stable.
+Video Observable:
+Large variance in head velocity across sessions
+Alternating low and high motion energy recordings
+Gesture frequency inconsistency
+Postural shifts between subdued and animated states
+Short Meaning: Motor activity alternates between slowed and elevated across time.
+
+Expressivity: Variable facial expressivity and inconsistency across sessions.
+Clinical Meaning: Emotional expression shifts depending on mood polarity.
+Behavioral Meaning:
+Some sessions show flattened affect.
+Other sessions show amplified or animated expression.
+Smile frequency fluctuates.
+Emotional tone lacks stability.
+Unlike dysthymia — there is no stable low baseline.
+Video Observable:
+AU variance low in some sessions, high in others.
+Smile activation inconsistent across recordings.
+Emotional amplitude fluctuates noticeably.
+Short Meaning: Emotional expression varies significantly across time.
+Temporal (related to time): Inconsistent response latency.
+Clinical Meaning: Cognitive speed fluctuates with mood state.
+Behavioral Meaning:
+Slow responses during depressive states.
+Fast responses during elevated states.
+Noticeable inconsistency in reaction time across sessions.
+Unlike unipolar MDD — delay is not stable.
+Video Observable:
+Response latency high in some recordings.
+Reduced latency in others.
+Wide variance in reaction time across sessions.
+Short Meaning: Response timing fluctuates depending on mood state.
+Big Pattern Snapshot
+Depression in Bipolar Disorder = Depressive features +
+Intermittent elevated patterns
+High cross-session variability
+Key differentiator:
+Unipolar MDD → consistently low
+Bipolar depression → low within a fluctuating system
+

@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-03-24T17:11:17",
+  "input": "data/patient_level_master_180k_model_ready_pruned_ultra.csv",
+  "rows": 180000,
+  "feature_count": 63,
+  "classes": [
+    "anxiety",
+    "bipolar",
+    "depression",
+    "phobia",
+    "stress",
+    "suicidal_tendency"
+  ],
+  "split": {
+    "train_rows": 126000,
+    "val_rows": 18000,
+    "test_rows": 36000,
+    "test_size": 0.2,
+    "val_size_within_trainval": 0.125,
+    "seed": 42
+  },
+  "validation_scores": {
+    "xgb": {
+      "macro_f1": 0.9998888888765433,
+      "accuracy": 0.9998888888888889,
+      "balanced_accuracy": 0.9998888888888889
+    },
+    "logreg": {
+      "macro_f1": 0.9775904317005092,
+      "accuracy": 0.9776111111111111,
+      "balanced_accuracy": 0.9776111111111111
+    },
+    "hgb": {
+      "macro_f1": 0.9998333333287036,
+      "accuracy": 0.9998333333333334,
+      "balanced_accuracy": 0.9998333333333335
+    }
+  },
+  "candidate_models": [
+    "hgb",
+    "logreg",
+    "xgb"
+  ],
+  "selected_model": "xgb",
+  "test_scores": {
+    "macro_f1": 0.9998611111101466,
+    "accuracy": 0.9998611111111111,
+    "balanced_accuracy": 0.9998611111111111
+  },
+  "classification_report": {
+    "anxiety": {
+      "precision": 0.9995000833194467,
+      "recall": 0.9996666666666667,
+      "f1-score": 0.9995833680526622,
+      "support": 6000.0
+    },
+    "bipolar": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6000.0
+    },
+    "depression": {
+      "precision": 0.9996666111018503,
+      "recall": 0.9995,
+      "f1-score": 0.9995832986082174,
+      "support": 6000.0
+    },
+    "phobia": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6000.0
+    },
+    "stress": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6000.0
+    },
+    "suicidal_tendency": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6000.0
+    },
+    "accuracy": 0.9998611111111111,
+    "macro avg": {
+      "precision": 0.9998611157368829,
+      "recall": 0.9998611111111111,
+      "f1-score": 0.9998611111101466,
+      "support": 36000.0
+    },
+    "weighted avg": {
+      "precision": 0.9998611157368829,
+      "recall": 0.9998611111111111,
+      "f1-score": 0.9998611111101466,
+      "support": 36000.0
+    }
+  },
+  "artifacts": {
+    "run_dir": "reports/model_training/run_20260324_171117",
+    "model": "reports/model_training/run_20260324_171117/best_model.joblib",
+    "label_encoder": "reports/model_training/run_20260324_171117/label_encoder.joblib",
+    "confusion_matrix_csv": "reports/model_training/run_20260324_171117/confusion_matrix.csv",
+    "feature_importance_csv": "reports/model_training/run_20260324_171117/feature_importance.csv",
+    "training_report_json": "reports/model_training/run_20260324_171117/training_report.json"
+  }
+}

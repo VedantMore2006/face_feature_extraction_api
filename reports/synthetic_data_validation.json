@@ -1,0 +1,1862 @@
+{
+  "timestamp": "2026-03-24T11:48:44.423003",
+  "clinical_data": {
+    "anxiety": {
+      "sample_count": 17055,
+      "feature_count": 34,
+      "null_values": "0",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.04928902188331867,
+          "std": 0.005553741889587937,
+          "min": 0.03438712,
+          "max": 0.07057642,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.0007725978334799179,
+          "std": 0.0004477822475469696,
+          "min": 0.0,
+          "max": 0.00240603,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.19716837696863088,
+          "std": 0.12455467149450163,
+          "min": 0.0,
+          "max": 0.61333333,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.01272421344884198,
+          "std": 0.0020363470947675154,
+          "min": 0.00552322,
+          "max": 0.02592176,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 0.964062000935796,
+          "std": 0.06685249474834959,
+          "min": -1.43456948,
+          "max": 0.9993822,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9674629630419233,
+          "std": 0.01536121987721797,
+          "min": 0.71464418,
+          "max": 0.98419285,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.032986990367634125,
+          "std": 0.0034390921939950452,
+          "min": 0.02417431,
+          "max": 0.04947479,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.0737164070284374,
+          "std": 0.055291837850607005,
+          "min": 0.0,
+          "max": 0.21666667,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.053067792284374096,
+          "std": 0.6158761126149257,
+          "min": 0.0,
+          "max": 9.71425953,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.013979440475520376,
+          "std": 0.003906212587439286,
+          "min": 0.0,
+          "max": 0.02539938,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.3551024137596013,
+          "std": 0.16397774103796084,
+          "min": 0.0,
+          "max": 0.8,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9645680646373498,
+          "std": 0.03239026020588159,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.13889075200058634,
+          "std": 0.052014953487484354,
+          "min": 0.0,
+          "max": 0.29551343,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 3.485416930647318,
+          "std": 1.890694001357465,
+          "min": 0.0,
+          "max": 6.50932958,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 5.133770662894166,
+          "std": 8.020504624939116,
+          "min": 0.0,
+          "max": 371.48332884,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.654319099022574,
+          "std": 0.16012430974115513,
+          "min": 0.13176162,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.0056527183541483445,
+          "std": 0.009995217546150972,
+          "min": 0.0,
+          "max": 0.17810303,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 0.9719326688167693,
+          "std": 0.07244143800140107,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 0.9273648830618586,
+          "std": 0.052470935778457975,
+          "min": 0.77030986,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 5.0115149706684265,
+          "std": 31.586487489565474,
+          "min": 0.0,
+          "max": 653.49122831,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 13.79736147757256,
+          "std": 5.602121854973252,
+          "min": 0.0,
+          "max": 28.0,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.30176220409029614,
+          "std": 0.04363833889720523,
+          "min": 0.0,
+          "max": 0.40620658,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.11424508989856348,
+          "std": 0.06373433078018265,
+          "min": 0.0,
+          "max": 0.26666667,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.8204675175854588,
+          "std": 0.046664867981102504,
+          "min": 0.63379866,
+          "max": 0.97065575,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 1.4135542361483437,
+          "std": 0.5359039577558735,
+          "min": 0.0,
+          "max": 2.41666667,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 2.4374184501125766,
+          "std": 0.36340550535220567,
+          "min": 0.0,
+          "max": 3.1,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.38216351097859863,
+          "std": 0.07607797421022475,
+          "min": 0.11782991,
+          "max": 0.54497777,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 80.61287422485724,
+          "std": 67.22633154091227,
+          "min": 0.0,
+          "max": 172.39587867,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 46.94211346796717,
+          "std": 68.57961757937697,
+          "min": 0.0,
+          "max": 193.21697283,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 2.1330270539044265,
+          "std": 1.0359793492494762,
+          "min": 0.0,
+          "max": 2.72836092,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 80.61287422485724,
+          "std": 67.22633154091227,
+          "min": 0.0,
+          "max": 172.39587867,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.6001172676634418,
+          "std": 0.48984047859312196,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 24.733072224038697,
+          "std": 36.810483398840354,
+          "min": 0.0,
+          "max": 80.03423068,
+          "nan_count": "0"
+        }
+      }
+    },
+    "bipolar": {
+      "sample_count": 3552,
+      "feature_count": 34,
+      "null_values": "0",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.060252807761824324,
+          "std": 0.0073875092192609,
+          "min": 0.04663103,
+          "max": 0.08502967,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.0011378098592342342,
+          "std": 0.0008267252177116503,
+          "min": 0.0,
+          "max": 0.0033207,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.5013138135304053,
+          "std": 0.3397467786848812,
+          "min": 0.01666667,
+          "max": 1.05,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.02051696529842342,
+          "std": 0.003003295333584215,
+          "min": 0.01308937,
+          "max": 0.0324289,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 0.971452880999437,
+          "std": 0.011994701568741092,
+          "min": 0.92530816,
+          "max": 0.99917598,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9721764170129504,
+          "std": 0.006985467827555816,
+          "min": 0.95860266,
+          "max": 0.99116259,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.04548264832207207,
+          "std": 0.004382483132827744,
+          "min": 0.03757286,
+          "max": 0.05859781,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.003955606891891892,
+          "std": 0.001858990058050706,
+          "min": 0.0,
+          "max": 0.00857082,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.015743553631756755,
+          "std": 0.004680511343044929,
+          "min": 0.0,
+          "max": 0.02618325,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.3546654466976351,
+          "std": 0.15812286692414657,
+          "min": 0.0,
+          "max": 0.7,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9631530819707207,
+          "std": 0.03557502584381263,
+          "min": 0.0,
+          "max": 0.99665552,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.09374851539132883,
+          "std": 0.02035178885343956,
+          "min": 0.0,
+          "max": 0.14780085,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 1.4370249702702702,
+          "std": 1.0586245556014797,
+          "min": 0.0,
+          "max": 3.16801608,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 2.6271243244425677,
+          "std": 3.255266519022127,
+          "min": 0.0,
+          "max": 10.23478132,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.8074020860951577,
+          "std": 0.0812169949206179,
+          "min": 0.51333333,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.0039036844144144144,
+          "std": 0.00854514655328388,
+          "min": 0.0,
+          "max": 0.15125208,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 0.8696710773282658,
+          "std": 0.18233094857780624,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 0.9796822329983109,
+          "std": 0.01859801853378219,
+          "min": 0.91111917,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 2.559045188651464,
+          "std": 27.28375212976478,
+          "min": 0.0,
+          "max": 567.75050388,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 24.75045045045045,
+          "std": 10.02819903653885,
+          "min": 0.0,
+          "max": 38.0,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.3036460197691442,
+          "std": 0.06013187420541299,
+          "min": 0.0,
+          "max": 0.45471632,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.29602383685247746,
+          "std": 0.14160992589479166,
+          "min": 0.0,
+          "max": 0.5,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.86608333084741,
+          "std": 0.023967971535379686,
+          "min": 0.81173493,
+          "max": 0.92021607,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 0.1456878752533784,
+          "std": 0.08220700914321155,
+          "min": 0.0,
+          "max": 0.28333333,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 1.040287162162162,
+          "std": 0.354291272224385,
+          "min": 0.0,
+          "max": 1.76,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.4585762275281532,
+          "std": 0.11062132007475449,
+          "min": 0.13773175,
+          "max": 0.7150654,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 2.522018547010135,
+          "std": 0.9035808690679022,
+          "min": 0.0,
+          "max": 4.12752796,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 2.3889223236233113,
+          "std": 4.317970096163086,
+          "min": 0.0,
+          "max": 20.78420186,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 1.803096093938626,
+          "std": 0.3323241759623508,
+          "min": 0.0,
+          "max": 2.05985359,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 2.522018547010135,
+          "std": 0.9035808690679022,
+          "min": 0.0,
+          "max": 4.12752796,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.20448728039695946,
+          "std": 0.07974469463384526,
+          "min": 0.0,
+          "max": 0.31753846,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 3.9281239552083336,
+          "std": 1.5496624867708162,
+          "min": 0.0,
+          "max": 5.84881759,
+          "nan_count": "0"
+        }
+      }
+    },
+    "depression": {
+      "sample_count": 20956,
+      "feature_count": 34,
+      "null_values": "0",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.04367720733680092,
+          "std": 0.014119538362062265,
+          "min": 0.02062035,
+          "max": 0.08540358,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.0011455291639625882,
+          "std": 0.002580622693247971,
+          "min": 0.0,
+          "max": 0.01989524,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.14322310249856846,
+          "std": 0.24376272165372626,
+          "min": 0.0,
+          "max": 1.13333333,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.011472327106317999,
+          "std": 0.0038327003812088796,
+          "min": 0.00424533,
+          "max": 0.02776053,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 0.9522553521225424,
+          "std": 0.09194726973524854,
+          "min": -4.02518472,
+          "max": 0.99795993,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9563739675963924,
+          "std": 0.015249006652713408,
+          "min": 0.6262325,
+          "max": 0.98027785,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.028187515224279442,
+          "std": 0.00804560206674607,
+          "min": 0.01577025,
+          "max": 0.05322172,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.5834413373172361,
+          "std": 0.3196999479618395,
+          "min": 0.0,
+          "max": 1.33333333,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.0720926127209391,
+          "std": 1.265841217214135,
+          "min": 0.0,
+          "max": 25.2892308,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.010278442399312845,
+          "std": 0.006410341703571955,
+          "min": 0.0,
+          "max": 0.03425897,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.1395491346950754,
+          "std": 0.12997972472831099,
+          "min": 0.0,
+          "max": 0.7,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9903397951937394,
+          "std": 0.02120433534581373,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.06197275912483297,
+          "std": 0.026606468352572583,
+          "min": 0.0,
+          "max": 0.20082977,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 3.380450665486257,
+          "std": 3.2415909563615224,
+          "min": 0.0,
+          "max": 10.51447764,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 3.990280606108991,
+          "std": 4.28305669524253,
+          "min": 0.0,
+          "max": 25.0774057,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.9459367442054782,
+          "std": 0.06358764148126468,
+          "min": 0.20190476,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.002619015765413247,
+          "std": 0.0089139005196248,
+          "min": 0.0,
+          "max": 0.11878862,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 0.9731328338743079,
+          "std": 0.07427301695094424,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 0.9316234447499523,
+          "std": 0.08201051075106769,
+          "min": 0.60929365,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 4.0056951645309224,
+          "std": 38.0860402329365,
+          "min": 0.0,
+          "max": 645.603596,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 17.77266653941592,
+          "std": 7.386019099526219,
+          "min": 0.0,
+          "max": 37.6,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.399245471820481,
+          "std": 0.07292562915991457,
+          "min": 0.0,
+          "max": 0.55444352,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.16749777305401795,
+          "std": 0.09638040653394726,
+          "min": 0.0,
+          "max": 0.44,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.8370246588881466,
+          "std": 0.05158434898369253,
+          "min": 0.66539625,
+          "max": 0.93160261,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 1.5928820967565376,
+          "std": 0.5117904741727466,
+          "min": 0.0,
+          "max": 2.6,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 2.162792119997614,
+          "std": 0.4736089477128352,
+          "min": 0.0,
+          "max": 3.0,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.3544814634696507,
+          "std": 0.08930503826055786,
+          "min": 0.13804584,
+          "max": 0.59466698,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 46.759689039425936,
+          "std": 70.00160994383454,
+          "min": 0.0,
+          "max": 151.56938028,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 46.759689039425936,
+          "std": 70.00160994383454,
+          "min": 0.0,
+          "max": 151.56938028,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 1.3510400205640387,
+          "std": 1.253164282775586,
+          "min": 0.0,
+          "max": 2.5614387,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 46.759689039425936,
+          "std": 70.00160994383454,
+          "min": 0.0,
+          "max": 151.56938028,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.30850353120824586,
+          "std": 0.4618453266386045,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "nan_count": "0"
+        }
+      }
+    }
+  },
+  "synthetic_data": {
+    "stress": {
+      "sample_count": 500,
+      "feature_count": 34,
+      "null_values": "0",
+      "out_of_bounds": "500",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.0494196299897184,
+          "std": 0.005337714804733357,
+          "min": 0.0299735801125877,
+          "max": 0.0654162017374599,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.012020351447343394,
+          "std": 0.01737360938886234,
+          "min": 0.0,
+          "max": 0.0718380809770935,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.21297704171626794,
+          "std": 0.11454266866739314,
+          "min": 0.0,
+          "max": 0.5312210240174093,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.012707371379956015,
+          "std": 0.0021496452028455138,
+          "min": 0.0056838344593098,
+          "max": 0.0194656757775197,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 0.9500588520503727,
+          "std": 0.050445569213168326,
+          "min": 0.7813048028510344,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9678205603202515,
+          "std": 0.01456686325138951,
+          "min": 0.9216345261216222,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.03904272876241775,
+          "std": 0.020136983208210828,
+          "min": 0.0,
+          "max": 0.1105778770342943,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0003984203463179232,
+          "std": 0.0005717491111761481,
+          "min": 0.0,
+          "max": 0.0031413173826108,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.07498668013362839,
+          "std": 0.052233549024717406,
+          "min": 0.0,
+          "max": 0.2246701261087206,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.32340126311070994,
+          "std": 0.38179217543991667,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.013919932472275215,
+          "std": 0.0039040246863277332,
+          "min": 0.0020647462094925,
+          "max": 0.0253418768159631,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.3483411710897097,
+          "std": 0.1563976984447326,
+          "min": 0.0,
+          "max": 0.8289767774054502,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9632148775112178,
+          "std": 0.028281743903341105,
+          "min": 0.8459150234766383,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.25316077868605213,
+          "std": 0.10534912983656594,
+          "min": 0.0,
+          "max": 0.557107282533857,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 3.4591180450612757,
+          "std": 1.809738536350553,
+          "min": 0.0,
+          "max": 8.609477627415249,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 16.178783420443803,
+          "std": 15.76377976294084,
+          "min": 0.0,
+          "max": 69.46142745443254,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.6479921398350539,
+          "std": 0.1648723656005644,
+          "min": 0.1425683507473354,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.007602235772812212,
+          "std": 0.007880801980948074,
+          "min": 0.0,
+          "max": 0.034858995332441,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 1.530583066840906,
+          "std": 0.09187329753672997,
+          "min": 1.1351102667945148,
+          "max": 1.6951738617542504,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 1.387410456685707,
+          "std": 0.07957194572515162,
+          "min": 1.1234070720923428,
+          "max": 1.6558551602637577,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 15.10913901841609,
+          "std": 19.794206547084045,
+          "min": 0.0,
+          "max": 105.1503890806528,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 0.9946362931039939,
+          "std": 0.06987115426347205,
+          "min": 0.0088818051159579,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.30401709882169703,
+          "std": 0.04288615000674479,
+          "min": 0.1789174901016036,
+          "max": 0.4275882788454269,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.11365430934846125,
+          "std": 0.06078246599660703,
+          "min": 0.0,
+          "max": 0.2959409660607569,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.821660225154998,
+          "std": 0.04597688452605628,
+          "min": 0.67097130680897,
+          "max": 0.9597473346712392,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 0.9297530503603632,
+          "std": 0.18194984268808084,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.38425850447936627,
+          "std": 0.07737222539900891,
+          "min": 0.2039990558151673,
+          "max": 0.5942294082938517,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 34.46445020386219,
+          "std": 24.263436925022546,
+          "min": 0.0,
+          "max": 103.81920772172988,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 60.53137292982864,
+          "std": 55.03634895552465,
+          "min": 0.0,
+          "max": 283.16561130008046,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 2.0510043223941112,
+          "std": 0.9875738204181183,
+          "min": 0.0,
+          "max": 4.82667583509839,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 0.8797785626431973,
+          "std": 0.32350075493082325,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.554942869829203,
+          "std": 0.350833442242564,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 0.7632893864089508,
+          "std": 0.42351445365175133,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        }
+      }
+    },
+    "phobia": {
+      "sample_count": 500,
+      "feature_count": 34,
+      "null_values": "0",
+      "out_of_bounds": "0",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.015342228762729622,
+          "std": 0.009663811708481887,
+          "min": 0.0,
+          "max": 0.0472154745946397,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.0008969942515908771,
+          "std": 0.000801670460997804,
+          "min": 0.0,
+          "max": 0.003681525564553,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.20623475478164524,
+          "std": 0.11120617260560343,
+          "min": 0.0,
+          "max": 0.538944764539123,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.012761305143237315,
+          "std": 0.0020068544701982898,
+          "min": 0.0073538698823351,
+          "max": 0.0187413079990481,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9672276039246445,
+          "std": 0.01530386933457073,
+          "min": 0.92307589128841,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.03289449484307649,
+          "std": 0.0034139766607783045,
+          "min": 0.0230135092147482,
+          "max": 0.0428304339035485,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0004029120361055991,
+          "std": 0.0005582288084786346,
+          "min": 0.0,
+          "max": 0.0030896840326857,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.07863921616131327,
+          "std": 0.05140238598942485,
+          "min": 0.0,
+          "max": 0.2335334928947618,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.24126340955604905,
+          "std": 0.3224474462063682,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.014069873352727708,
+          "std": 0.0038295338364257524,
+          "min": 0.0016790990336025,
+          "max": 0.0252947545397953,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.3616317572135656,
+          "std": 0.16684507391440231,
+          "min": 0.0,
+          "max": 0.7823087794376865,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9632486416811332,
+          "std": 0.02964140222478394,
+          "min": 0.8600929077951391,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.13829489232377454,
+          "std": 0.05161783340319299,
+          "min": 0.0,
+          "max": 0.2871904888965955,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 3.661654670773716,
+          "std": 1.8210605199905467,
+          "min": 0.0,
+          "max": 8.938536710324188,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 5.2190393524685,
+          "std": 5.104116848499633,
+          "min": 0.0,
+          "max": 22.172207067569968,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.655596376315742,
+          "std": 0.1593885906231624,
+          "min": 0.094765816842812,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.007279526958513753,
+          "std": 0.007624238347077718,
+          "min": 0.0,
+          "max": 0.0360134182496378,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 0.4778508583441984,
+          "std": 0.03132885333933381,
+          "min": 0.3509087023335079,
+          "max": 0.5443399268208358,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 0.9264840328394403,
+          "std": 0.051890005419565316,
+          "min": 0.7933951566799564,
+          "max": 1.0973718184423962,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 15.294603271618744,
+          "std": 19.764983306940902,
+          "min": 0.0,
+          "max": 97.088228340619,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 0.9922289408085533,
+          "std": 0.08385922013060922,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.30266371286400884,
+          "std": 0.043148352863813313,
+          "min": 0.1689638982210674,
+          "max": 0.4081961371463187,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.11674235084251211,
+          "std": 0.06299554282898091,
+          "min": 0.0,
+          "max": 0.3026384764186473,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.2431870111860967,
+          "std": 0.05198188122831203,
+          "min": 0.0980190566444421,
+          "max": 0.411418494852134,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 0.9602200691766078,
+          "std": 0.09999626421839679,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.2685410191830737,
+          "std": 0.07166211993635653,
+          "min": 0.0322980903282706,
+          "max": 0.4850880527194784,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 16.40539919488854,
+          "std": 12.336862199186827,
+          "min": 0.0,
+          "max": 55.68494506689723,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 61.55068270791551,
+          "std": 56.024362923717874,
+          "min": 0.0,
+          "max": 253.2991885451593,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 2.1626869199757066,
+          "std": 1.0603376320167637,
+          "min": 0.0,
+          "max": 5.277467326341983,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 0.8869907132058791,
+          "std": 0.31612988980660467,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.5700302739893913,
+          "std": 0.3472077885273757,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 0.791341451179321,
+          "std": 0.4046869875820495,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        }
+      }
+    },
+    "suicidal_tendency": {
+      "sample_count": 500,
+      "feature_count": 34,
+      "null_values": "0",
+      "out_of_bounds": "0",
+      "sample_features": {
+        "au12_mean_amplitude": {
+          "mean": 0.008762284152418557,
+          "std": 0.005149009567201825,
+          "min": 0.0,
+          "max": 0.0246959942265555,
+          "nan_count": "0"
+        },
+        "au12_variance": {
+          "mean": 0.0008479378784918404,
+          "std": 0.0011392360101680997,
+          "min": 0.0,
+          "max": 0.0050022311945609,
+          "nan_count": "0"
+        },
+        "au12_activation_frequency": {
+          "mean": 0.1882691011164635,
+          "std": 0.19183871954269813,
+          "min": 0.0,
+          "max": 0.8922802439200133,
+          "nan_count": "0"
+        },
+        "au15_mean_amplitude": {
+          "mean": 0.019446447985742,
+          "std": 0.018423248788892944,
+          "min": 0.0,
+          "max": 0.0780777899865751,
+          "nan_count": "0"
+        },
+        "au4_mean_activation": {
+          "mean": 0.9305168756053254,
+          "std": 0.07078782304590836,
+          "min": 0.6670140295790702,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au4_duration_ratio": {
+          "mean": 0.9573234076500255,
+          "std": 0.014957944200686947,
+          "min": 0.911599475503625,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "au1_au2_peak_intensity": {
+          "mean": 0.027829311477675287,
+          "std": 0.008009162135596028,
+          "min": 0.0,
+          "max": 0.0553503528522713,
+          "nan_count": "0"
+        },
+        "au20_activation_rate": {
+          "mean": 0.0003905435790064222,
+          "std": 0.0005792707119846124,
+          "min": 0.0,
+          "max": 0.0039488504055126,
+          "nan_count": "0"
+        },
+        "lip_compression_frequency": {
+          "mean": 0.5636371117677345,
+          "std": 0.29230109545958827,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "overall_au_variance": {
+          "mean": 0.056837223663944794,
+          "std": 0.08060771130418819,
+          "min": 0.0,
+          "max": 0.4524901762139377,
+          "nan_count": "0"
+        },
+        "facial_emotional_range": {
+          "mean": 0.001156541363832003,
+          "std": 0.0009470483546372736,
+          "min": 0.0,
+          "max": 0.0042334287241776,
+          "nan_count": "0"
+        },
+        "facial_transition_frequency": {
+          "mean": 0.1515806861725758,
+          "std": 0.11559144904312996,
+          "min": 0.0,
+          "max": 0.50366798275935,
+          "nan_count": "0"
+        },
+        "near_zero_au_activation_ratio": {
+          "mean": 0.9849301814017419,
+          "std": 0.015462792470500534,
+          "min": 0.9343773591239456,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "mean_head_velocity": {
+          "mean": 0.021221774610824303,
+          "std": 0.018405380195296767,
+          "min": 0.0,
+          "max": 0.0955785830214108,
+          "nan_count": "0"
+        },
+        "head_velocity_peak": {
+          "mean": 3.516690592827506,
+          "std": 2.681587366879206,
+          "min": 0.0,
+          "max": 14.115072298326378,
+          "nan_count": "0"
+        },
+        "head_motion_energy": {
+          "mean": 0.8696631213181707,
+          "std": 0.7085153054990723,
+          "min": 0.0,
+          "max": 2.8086672503933614,
+          "nan_count": "0"
+        },
+        "motion_energy_floor_score": {
+          "mean": 0.9408532615803931,
+          "std": 0.05207178523126801,
+          "min": 0.7451271718763317,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "landmark_displacement_mean": {
+          "mean": 0.004780131231592149,
+          "std": 0.005828245522030156,
+          "min": 0.0,
+          "max": 0.03067623980077,
+          "nan_count": "0"
+        },
+        "gesture_frequency": {
+          "mean": 0.1439637029015279,
+          "std": 0.012774228251132877,
+          "min": 0.0976541095861904,
+          "max": 0.1787137366810503,
+          "nan_count": "0"
+        },
+        "posture_rigidity_index": {
+          "mean": 1.3950844265818614,
+          "std": 0.11960981817097455,
+          "min": 1.0531359552449044,
+          "max": 1.7829259051179909,
+          "nan_count": "0"
+        },
+        "micro_motion_energy": {
+          "mean": 17.89675162594008,
+          "std": 24.5727179126875,
+          "min": 0.0,
+          "max": 109.79358884535556,
+          "nan_count": "0"
+        },
+        "blink_rate": {
+          "mean": 0.592171823997988,
+          "std": 0.07510795286568296,
+          "min": 0.0,
+          "max": 0.6896718232920747,
+          "nan_count": "0"
+        },
+        "blink_duration": {
+          "mean": 0.40075743524490715,
+          "std": 0.07569741733345005,
+          "min": 0.1721319876973399,
+          "max": 0.6516779095845987,
+          "nan_count": "0"
+        },
+        "blink_cluster_density": {
+          "mean": 0.166109676917164,
+          "std": 0.08957199147018609,
+          "min": 0.0,
+          "max": 0.406790452172947,
+          "nan_count": "0"
+        },
+        "eye_contact_ratio": {
+          "mean": 0.12450579048625793,
+          "std": 0.04942747824973821,
+          "min": 0.0,
+          "max": 0.2920465783468819,
+          "nan_count": "0"
+        },
+        "downward_gaze_frequency": {
+          "mean": 0.9661721814359755,
+          "std": 0.12376305799654767,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "gaze_shift_frequency": {
+          "mean": 0.997675565830283,
+          "std": 0.02413723807321406,
+          "min": 0.6542995618558562,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "baseline_eye_openness": {
+          "mean": 0.3542438982661181,
+          "std": 0.08826152663761454,
+          "min": 0.0580113605570442,
+          "max": 0.6342915852309526,
+          "nan_count": "0"
+        },
+        "response_latency_mean": {
+          "mean": 173.68536344816107,
+          "std": 169.71217557127315,
+          "min": 1.0,
+          "max": 782.1224318109059,
+          "nan_count": "0"
+        },
+        "speech_onset_delay": {
+          "mean": 58.07808611629266,
+          "std": 58.34784778580693,
+          "min": 0.0,
+          "max": 265.55154135959646,
+          "nan_count": "0"
+        },
+        "nod_onset_latency": {
+          "mean": 1.5085903947064543,
+          "std": 1.0972410881239263,
+          "min": 0.0,
+          "max": 6.127587995925917,
+          "nan_count": "0"
+        },
+        "pause_duration_mean": {
+          "mean": 0.6796829226292505,
+          "std": 0.4651220943687955,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "extended_silence_ratio": {
+          "mean": 0.34660231193558527,
+          "std": 0.32773937190080904,
+          "min": 0.0,
+          "max": 1.0,
+          "nan_count": "0"
+        },
+        "reaction_time_instability_index": {
+          "mean": 0.0004055754575248416,
+          "std": 0.0005648701047693874,
+          "min": 0.0,
+          "max": 0.0026524575689526,
+          "nan_count": "0"
+        }
+      }
+    }
+  },
+  "comparison": {
+    "au12_mean_amplitude": {
+      "anxiety": {
+        "mean": 0.04928902188331867,
+        "std": 0.005553741889587937,
+        "min": 0.03438712,
+        "max": 0.07057642
+      },
+      "bipolar": {
+        "mean": 0.060252807761824324,
+        "std": 0.0073875092192609,
+        "min": 0.04663103,
+        "max": 0.08502967
+      },
+      "depression": {
+        "mean": 0.04367720733680092,
+        "std": 0.014119538362062265,
+        "min": 0.02062035,
+        "max": 0.08540358
+      },
+      "stress": {
+        "mean": 0.0494196299897184,
+        "std": 0.005337714804733357,
+        "min": 0.0299735801125877,
+        "max": 0.0654162017374599
+      },
+      "phobia": {
+        "mean": 0.015342228762729622,
+        "std": 0.009663811708481887,
+        "min": 0.0,
+        "max": 0.0472154745946397
+      },
+      "suicidal_tendency": {
+        "mean": 0.008762284152418557,
+        "std": 0.005149009567201825,
+        "min": 0.0,
+        "max": 0.0246959942265555
+      }
+    },
+    "mean_head_velocity": {
+      "anxiety": {
+        "mean": 0.13889075200058634,
+        "std": 0.052014953487484354,
+        "min": 0.0,
+        "max": 0.29551343
+      },
+      "bipolar": {
+        "mean": 0.09374851539132883,
+        "std": 0.02035178885343956,
+        "min": 0.0,
+        "max": 0.14780085
+      },
+      "depression": {
+        "mean": 0.06197275912483297,
+        "std": 0.026606468352572583,
+        "min": 0.0,
+        "max": 0.20082977
+      },
+      "stress": {
+        "mean": 0.25316077868605213,
+        "std": 0.10534912983656594,
+        "min": 0.0,
+        "max": 0.557107282533857
+      },
+      "phobia": {
+        "mean": 0.13829489232377454,
+        "std": 0.05161783340319299,
+        "min": 0.0,
+        "max": 0.2871904888965955
+      },
+      "suicidal_tendency": {
+        "mean": 0.021221774610824303,
+        "std": 0.018405380195296767,
+        "min": 0.0,
+        "max": 0.0955785830214108
+      }
+    },
+    "response_latency_mean": {
+      "anxiety": {
+        "mean": 80.61287422485724,
+        "std": 67.22633154091227,
+        "min": 0.0,
+        "max": 172.39587867
+      },
+      "bipolar": {
+        "mean": 2.522018547010135,
+        "std": 0.9035808690679022,
+        "min": 0.0,
+        "max": 4.12752796
+      },
+      "depression": {
+        "mean": 46.759689039425936,
+        "std": 70.00160994383454,
+        "min": 0.0,
+        "max": 151.56938028
+      },
+      "stress": {
+        "mean": 34.46445020386219,
+        "std": 24.263436925022546,
+        "min": 0.0,
+        "max": 103.81920772172988
+      },
+      "phobia": {
+        "mean": 16.40539919488854,
+        "std": 12.336862199186827,
+        "min": 0.0,
+        "max": 55.68494506689723
+      },
+      "suicidal_tendency": {
+        "mean": 173.68536344816107,
+        "std": 169.71217557127315,
+        "min": 1.0,
+        "max": 782.1224318109059
+      }
+    },
+    "eye_contact_ratio": {
+      "anxiety": {
+        "mean": 0.8204675175854588,
+        "std": 0.046664867981102504,
+        "min": 0.63379866,
+        "max": 0.97065575
+      },
+      "bipolar": {
+        "mean": 0.86608333084741,
+        "std": 0.023967971535379686,
+        "min": 0.81173493,
+        "max": 0.92021607
+      },
+      "depression": {
+        "mean": 0.8370246588881466,
+        "std": 0.05158434898369253,
+        "min": 0.66539625,
+        "max": 0.93160261
+      },
+      "stress": {
+        "mean": 0.821660225154998,
+        "std": 0.04597688452605628,
+        "min": 0.67097130680897,
+        "max": 0.9597473346712392
+      },
+      "phobia": {
+        "mean": 0.2431870111860967,
+        "std": 0.05198188122831203,
+        "min": 0.0980190566444421,
+        "max": 0.411418494852134
+      },
+      "suicidal_tendency": {
+        "mean": 0.12450579048625793,
+        "std": 0.04942747824973821,
+        "min": 0.0,
+        "max": 0.2920465783468819
+      }
+    },
+    "au4_mean_activation": {
+      "anxiety": {
+        "mean": 0.964062000935796,
+        "std": 0.06685249474834959,
+        "min": -1.43456948,
+        "max": 0.9993822
+      },
+      "bipolar": {
+        "mean": 0.971452880999437,
+        "std": 0.011994701568741092,
+        "min": 0.92530816,
+        "max": 0.99917598
+      },
+      "depression": {
+        "mean": 0.9522553521225424,
+        "std": 0.09194726973524854,
+        "min": -4.02518472,
+        "max": 0.99795993
+      },
+      "stress": {
+        "mean": 0.9500588520503727,
+        "std": 0.050445569213168326,
+        "min": 0.7813048028510344,
+        "max": 1.0
+      },
+      "phobia": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "suicidal_tendency": {
+        "mean": 0.9305168756053254,
+        "std": 0.07078782304590836,
+        "min": 0.6670140295790702,
+        "max": 1.0
+      }
+    },
+    "posture_rigidity_index": {
+      "anxiety": {
+        "mean": 0.9273648830618586,
+        "std": 0.052470935778457975,
+        "min": 0.77030986,
+        "max": 1.0
+      },
+      "bipolar": {
+        "mean": 0.9796822329983109,
+        "std": 0.01859801853378219,
+        "min": 0.91111917,
+        "max": 1.0
+      },
+      "depression": {
+        "mean": 0.9316234447499523,
+        "std": 0.08201051075106769,
+        "min": 0.60929365,
+        "max": 1.0
+      },
+      "stress": {
+        "mean": 1.387410456685707,
+        "std": 0.07957194572515162,
+        "min": 1.1234070720923428,
+        "max": 1.6558551602637577
+      },
+      "phobia": {
+        "mean": 0.9264840328394403,
+        "std": 0.051890005419565316,
+        "min": 0.7933951566799564,
+        "max": 1.0973718184423962
+      },
+      "suicidal_tendency": {
+        "mean": 1.3950844265818614,
+        "std": 0.11960981817097455,
+        "min": 1.0531359552449044,
+        "max": 1.7829259051179909
+      }
+    },
+    "blink_rate": {
+      "anxiety": {
+        "mean": 13.79736147757256,
+        "std": 5.602121854973252,
+        "min": 0.0,
+        "max": 28.0
+      },
+      "bipolar": {
+        "mean": 24.75045045045045,
+        "std": 10.02819903653885,
+        "min": 0.0,
+        "max": 38.0
+      },
+      "depression": {
+        "mean": 17.77266653941592,
+        "std": 7.386019099526219,
+        "min": 0.0,
+        "max": 37.6
+      },
+      "stress": {
+        "mean": 0.9946362931039939,
+        "std": 0.06987115426347205,
+        "min": 0.0088818051159579,
+        "max": 1.0
+      },
+      "phobia": {
+        "mean": 0.9922289408085533,
+        "std": 0.08385922013060922,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "suicidal_tendency": {
+        "mean": 0.592171823997988,
+        "std": 0.07510795286568296,
+        "min": 0.0,
+        "max": 0.6896718232920747
+      }
+    },
+    "gesture_frequency": {
+      "anxiety": {
+        "mean": 0.9719326688167693,
+        "std": 0.07244143800140107,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "bipolar": {
+        "mean": 0.8696710773282658,
+        "std": 0.18233094857780624,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "depression": {
+        "mean": 0.9731328338743079,
+        "std": 0.07427301695094424,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "stress": {
+        "mean": 1.530583066840906,
+        "std": 0.09187329753672997,
+        "min": 1.1351102667945148,
+        "max": 1.6951738617542504
+      },
+      "phobia": {
+        "mean": 0.4778508583441984,
+        "std": 0.03132885333933381,
+        "min": 0.3509087023335079,
+        "max": 0.5443399268208358
+      },
+      "suicidal_tendency": {
+        "mean": 0.1439637029015279,
+        "std": 0.012774228251132877,
+        "min": 0.0976541095861904,
+        "max": 0.1787137366810503
+      }
+    },
+    "overall_au_variance": {
+      "anxiety": {
+        "mean": 0.053067792284374096,
+        "std": 0.6158761126149257,
+        "min": 0.0,
+        "max": 9.71425953
+      },
+      "bipolar": {
+        "mean": 0.003955606891891892,
+        "std": 0.001858990058050706,
+        "min": 0.0,
+        "max": 0.00857082
+      },
+      "depression": {
+        "mean": 0.0720926127209391,
+        "std": 1.265841217214135,
+        "min": 0.0,
+        "max": 25.2892308
+      },
+      "stress": {
+        "mean": 0.32340126311070994,
+        "std": 0.38179217543991667,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "phobia": {
+        "mean": 0.24126340955604905,
+        "std": 0.3224474462063682,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "suicidal_tendency": {
+        "mean": 0.056837223663944794,
+        "std": 0.08060771130418819,
+        "min": 0.0,
+        "max": 0.4524901762139377
+      }
+    },
+    "au15_mean_amplitude": {
+      "anxiety": {
+        "mean": 0.01272421344884198,
+        "std": 0.0020363470947675154,
+        "min": 0.00552322,
+        "max": 0.02592176
+      },
+      "bipolar": {
+        "mean": 0.02051696529842342,
+        "std": 0.003003295333584215,
+        "min": 0.01308937,
+        "max": 0.0324289
+      },
+      "depression": {
+        "mean": 0.011472327106317999,
+        "std": 0.0038327003812088796,
+        "min": 0.00424533,
+        "max": 0.02776053
+      },
+      "stress": {
+        "mean": 0.012707371379956015,
+        "std": 0.0021496452028455138,
+        "min": 0.0056838344593098,
+        "max": 0.0194656757775197
+      },
+      "phobia": {
+        "mean": 0.012761305143237315,
+        "std": 0.0020068544701982898,
+        "min": 0.0073538698823351,
+        "max": 0.0187413079990481
+      },
+      "suicidal_tendency": {
+        "mean": 0.019446447985742,
+        "std": 0.018423248788892944,
+        "min": 0.0,
+        "max": 0.0780777899865751
+      }
+    }
+  }
+}

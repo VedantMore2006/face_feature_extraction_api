@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-03-23T02:56:17",
+  "inputs": [
+    "data/features_20260322_225651.csv"
+  ],
+  "basic": {
+    "row_count": 3709,
+    "column_count": 36,
+    "numeric_column_count": 35,
+    "duplicate_row_count": 0,
+    "memory_mb": 1.3089
+  },
+  "missing": {
+    "total_missing_cells": 0,
+    "missing_cell_ratio": 0.0,
+    "columns_with_missing": 0
+  },
+  "stability": {
+    "constant_count": 5,
+    "near_constant_count": 5
+  },
+  "range_check": {
+    "normalized_min_expected": 0.0,
+    "normalized_max_expected": 1.0,
+    "violating_columns": 0
+  },
+  "correlation": {
+    "high_pair_count": 8,
+    "threshold_abs_r": 0.9
+  },
+  "temporal": {
+    "timestamp_column_present": true,
+    "valid_timestamp_count": 3709,
+    "is_monotonic_non_decreasing": true,
+    "start_timestamp": 1774200442.7410345,
+    "end_timestamp": 1774200809.8068218,
+    "duration_seconds": 367.06578731536865,
+    "median_dt": 0.09863674640655518,
+    "mean_dt": 0.09899293077545002,
+    "std_dt": 0.030018868571469508,
+    "min_dt": 0.05115985870361328,
+    "max_dt": 1.8697993755340576,
+    "p95_dt": 0.1072050929069519,
+    "estimated_fps_from_median_dt": 10.138209505393238,
+    "large_gap_count": 2,
+    "large_gap_threshold_seconds": 0.2959102392196655
+  },
+  "artifacts": {
+    "summary_json": "reports/eda/eda_20260323_025615/summary.json",
+    "behavioral_json": "reports/eda/eda_20260323_025615/behavioral_summary.json",
+    "plots_generated": []
+  }
+}

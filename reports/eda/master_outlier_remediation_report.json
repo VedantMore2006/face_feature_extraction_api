@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-03-24T12:43:28",
+  "input": "data/patient_level_master_180k.csv",
+  "output": "data/patient_level_master_180k_cleaned.csv",
+  "rows": 180000,
+  "columns": 206,
+  "group_col": "condition_label",
+  "numeric_columns_transformed": 204,
+  "winsorization": {
+    "low_q": 0.005,
+    "high_q": 0.995,
+    "slope_low_q": 0.01,
+    "slope_high_q": 0.99
+  },
+  "rows_touched_total": 280318,
+  "outliers": {
+    "z_threshold": 3.5,
+    "before_total": 5168526,
+    "after_total": 5145515,
+    "delta": -23011,
+    "before_top15": [
+      {
+        "column": "pause_duration_mean__max",
+        "outlier_count": 89998,
+        "outlier_ratio": 0.49998888888888887
+      },
+      {
+        "column": "au20_activation_rate__slope",
+        "outlier_count": 89993,
+        "outlier_ratio": 0.49996111111111113
+      },
+      {
+        "column": "pause_duration_mean__range",
+        "outlier_count": 89984,
+        "outlier_ratio": 0.4999111111111111
+      },
+      {
+        "column": "blink_rate__max",
+        "outlier_count": 89632,
+        "outlier_ratio": 0.49795555555555554
+      },
+      {
+        "column": "blink_rate__mean",
+        "outlier_count": 88676,
+        "outlier_ratio": 0.49264444444444444
+      },
+      {
+        "column": "gaze_shift_frequency__slope",
+        "outlier_count": 88451,
+        "outlier_ratio": 0.49139444444444447
+      },
+      {
+        "column": "micro_motion_energy__min",
+        "outlier_count": 87936,
+        "outlier_ratio": 0.4885333333333333
+      },
+      {
+        "column": "au12_variance__min",
+        "outlier_count": 87744,
+        "outlier_ratio": 0.48746666666666666
+      },
+      {
+        "column": "gaze_shift_frequency__mean",
+        "outlier_count": 87383,
+        "outlier_ratio": 0.4854611111111111
+      },
+      {
+        "column": "head_motion_energy__min",
+        "outlier_count": 84480,
+        "outlier_ratio": 0.4693333333333333
+      },
+      {
+        "column": "au4_mean_activation__max",
+        "outlier_count": 84193,
+        "outlier_ratio": 0.46773888888888887
+      },
+      {
+        "column": "reaction_time_instability_index__range",
+        "outlier_count": 83306,
+        "outlier_ratio": 0.4628111111111111
+      },
+      {
+        "column": "blink_rate__min",
+        "outlier_count": 83173,
+        "outlier_ratio": 0.4620722222222222
+      },
+      {
+        "column": "blink_rate__slope",
+        "outlier_count": 79317,
+        "outlier_ratio": 0.44065
+      },
+      {
+        "column": "overall_au_variance__min",
+        "outlier_count": 78577,
+        "outlier_ratio": 0.43653888888888887
+      }
+    ],
+    "after_top15": [
+      {
+        "column": "pause_duration_mean__max",
+        "outlier_count": 89998,
+        "outlier_ratio": 0.49998888888888887
+      },
+      {
+        "column": "au20_activation_rate__slope",
+        "outlier_count": 89993,
+        "outlier_ratio": 0.49996111111111113
+      },
+      {
+        "column": "pause_duration_mean__range",
+        "outlier_count": 89989,
+        "outlier_ratio": 0.4999388888888889
+      },
+      {
+        "column": "gaze_shift_frequency__slope",
+        "outlier_count": 88641,
+        "outlier_ratio": 0.49245
+      },
+      {
+        "column": "micro_motion_energy__min",
+        "outlier_count": 87936,
+        "outlier_ratio": 0.4885333333333333
+      },
+      {
+        "column": "au12_variance__min",
+        "outlier_count": 87723,
+        "outlier_ratio": 0.48735
+      },
+      {
+        "column": "gaze_shift_frequency__mean",
+        "outlier_count": 87391,
+        "outlier_ratio": 0.4855055555555556
+      },
+      {
+        "column": "blink_rate__max",
+        "outlier_count": 87229,
+        "outlier_ratio": 0.48460555555555557
+      },
+      {
+        "column": "blink_rate__mean",
+        "outlier_count": 86439,
+        "outlier_ratio": 0.4802166666666667
+      },
+      {
+        "column": "head_motion_energy__min",
+        "outlier_count": 84468,
+        "outlier_ratio": 0.46926666666666667
+      },
+      {
+        "column": "au4_mean_activation__max",
+        "outlier_count": 84193,
+        "outlier_ratio": 0.46773888888888887
+      },
+      {
+        "column": "reaction_time_instability_index__range",
+        "outlier_count": 83306,
+        "outlier_ratio": 0.4628111111111111
+      },
+      {
+        "column": "blink_rate__min",
+        "outlier_count": 83173,
+        "outlier_ratio": 0.4620722222222222
+      },
+      {
+        "column": "baseline_eye_openness__slope",
+        "outlier_count": 79102,
+        "outlier_ratio": 0.43945555555555554
+      },
+      {
+        "column": "overall_au_variance__min",
+        "outlier_count": 78612,
+        "outlier_ratio": 0.4367333333333333
+      }
+    ]
+  },
+  "artifacts": {
+    "report_json": "reports/eda/master_outlier_remediation_report.json"
+  }
+}

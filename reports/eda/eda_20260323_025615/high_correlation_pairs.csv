@@ -1,0 +1,9 @@
+feature_a,feature_b,correlation,abs_correlation
+au12_variance,overall_au_variance,1.0,1.0
+speech_onset_delay,pause_duration_mean,1.0,1.0
+response_latency_mean,pause_duration_mean,1.0,1.0
+response_latency_mean,speech_onset_delay,1.0,1.0
+au20_activation_rate,gesture_frequency,0.9997188698098285,0.9997188698098285
+head_motion_energy,posture_rigidity_index,-0.9332534114913696,0.9332534114913696
+mean_head_velocity,posture_rigidity_index,-0.9143810734061614,0.9143810734061614
+head_velocity_peak,head_motion_energy,0.9047305921035982,0.9047305921035982
