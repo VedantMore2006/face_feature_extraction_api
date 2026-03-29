@@ -15,11 +15,36 @@ http://127.0.0.1:8001/docs
 
 ## 1. Prerequisites
 
+### Install Dependencies
+
 From project root, install API dependencies:
 
 ```bash
-pip install -r api/requirements-api.txt
+pip install -r requirements.txt
 ```
+
+### Configure API Authentication
+
+The Extraction API requires an API key for security. Before starting the service:
+
+1. **Create `.env` file** from template:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Edit `.env`** and set your secret key:
+   ```bash
+   EXTRACTION_API_KEY=your_long_random_secret_key_here
+   ```
+   
+   For development, you can generate a random key:
+   ```bash
+   python3 -c "import secrets; print(secrets.token_urlsafe(32))"
+   ```
+
+3. **In production**, use your cloud secret manager (AWS Secrets Manager, GCP Secret Manager, etc.) and inject as environment variable at runtime.
+
+⚠️ **Never commit `.env` to source control** — it's already in `.gitignore`.
 
 
 
@@ -37,9 +62,47 @@ Start Scoring API on port 8002:
 uvicorn scoring_api:app --host 0.0.0.0 --port 8002 --reload
 ```
 
-## 3. Extraction API
+## 3. Using the Extraction API
 
-Source file: api/extraction_api.py
+### Authentication in Swagger UI
+
+1. Start the Extraction API:
+   ```bash
+   uvicorn extraction_api:app --host 0.0.0.0 --port 8001 --reload
+   ```
+
+2. Open Swagger UI:
+   ```
+   http://127.0.0.1:8001/docs
+   ```
+
+3. Click **"Authorize"** button (top right) and enter your API key in the `X-API-Key` field
+
+4. All subsequent requests in Swagger UI will automatically include the key
+
+### Authentication in curl
+
+Add the `-H` header flag with your API key:
+
+```bash
+curl -X POST "http://127.0.0.1:8001/extract/video?mode=balanced&allow_short=true" \
+  -H "X-API-Key: your_long_random_secret_key_here" \
+  -F "video=@assets/stress.mp4"
+```
+
+### Authentication in Python
+
+```python
+import requests
+
+headers = {"X-API-Key": "your_long_random_secret_key_here"}
+response = requests.post(
+    "http://127.0.0.1:8001/extract/video",
+    headers=headers,
+    files={"video": open("video.mp4", "rb")},
+    params={"mode": "balanced"}
+)
+```
 
 ### Endpoint A: Upload Video And Process Session
 
@@ -65,6 +128,7 @@ Example call:
 
 ```bash
 curl -X POST "http://127.0.0.1:8001/extract/video?mode=balanced&allow_short=true" \
+  -H "X-API-Key: your_api_key_here" \
   -F "video=@assets/stress.mp4"
 ```
 
@@ -86,12 +150,15 @@ Method and route:
 Example call:
 
 ```bash
-curl "http://127.0.0.1:8001/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector"
+curl "http://127.0.0.1:8001/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
+  -H "X-API-Key: your_api_key_here"
 ```
-- And save it in the file
+
+And save it in a file:
 
 ```bash
 curl -s "http://127.0.0.1:8001/extract/session/8cadd316226f4d4b9aee328aab0186f9/vector" \
+  -H "X-API-Key: your_api_key_here" \
   | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps({'vector': d['vector']}))" \
   > score_input.json
 ```

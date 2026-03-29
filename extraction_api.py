@@ -1,12 +1,17 @@
 from __future__ import annotations
 
 import json
+import os
+import secrets
 import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict
 
-from fastapi import FastAPI, File, HTTPException, Query, UploadFile
+from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
+from fastapi.security import APIKeyHeader
+from fastapi.openapi.utils import get_openapi
+from dotenv import load_dotenv
 
 from predict_video_risk import (
     MODE_PROFILES,
@@ -22,14 +27,85 @@ from src.regions import validate_runtime_contract
 APP_TITLE = "Facial Extraction API"
 DEFAULT_MODEL_DIR = "reports/model_training/run_20260324_171117"
 DEFAULT_LABEL_COL = "condition_label"
+API_KEY_ENV_VAR = "EXTRACTION_API_KEY"
+API_KEY_HEADER_NAME = "X-API-Key"
 
 project_root = Path(__file__).resolve().parent
+load_dotenv(project_root / ".env")
+
 sessions_dir = project_root / "reports" / "api_sessions"
 upload_dir = project_root / "reports" / "api_uploads"
 sessions_dir.mkdir(parents=True, exist_ok=True)
 upload_dir.mkdir(parents=True, exist_ok=True)
 
-app = FastAPI(title=APP_TITLE, version="1.0.0")
+app = FastAPI(
+    title=APP_TITLE,
+    version="1.0.0",
+    description="Privacy-first facial feature extraction API with authentication.",
+)
+api_key_header = APIKeyHeader(
+    name=API_KEY_HEADER_NAME,
+    description="API key required for authentication. Obtain from deployment configuration.",
+    auto_error=False,
+)
+
+
+def _load_api_key() -> str:
+    key = os.getenv(API_KEY_ENV_VAR, "").strip()
+    if not key:
+        raise RuntimeError(
+            f"Missing required environment variable {API_KEY_ENV_VAR}. "
+            f"Set it before starting {APP_TITLE}."
+        )
+    if key == "CHANGE_ME":
+        raise RuntimeError(
+            f"Invalid {API_KEY_ENV_VAR} value. Replace placeholder value 'CHANGE_ME' with a real key."
+        )
+    return key
+
+
+EXPECTED_API_KEY = _load_api_key()
+
+
+def require_api_key(provided_key: str | None = Depends(api_key_header)) -> None:
+    """Validate API key from X-API-Key header."""
+    if not provided_key or not secrets.compare_digest(provided_key, EXPECTED_API_KEY):
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+
+def custom_openapi():
+    """Add security scheme to OpenAPI spec for Swagger UI display."""
+    if app.openapi_schema:
+        return app.openapi_schema
+    
+    openapi_schema = get_openapi(
+        title=APP_TITLE,
+        version="1.0.0",
+        description="Privacy-first facial feature extraction API with authentication.",
+        routes=app.routes,
+    )
+    
+    openapi_schema["components"]["securitySchemes"] = {
+        "api_key": {
+            "type": "apiKey",
+            "in": "header",
+            "name": API_KEY_HEADER_NAME,
+            "description": "API key for authentication. Required for all extraction endpoints.",
+        }
+    }
+    
+    # Apply security to protected endpoints, but not /health
+    for path, path_item in openapi_schema["paths"].items():
+        if path != "/health":
+            for operation in path_item.values():
+                if isinstance(operation, dict) and "operationId" in operation:
+                    operation["security"] = [{"api_key": []}]
+    
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+
+app.openapi = custom_openapi
 
 
 @app.get("/health")
@@ -62,6 +138,7 @@ async def extract_from_video(
     model_dir: str = Query(DEFAULT_MODEL_DIR),
     training_report: str = Query(""),
     label_col: str = Query(DEFAULT_LABEL_COL),
+    _auth: None = Depends(require_api_key),
 ) -> Dict[str, Any]:
     try:
         cfg = RuntimeConfig()
@@ -139,7 +216,7 @@ async def extract_from_video(
 
 
 @app.get("/extract/session/{session_id}/vector")
-def get_session_vector(session_id: str) -> Dict[str, Any]:
+def get_session_vector(session_id: str, _auth: None = Depends(require_api_key)) -> Dict[str, Any]:
     session_file = sessions_dir / f"{session_id}.json"
     if not session_file.exists():
         raise HTTPException(status_code=404, detail=f"Session not found: {session_id}")
