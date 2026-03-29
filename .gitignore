@@ -7,7 +7,7 @@
 *.avi
 *.mov
 *.mkv
-
+*.csv
 # Python bytecode files
 *.pyc
 # Python 3 cache directories
