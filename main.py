@@ -15,7 +15,7 @@ import os
 os.environ['QT_QPA_PLATFORM'] = 'xcb'
 from src.config import RuntimeConfig, validate_runtime_config
 from src.contracts import ContractError, load_feature_contract
-from src.pipeline import PipelineError, run_foundation_pipeline
+from src.pipeline import PipelineError, run_raw_extraction_pipeline
 from src.regions import RegionMappingError, validate_runtime_contract
 
 
@@ -60,7 +60,7 @@ def main() -> int:
             print("[OK] Check-only mode complete.")
             return 0
 
-        run_foundation_pipeline(cfg, contract.feature_order, project_root)
+        run_raw_extraction_pipeline(cfg, contract.feature_order, project_root)
         return 0
     except (ValueError, ContractError, RegionMappingError, PipelineError) as exc:
         print(f"[ERROR] {exc}")
