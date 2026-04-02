@@ -35,8 +35,10 @@ load_dotenv(project_root / ".env")
 
 sessions_dir = project_root / "reports" / "api_sessions"
 upload_dir = project_root / "reports" / "api_uploads"
+vectors_dir = project_root / "reports" / "api_vectors"
 sessions_dir.mkdir(parents=True, exist_ok=True)
 upload_dir.mkdir(parents=True, exist_ok=True)
+vectors_dir.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI(
     title=APP_TITLE,
@@ -128,6 +130,18 @@ def _expected_schema(model_dir: Path, training_report: str, label_col: str) -> t
     return expected_features, training_report_path
 
 
+def _save_session_outputs(session_id: str, payload: Dict[str, Any]) -> None:
+    session_file = sessions_dir / f"{session_id}.json"
+    vector_file = vectors_dir / f"{session_id}.json"
+
+    vector_payload = {
+        "session_id": session_id,
+        "vector": payload["vector"],
+    }
+    session_file.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    vector_file.write_text(json.dumps(vector_payload, indent=2), encoding="utf-8")
+
+
 @app.post("/extract/video")
 async def extract_from_video(
     video: UploadFile = File(...),
@@ -200,7 +214,7 @@ async def extract_from_video(
             "vector_feature_count": int(len(ml_vector)),
             "vector": ml_vector,
         }
-        (sessions_dir / f"{session_id}.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+        _save_session_outputs(session_id=session_id, payload=payload)
 
         return {
             "session_id": session_id,

@@ -53,7 +53,8 @@ The Extraction API requires an API key for security. Before starting the service
 Start Extraction API on port 8001:
 
 ```bash
-uvicorn extraction_api:app --host 0.0.0.0 --port 8001 --reload
+
+
 ```
 
 Start Scoring API on port 8002:
@@ -173,6 +174,33 @@ Example response shape:
     "au12_variance__min": 0.000045
   }
 }
+```
+
+### Optional: Post-Process Session Files Into Vector-Only Files
+
+Note: new extraction requests now auto-generate vector-only files in reports/api_vectors.
+Use this utility mainly for backfill/manual processing of older session JSON files.
+
+If you want to avoid touching API runtime logic, use the standalone extractor utility:
+
+```bash
+python extract_session_vectors.py
+```
+
+Behavior:
+
+- Reads the latest file from reports/api_sessions
+- Writes a vector-only file to reports/api_vectors/{session_id}.json
+- Keeps original full session JSON unchanged
+
+Useful flags:
+
+```bash
+# Process one known session file
+python extract_session_vectors.py --session-id 4bc4fabea4f940fc9e5b25459900a69c
+
+# Process every session JSON into vector-only outputs
+python extract_session_vectors.py --all
 ```
 
 ## 4. Scoring API
