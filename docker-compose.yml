@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  face-feature-extraction-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: face_feature_extraction_api
+    restart: unless-stopped
+    ports:
+      - "8010:8010"
+    environment:
+      - EXTRACTION_API_KEY=${EXTRACTION_API_KEY}
+    volumes:
+      - api_sessions:/app/reports/api_sessions
+      - api_uploads:/app/reports/api_uploads
+      - api_vectors:/app/reports/api_vectors
+
+volumes:
+  api_sessions:
+  api_uploads:
+  api_vectors:

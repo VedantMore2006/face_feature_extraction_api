@@ -327,3 +327,33 @@ Scoring API:
 - 400: missing vector features or unknown extra features
 - 404: model or training_report not found
 - 500: model inference failure
+
+## 7. Hostinger VPS Deployment (Docker Manager)
+
+This repository now includes:
+
+- Dockerfile
+- docker-compose.yml
+
+Use Hostinger Docker Manager "Compose URL" with the raw GitHub URL of this compose file:
+
+https://raw.githubusercontent.com/<your-username>/<your-repo>/<your-branch>/docker-compose.yml
+
+Deployment steps:
+
+1. Push this repository to GitHub.
+2. In Hostinger Docker Manager, open Compose URL deployment.
+3. Paste the raw docker-compose URL above.
+4. Set environment variable EXTRACTION_API_KEY in Hostinger before deploy.
+5. Deploy the stack.
+
+Container service details:
+
+- Service name: face-feature-extraction-api
+- Exposed port: 8010
+- API docs URL: http://<your-vps-ip>:8010/docs
+
+Notes:
+
+- Named Docker volumes are used for runtime outputs (api_sessions, api_uploads, api_vectors).
+- Model artifacts under reports/model_training remain bundled with the image.
