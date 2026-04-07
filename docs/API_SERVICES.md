@@ -9,7 +9,7 @@ Architecture is intentionally split into two services:
 
 ## Swagger UI
 ```
-http://127.0.0.1:8001/docs
+http://127.0.0.1:8010/docs
 ```
 
 
@@ -50,17 +50,17 @@ The Extraction API requires an API key for security. Before starting the service
 
 ## 2. Start Services
 
-Start Extraction API on port 8001:
+Start Extraction API on port 8010:
 
 ```bash
-
+uvicorn extraction_api:app --host 0.0.0.0 --port 8010 --reload
 
 ```
 
-Start Scoring API on port 8002:
+Start Scoring API on port 8011:
 
 ```bash
-uvicorn scoring_api:app --host 0.0.0.0 --port 8002 --reload
+uvicorn scoring_api:app --host 0.0.0.0 --port 8011 --reload
 ```
 
 ## 3. Using the Extraction API
@@ -69,12 +69,12 @@ uvicorn scoring_api:app --host 0.0.0.0 --port 8002 --reload
 
 1. Start the Extraction API:
    ```bash
-   uvicorn extraction_api:app --host 0.0.0.0 --port 8001 --reload
+   uvicorn extraction_api:app --host 0.0.0.0 --port 8010 --reload
    ```
 
 2. Open Swagger UI:
    ```
-   http://127.0.0.1:8001/docs
+   http://127.0.0.1:8010/docs
    ```
 
 3. Click **"Authorize"** button (top right) and enter your API key in the `X-API-Key` field
@@ -86,7 +86,7 @@ uvicorn scoring_api:app --host 0.0.0.0 --port 8002 --reload
 Add the `-H` header flag with your API key:
 
 ```bash
-curl -X POST "http://127.0.0.1:8001/extract/video?mode=balanced&allow_short=true" \
+curl -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
   -H "X-API-Key: your_long_random_secret_key_here" \
   -F "video=@assets/stress.mp4"
 ```
@@ -98,7 +98,7 @@ import requests
 
 headers = {"X-API-Key": "your_long_random_secret_key_here"}
 response = requests.post(
-    "http://127.0.0.1:8001/extract/video",
+    "http://127.0.0.1:8010/extract/video",
     headers=headers,
     files={"video": open("video.mp4", "rb")},
     params={"mode": "balanced"}
@@ -128,7 +128,7 @@ Query parameters:
 Example call:
 
 ```bash
-curl -X POST "http://127.0.0.1:8001/extract/video?mode=balanced&allow_short=true" \
+curl -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
   -H "X-API-Key: your_api_key_here" \
   -F "video=@assets/stress.mp4"
 ```
@@ -151,14 +151,14 @@ Method and route:
 Example call:
 
 ```bash
-curl "http://127.0.0.1:8001/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
+curl "http://127.0.0.1:8010/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
   -H "X-API-Key: your_api_key_here"
 ```
 
 And save it in a file:
 
 ```bash
-curl -s "http://127.0.0.1:8001/extract/session/8cadd316226f4d4b9aee328aab0186f9/vector" \
+curl -s "http://127.0.0.1:8010/extract/session/8cadd316226f4d4b9aee328aab0186f9/vector" \
   -H "X-API-Key: your_api_key_here" \
   | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps({'vector': d['vector']}))" \
   > score_input.json
@@ -264,7 +264,7 @@ Optional flags:
 
 ```bash
 conda run -n face_env python3 api/test_pipeline.py assets/test.mp4 \
-  --extract-port 8001 \
+  --extract-port 8010 \
   --score-port 8002 \
   --mode balanced
 ```
@@ -272,9 +272,9 @@ conda run -n face_env python3 api/test_pipeline.py assets/test.mp4 \
 Example output:
 
 ```
-[1/3] Uploading test.mp4 → http://127.0.0.1:8001/extract/video
+[1/3] Uploading test.mp4 → http://127.0.0.1:8010/extract/video
       session_id=b99baf61...  features=63
-[2/3] Fetching vector → http://127.0.0.1:8001/extract/session/b99baf61.../vector
+[2/3] Fetching vector → http://127.0.0.1:8010/extract/session/b99baf61.../vector
       63 features retrieved
 [3/3] Scoring vector → http://127.0.0.1:8002/score
 =============================================
@@ -293,7 +293,7 @@ Example output:
 Step 1: upload video, capture session_id:
 
 ```bash
-SESSION=$(curl -s -X POST "http://127.0.0.1:8001/extract/video?mode=balanced&allow_short=true" \
+SESSION=$(curl -s -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
   -F "video=@assets/test.mp4" | python3 -c "import sys,json; print(json.load(sys.stdin)['session_id'])")
 echo "session_id: $SESSION"
 ```
@@ -301,7 +301,7 @@ echo "session_id: $SESSION"
 Step 2: fetch vector and save to file:
 
 ```bash
-curl -s "http://127.0.0.1:8001/extract/session/$SESSION/vector" \
+curl -s "http://127.0.0.1:8010/extract/session/$SESSION/vector" \
   | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps({'vector': d['vector']}))" \
   > /tmp/score_input.json
 ```

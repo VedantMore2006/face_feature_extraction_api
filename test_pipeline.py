@@ -5,7 +5,7 @@ Usage (from project root, with both APIs running):
     conda run -n face_env python3 api/test_pipeline.py assets/test.mp4
 
 Optional flags:
-    --extract-port  PORT   (default 8001)
+    --extract-port  PORT   (default 8010)
     --score-port    PORT   (default 8002)
     --mode          accurate|balanced|fast  (default balanced)
 """
@@ -59,8 +59,8 @@ def score_vector(vector: dict, score_port: int) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="End-to-end API test")
     parser.add_argument("video", type=Path, help="Path to video file")
-    parser.add_argument("--extract-port", type=int, default=8001)
-    parser.add_argument("--score-port",   type=int, default=8002)
+    parser.add_argument("--extract-port", type=int, default=8010)
+    parser.add_argument("--score-port",   type=int, default=8011)
     parser.add_argument("--mode", default="balanced", choices=["accurate", "balanced", "fast"])
     args = parser.parse_args()
 
