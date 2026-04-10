@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import secrets
+import tempfile
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -34,11 +35,11 @@ project_root = Path(__file__).resolve().parent
 load_dotenv(project_root / ".env")
 
 sessions_dir = project_root / "reports" / "api_sessions"
-upload_dir = project_root / "reports" / "api_uploads"
 vectors_dir = project_root / "reports" / "api_vectors"
+raw_features_dir = project_root / "reports" / "api_raw_features"
 sessions_dir.mkdir(parents=True, exist_ok=True)
-upload_dir.mkdir(parents=True, exist_ok=True)
 vectors_dir.mkdir(parents=True, exist_ok=True)
+raw_features_dir.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI(
     title=APP_TITLE,
@@ -171,20 +172,25 @@ async def extract_from_video(
 
         session_id = uuid.uuid4().hex
         suffix = Path(video.filename or "upload.mp4").suffix or ".mp4"
-        saved_video = upload_dir / f"{session_id}{suffix}"
+        temp_video_path: Path | None = None
 
         content = await video.read()
-        saved_video.write_bytes(content)
+        with tempfile.NamedTemporaryFile(prefix=f"api_{session_id}_", suffix=suffix, delete=False) as tmp:
+            tmp.write(content)
+            temp_video_path = Path(tmp.name)
 
         mode_profile = MODE_PROFILES[mode]
         active_stride = int(frame_stride) if int(frame_stride) > 0 else int(mode_profile["frame_stride"])
 
         raw_df, extraction_stats = extract_raw_timeseries(
-            video_file=saved_video,
+            video_file=temp_video_path,
             cfg=cfg,
             feature_order=contract.feature_order,
             frame_stride=active_stride,
         )
+
+        raw_features_file = raw_features_dir / f"api_raw_features_{session_id}.csv"
+        raw_df.to_csv(raw_features_file, index=False)
 
         duration_seconds = float(raw_df["timestamp"].iloc[-1] - raw_df["timestamp"].iloc[0])
         if duration_seconds < float(min_duration_seconds) and not allow_short:
@@ -202,7 +208,8 @@ async def extract_from_video(
         payload = {
             "session_id": session_id,
             "created_at": datetime.now().isoformat(timespec="seconds"),
-            "video_file": str(saved_video),
+            "video_file": str(video.filename or "uploaded_file"),
+            "raw_features_file": str(raw_features_file),
             "training_report": str(training_report_path),
             "mode": mode,
             "frame_stride": active_stride,
@@ -227,6 +234,9 @@ async def extract_from_video(
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Extraction failed: {exc}") from exc
+    finally:
+        if "temp_video_path" in locals() and temp_video_path and temp_video_path.exists():
+            temp_video_path.unlink(missing_ok=True)
 
 
 @app.get("/extract/session/{session_id}/vector")

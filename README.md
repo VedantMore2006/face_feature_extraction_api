@@ -201,6 +201,171 @@ streamlit run app.py
 
 ---
 
+## API Reference (Current Codebase)
+
+The current workspace exposes one FastAPI service in `extraction_api.py`.
+
+- Base URL (local): `http://127.0.0.1:8010`
+- Swagger UI: `http://127.0.0.1:8010/docs`
+- OpenAPI JSON: `http://127.0.0.1:8010/openapi.json`
+
+### Authentication
+
+All extraction endpoints require API key authentication via header `X-API-Key`.
+
+1. Create `.env` in project root:
+
+```bash
+cp .env.example .env
+```
+
+2. Set a real key:
+
+```bash
+EXTRACTION_API_KEY=replace_with_a_long_random_secret
+```
+
+3. Start the API:
+
+```bash
+uvicorn extraction_api:app --host 0.0.0.0 --port 8010 --reload
+```
+
+### Endpoint Summary
+
+| Method | Route | Auth | What It Does |
+|---|---|---|---|
+| `GET` | `/health` | No | Health check for service status |
+| `POST` | `/extract/video` | Yes | Uploads a video and generates one session-level ML vector |
+| `GET` | `/extract/session/{session_id}/vector` | Yes | Returns saved vector for a given session |
+
+### 1) Health Check
+
+- Method: `GET`
+- Route: `/health`
+- Input: none
+- Output:
+
+```json
+{
+  "status": "ok",
+  "service": "Facial Extraction API"
+}
+```
+
+curl:
+
+```bash
+curl -X GET "http://127.0.0.1:8010/health"
+```
+
+### 2) Extract Vector From Video
+
+- Method: `POST`
+- Route: `/extract/video`
+- Content type: `multipart/form-data`
+- Required form field:
+  - `video`: video file upload
+
+Query parameters:
+
+- `mode` (string): `accurate` | `balanced` | `fast`, default `balanced`
+- `frame_stride` (int): `>=0`, default `0` (uses mode default)
+- `min_duration_seconds` (float): `>0`, default `150.0`
+- `allow_short` (bool): default `false`
+- `model_dir` (string): default `reports/model_training/run_20260324_171117`
+- `training_report` (string): optional path, default empty (auto-resolve)
+- `label_col` (string): default `condition_label`
+
+Headers:
+
+- `X-API-Key: <your_api_key>`
+
+Success response:
+
+```json
+{
+  "session_id": "8d0c5f7e62d14e2cbe64b70842d4f4da",
+  "vector_feature_count": 63
+}
+```
+
+Server-side artifacts created for this request:
+
+- Full session payload: `reports/api_sessions/{session_id}.json`
+- Vector-only payload: `reports/api_vectors/{session_id}.json`
+- Raw extraction CSV (timestamp + raw base features): `reports/api_raw_features/api_raw_features_{session_id}.csv`
+
+Video persistence policy:
+
+- Uploaded videos are processed through a temporary file and deleted after extraction.
+- Original uploaded video content is **not** stored permanently.
+
+curl:
+
+```bash
+curl -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
+  -H "X-API-Key: replace_with_a_long_random_secret" \
+  -F "video=@assets/test.mp4"
+```
+
+### 3) Get Saved Vector By Session ID
+
+- Method: `GET`
+- Route: `/extract/session/{session_id}/vector`
+- Path parameter:
+  - `session_id` (string)
+- Headers:
+  - `X-API-Key: <your_api_key>`
+
+Success response shape:
+
+```json
+{
+  "session_id": "8d0c5f7e62d14e2cbe64b70842d4f4da",
+  "vector": {
+    "au12_mean_amplitude__mean": 0.000123,
+    "au12_mean_amplitude__std": 0.000045
+  }
+}
+```
+
+curl:
+
+```bash
+curl -X GET "http://127.0.0.1:8010/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
+  -H "X-API-Key: replace_with_a_long_random_secret"
+```
+
+### End-to-End curl Workflow
+
+1. Upload video and capture session ID:
+
+```bash
+SESSION_ID=$(curl -s -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
+  -H "X-API-Key: replace_with_a_long_random_secret" \
+  -F "video=@assets/test.mp4" \
+  | python3 -c "import sys,json; print(json.load(sys.stdin)['session_id'])")
+
+echo "$SESSION_ID"
+```
+
+2. Fetch vector:
+
+```bash
+curl -s "http://127.0.0.1:8010/extract/session/$SESSION_ID/vector" \
+  -H "X-API-Key: replace_with_a_long_random_secret"
+```
+
+### Common API Errors
+
+- `401 Unauthorized`: missing or invalid `X-API-Key`
+- `400 Bad Request`: invalid query/input, or video too short when `allow_short=false`
+- `404 Not Found`: missing session, training report, or model artifact path
+- `500 Internal Server Error`: extraction runtime failure
+
+---
+
 ## 🧬 Feature Modules Explained
 
 ### **AU12 (Action Unit 12 — Smile Intensity)**
