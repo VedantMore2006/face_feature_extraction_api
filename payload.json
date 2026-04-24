@@ -1,0 +1,19 @@
+{
+  "endpoint": "/extract/video",
+  "method": "POST",
+  "headers": {
+    "x-api-key": "scs@FaceExtract#2026$secure"
+  },
+  "query_params": {
+    "mode": "balanced",
+    "frame_stride": 0,
+    "min_duration_seconds": 150.0,
+    "allow_short": true,
+    "model_dir": "reports/model_training/run_20260324_171117",
+    "training_report": "",
+    "label_col": "condition_label"
+  },
+  "input": {
+    "video_file": "extra/test.mp4"
+  }
+}
