@@ -1,0 +1,4 @@
+Transcribing 2 video files...
+  warning: could not transcribe /home/vedant/face_feature_extraction_api/extra/test.mp4: Video transcription requires faster-whisper. Run: pip install 'graphifyy[video]'
+  warning: could not transcribe /home/vedant/face_feature_extraction_api/extra/test2.mp4: Video transcription requires faster-whisper. Run: pip install 'graphifyy[video]'
+[]
