@@ -201,9 +201,9 @@ uvicorn app:app --host 0.0.0.0 --port 8010 --reload
 
 The current workspace exposes one FastAPI service through `app.py`, which imports the API instance from `extraction_api.py`.
 
-- Base URL (local): `http://127.0.0.1:8010`
-- Swagger UI: `http://127.0.0.1:8010/docs`
-- OpenAPI JSON: `http://127.0.0.1:8010/openapi.json`
+- Base URL (local): `http://127.0.0.1:5100`
+- Swagger UI: `http://127.0.0.1:5100/docs`
+- OpenAPI JSON: `http://127.0.0.1:5100/openapi.json`
 
 ### Authentication
 
@@ -224,7 +224,7 @@ EXTRACTION_API_KEY=replace_with_a_long_random_secret
 3. Start the API:
 
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 8010 --reload
+uvicorn app:app --host 0.0.0.0 --port 5100 --reload
 ```
 
 ### Endpoint Summary
@@ -252,7 +252,7 @@ uvicorn app:app --host 0.0.0.0 --port 8010 --reload
 curl:
 
 ```bash
-curl -X GET "http://127.0.0.1:8010/health"
+curl -X GET "http://127.0.0.1:5100/health"
 ```
 
 ### How to Use
@@ -260,7 +260,7 @@ curl -X GET "http://127.0.0.1:8010/health"
 ```python
 import requests
 
-url = "http://127.0.0.1:8010/extract/video"
+url = "http://127.0.0.1:5100/extract/video"
 
 payload = {
   "mode": "balanced",
@@ -330,7 +330,7 @@ Video persistence policy:
 curl:
 
 ```bash
-curl -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
+curl -X POST "http://127.0.0.1:5100/extract/video?mode=balanced&allow_short=true" \
   -H "X-API-Key: replace_with_a_long_random_secret" \
   -F "video=@extra/test.mp4"
 ```
@@ -359,7 +359,7 @@ Success response shape:
 curl:
 
 ```bash
-curl -X GET "http://127.0.0.1:8010/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
+curl -X GET "http://127.0.0.1:5100/extract/session/8d0c5f7e62d14e2cbe64b70842d4f4da/vector" \
   -H "X-API-Key: replace_with_a_long_random_secret"
 ```
 
@@ -368,7 +368,7 @@ curl -X GET "http://127.0.0.1:8010/extract/session/8d0c5f7e62d14e2cbe64b70842d4f
 1. Upload video and capture session ID:
 
 ```bash
-SESSION_ID=$(curl -s -X POST "http://127.0.0.1:8010/extract/video?mode=balanced&allow_short=true" \
+SESSION_ID=$(curl -s -X POST "http://127.0.0.1:5100/extract/video?mode=balanced&allow_short=true" \
   -H "X-API-Key: replace_with_a_long_random_secret" \
   -F "video=@extra/test.mp4" \
   | python3 -c "import sys,json; print(json.load(sys.stdin)['session_id'])")
@@ -379,7 +379,7 @@ echo "$SESSION_ID"
 2. Fetch vector:
 
 ```bash
-curl -s "http://127.0.0.1:8010/extract/session/$SESSION_ID/vector" \
+curl -s "http://127.0.0.1:5100/extract/session/$SESSION_ID/vector" \
   -H "X-API-Key: replace_with_a_long_random_secret"
 ```
 

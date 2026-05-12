@@ -22,6 +22,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 8010
+EXPOSE 5100
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8010"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "5100"]

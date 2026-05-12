@@ -28,11 +28,11 @@ logger = logging.getLogger(__name__)
 BASE_URL = os.getenv("ML_API_BASE_URL", "http://88.222.212.15").rstrip("/")
 
 # Keep defaults aligned with successful CLI checks.
-FACE_EXTRACT_URL = os.getenv("FACE_EXTRACT_URL", f"{BASE_URL}:8010/extract/video")
+FACE_EXTRACT_URL = os.getenv("FACE_EXTRACT_URL", f"{BASE_URL}:5100/extract/video")
 # Important: include /extract in this path, otherwise vector polling stays at 404.
 FACE_VECTOR_URL_TEMPLATE = os.getenv(
     "FACE_VECTOR_URL_TEMPLATE",
-    f"{BASE_URL}:8010/extract/session/{{session_id}}/vector",
+    f"{BASE_URL}:5100/extract/session/{{session_id}}/vector",
 )
 
 EXTRACT_TIMEOUT_SECONDS = int(os.getenv("FACE_EXTRACT_TIMEOUT_SECONDS", "600"))

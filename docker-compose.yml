@@ -8,7 +8,7 @@ services:
     container_name: face_feature_extraction_api
     restart: unless-stopped
     ports:
-      - "8010:8010"
+      - "5100:5100"
     environment:
       - EXTRACTION_API_KEY=${EXTRACTION_API_KEY}
     volumes:
