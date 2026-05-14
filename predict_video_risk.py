@@ -336,10 +336,22 @@ def main() -> int:
         pred_idx=pred_idx,
     )
 
+    # Apply a conservative fallback: if the top predicted probability is low,
+    # treat the session as `normal` (no notable condition). This prevents
+    # spurious labels when the model is uncertain or the pattern is outside
+    # the trained classes.
+    top_prob = max(probabilities.values()) if probabilities else 0.0
+    fallback_applied = False
+    if top_prob < 0.50:
+        pred_label = "normal"
+        fallback_applied = True
+        risk_score = 0.0
+    else:
+        # retain original model confidence as risk score
+        risk_score = confidence
+
     ranked = sorted(probabilities.items(), key=lambda kv: kv[1], reverse=True)
     top3 = [{"label": k, "probability": float(v)} for k, v in ranked[:3]]
-
-    risk_score = confidence
 
     run_stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     run_dir = Path(args.output_root) / f"run_{run_stamp}"
@@ -384,6 +396,7 @@ def main() -> int:
             "predicted_index": pred_idx,
             "confidence": confidence,
             "risk_score": risk_score,
+            "fallback_applied": fallback_applied,
             "probabilities": probabilities,
             "top3": top3,
         },

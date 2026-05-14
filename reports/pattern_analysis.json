@@ -1039,16 +1039,19 @@
         "overall_au_variance": "MODERATE-HIGH"
       }
     },
-    "phobia": {
-      "characteristics": "Fear-peaked responses, context-dependent freezing, rapid activation",
+    "normal": {
+      "characteristics": "Typical baseline behaviour: moderate expressivity, balanced movement, normal response times",
       "key_markers": {
-        "au4_mean_activation": "HIGH",
-        "response_latency_mean": "VERY-LOW",
-        "gesture_frequency": "LOW-MODERATE",
-        "head_motion_energy": "VARIABLE",
-        "eye_contact_ratio": "LOW",
-        "downward_gaze_frequency": "HIGH",
-        "au12_mean_amplitude": "LOW"
+        "au12_mean_amplitude": "NORMAL",
+        "au12_variance": "NORMAL",
+        "overall_au_variance": "NORMAL",
+        "mean_head_velocity": "NORMAL",
+        "head_motion_energy": "NORMAL",
+        "gesture_frequency": "NORMAL",
+        "response_latency_mean": "NORMAL",
+        "facial_emotional_range": "NORMAL",
+        "eye_contact_ratio": "NORMAL",
+        "blink_rate": "NORMAL"
       }
     },
     "suicidal_tendency": {

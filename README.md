@@ -187,7 +187,7 @@ done
 
 ### **2. Run the API Service:**
 ```bash
-uvicorn app:app --host 0.0.0.0 --port 8010 --reload
+uvicorn app:app --host 0.0.0.0 --port 5100 --reload
 ```
 
 **API endpoints:**
