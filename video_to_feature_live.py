@@ -36,7 +36,7 @@ FACE_VECTOR_URL_TEMPLATE = os.getenv(
 )
 
 EXTRACT_TIMEOUT_SECONDS = int(os.getenv("FACE_EXTRACT_TIMEOUT_SECONDS", "600"))
-VECTOR_REQUEST_TIMEOUT_SECONDS = int(os.getenv("FACE_VECTOR_REQUEST_TIMEOUT_SECONDS", "30"))
+VECTOR_REQUEST_TIMEOUT_SECONDS = int(os.getenv("FACE_VECTOR_REQUEST_TIMEOUT_SECONDS", "60"))
 VECTOR_MAX_WAIT_SECONDS = int(os.getenv("FACE_VECTOR_MAX_WAIT_SECONDS", "180"))
 VECTOR_RETRY_DELAY_SECONDS = int(os.getenv("FACE_VECTOR_RETRY_DELAY_SECONDS", "3"))
 
@@ -100,7 +100,8 @@ def process_face_extraction_only(
     if video_bytes is None and not video_path:
         raise LiveAPIError("No face input provided. Expected video_path or video_bytes.")
 
-    extraction_api_key = _require_env("EXTRACTION_API_KEY")
+    # HARDCODED FOR TESTING
+    extraction_api_key = "feature"
     api_headers = {"X-API-Key": extraction_api_key}
     latencies: dict[str, float] = {}
 
