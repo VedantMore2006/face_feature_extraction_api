@@ -457,7 +457,38 @@ curl -s "http://127.0.0.1:5100/extract/session/$SESSION_ID/vector" \
 
 ---
 
-## 🔐 Privacy Guarantees
+## � Comprehensive Feature Documentation
+
+### **All 34 Primary Features + 63 Engineered Features**
+
+For a **complete, detailed guide** to every feature extracted by this pipeline, including:
+
+- ✅ **All 34 raw features** with exact computation methods
+- ✅ **How z-score normalization works** (baseline collection → z-score → sigmoid scaling)
+- ✅ **Clinical significance** of each feature for mental health screening
+- ✅ **All 63 engineered features** ranked by model importance (0.22 → 0.0001)
+- ✅ **Feature-to-region mapping** (which facial regions contribute to each feature)
+- ✅ **Quick reference by clinical domain** (depression, anxiety, bipolar, stress)
+- ✅ **FAQ & implementation notes**
+
+**👉 [See: docs/FEATURE_EXTRACTION_GUIDE.md](docs/FEATURE_EXTRACTION_GUIDE.md)**
+
+**Key Points:**
+- **34 raw features** are extracted per-frame: AU expression (13), head motion (8), eye/gaze (7), temporal response (6)
+- **Aggregation**: For each raw feature, 6 statistics are computed per session: mean, std, min, max, range, slope = **204 candidate features**
+- **Model selection**: The final ML model uses the **63 most discriminative features** for classification
+- **Normalization**: Each person's baseline is established in the first 30 seconds, then all subsequent features are z-score normalized and sigmoid-scaled to [0, 1]
+- **Most important features**: `nod_onset_latency__mean` (0.221), `reaction_time_instability_index__range` (0.162), `speech_onset_delay__min` (0.124)
+
+**Who should read this?**
+- Data scientists exploring feature importance
+- Clinicians wanting to understand what's being measured
+- Researchers validating behavioral markers
+- Developers extending the system with new features
+
+---
+
+## �🔐 Privacy Guarantees
 
 ### **What IS Stored:**
 ✅ Scaled behavioral features (6 numbers per frame)  
