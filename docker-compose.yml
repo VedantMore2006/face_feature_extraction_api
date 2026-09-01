@@ -5,16 +5,22 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: face_feature_extraction_api
+    image: face-feature-extraction-api
+    container_name: face-feature-extraction-api
     restart: unless-stopped
-    ports:
-      - "5100:5100"
     environment:
       - EXTRACTION_API_KEY=${EXTRACTION_API_KEY}
     volumes:
       - api_sessions:/app/reports/api_sessions
       - api_uploads:/app/reports/api_uploads
       - api_vectors:/app/reports/api_vectors
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          memory: 384M
 
 volumes:
   api_sessions:
