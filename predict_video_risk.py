@@ -57,7 +57,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--min-duration-seconds",
         type=float,
-        default=150.0,
+        default=60.0,
         help="Soft minimum recommended video duration for stable extraction.",
     )
     parser.add_argument(

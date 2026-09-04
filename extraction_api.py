@@ -148,7 +148,7 @@ async def extract_from_video(
     video: UploadFile = File(...),
     mode: str = Query("balanced", pattern="^(accurate|balanced|fast)$"),
     frame_stride: int = Query(0, ge=0),
-    min_duration_seconds: float = Query(150.0, gt=0.0),
+    min_duration_seconds: float = Query(60.0, gt=0.0),
     allow_short: bool = Query(False),
     model_dir: str = Query(DEFAULT_MODEL_DIR),
     training_report: str = Query(""),

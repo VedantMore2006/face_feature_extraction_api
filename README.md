@@ -297,7 +297,7 @@ Query parameters:
 
 - `mode` (string): `accurate` | `balanced` | `fast`, default `balanced`
 - `frame_stride` (int): `>=0`, default `0` (uses mode default)
-- `min_duration_seconds` (float): `>0`, default `150.0`
+- `min_duration_seconds` (float): `>0`, default `60.0`
 - `allow_short` (bool): default `false`
 - `model_dir` (string): default `reports/model_training/run_20260324_171117`
 - `training_report` (string): optional path, default empty (auto-resolve)

@@ -119,7 +119,7 @@ Query parameters:
 
 - mode: accurate | balanced | fast
 - frame_stride: optional override (0 means use mode default)
-- min_duration_seconds: default 150.0
+- min_duration_seconds: default 60.0
 - allow_short: default false
 - model_dir: default reports/model_training/run_20260324_171117
 - training_report: optional
